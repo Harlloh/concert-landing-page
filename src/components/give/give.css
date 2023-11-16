@@ -1,0 +1,31 @@
+.cardd {
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: red; */
+}
+.give-sect {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.78)),
+    url("../../assets/giving-alms.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top bottom;
+  height: 80vh;
+  align-items: center;
+  display: flex;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+}
+.give-sect h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+.give-sect h3 span {
+  font-family: Inter;
+  color: #ff9b0d;
+  font-weight: 500;
+}
