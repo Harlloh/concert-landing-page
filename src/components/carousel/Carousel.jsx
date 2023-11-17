@@ -13,7 +13,7 @@ import bg4 from "../../assets/xan-griffin-eA2t5EvcxU4-unsplash.jpg";
 import "./carousel.css";
 
 // import required modules
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 
 export default function Carousel() {
   return (
@@ -24,11 +24,10 @@ export default function Carousel() {
       }}
       spaceBetween={30}
       effect={"fade"}
-      navigation={true}
       pagination={{
         clickable: true,
       }}
-      modules={[EffectFade, Navigation, Pagination, Autoplay]}
+      modules={[EffectFade, Pagination, Autoplay]}
       className="mySwiper"
     >
       <SwiperSlide className="swiperslide">

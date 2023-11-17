@@ -271,4 +271,8 @@ section {
   .swipe-text p {
     font-weight: bold;
   }
+  .swipe-text {
+    align-items: center;
+    justify-content: center;
+  }
 }
