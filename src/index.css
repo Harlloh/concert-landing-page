@@ -243,10 +243,10 @@ section {
     width: 75%;
   }
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .swiper-slide .swiper-slide-img {
-    height: 75vh;
-    width: 100vw;
+    height: 70vh;
+    width: 150vw;
   }
 }
