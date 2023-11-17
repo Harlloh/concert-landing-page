@@ -242,7 +242,7 @@ section {
   .conveyner .image img {
     width: 75%;
   }
-  body {
+  html {
     overflow-x: hidden;
   }
   .swiper-slide .swiper-slide-img {
