@@ -38,7 +38,7 @@ export default function Carousel() {
             <h2>LAGOS</h2>
             <p>ARE YOU READY?</p>
           </div>
-          <img src={bg1} />
+          <img className="swiper-slide-img" src={bg1} />
         </SwiperSlide>
         <SwiperSlide>
           <div className="swipe-text">
@@ -47,7 +47,7 @@ export default function Carousel() {
             <p className="text-white text-5">ASHER PRAISE CONCERT</p>
             {/* <p>Freudes place maryland ikeja, Lagos state.</p> */}
           </div>
-          <img src={bg3} />
+          <img className="swiper-slide-img" src={bg3} />
         </SwiperSlide>
 
         <SwiperSlide>
@@ -59,7 +59,7 @@ export default function Carousel() {
             </p>
           </div>
           <div className="overlay"></div>
-          <img src={bg4} />
+          <img className="swiper-slide-img" src={bg4} />
         </SwiperSlide>
         {/* <Countdown /> */}
       </Swiper>

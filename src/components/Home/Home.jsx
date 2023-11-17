@@ -184,7 +184,7 @@ export default function Home() {
 
       <Carousel />
       <section className="aboutsect" id="about">
-        <div className="detailsss d-flex gap-5">
+        <div className="detailsss">
           <div className="detail d-flex gap-2 align-items-center">
             <FaCalendarAlt color="white" />
             <div className="detail-details text-white">
@@ -456,7 +456,7 @@ export default function Home() {
 
             <span>
               <h5>ADEGOKE.</h5>
-              <cite>convener&apos;s Note</cite>
+              <cite>convener</cite>
             </span>
           </div>
           <div className="image">

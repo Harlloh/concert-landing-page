@@ -1,6 +1,6 @@
 .footer-sect {
   width: 100%;
-  background: var(--general-dark, #222);
+  background: var(--general-dark, #000000);
 }
 .footer-container {
   display: flex;

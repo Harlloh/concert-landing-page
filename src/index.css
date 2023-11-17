@@ -144,6 +144,7 @@ section {
     flex-direction: column;
     padding: 1rem;
     width: 80%;
+    gap: 1rem;
     margin: 0 auto;
   }
   .aboutsect {
@@ -178,9 +179,11 @@ section {
   .quote h3 {
     font-size: 1.72rem;
   }
+
   .ministers .minister .ministerdiv img {
-    width: 15rem;
+    width: 13rem;
     height: 15rem;
+    /* border-width: 5px; */
   }
   .footer-container {
     flex-direction: column;
@@ -238,5 +241,12 @@ section {
   }
   .conveyner .image img {
     width: 75%;
+  }
+  body {
+    overflow: hidden;
+  }
+  .swiper-slide .swiper-slide-img {
+    height: 75vh;
+    width: 100vw;
   }
 }

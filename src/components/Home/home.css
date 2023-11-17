@@ -59,6 +59,8 @@
 }
 .detailsss {
   position: absolute;
+  display: flex;
+  gap: 10rem;
   /* transform: translate(0%, 50%); */
   top: 0;
   background-color: rgb(28, 43, 72);
@@ -112,6 +114,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .conveyner .image img {
   width: 50%;
   height: 100%;
@@ -282,9 +285,10 @@
   grid-template-columns: 1fr 1fr;
 }
 .contact-details {
-  background-color: rgb(28, 43, 72);
+  background-color: white;
   position: relative;
-  color: white;
+  color: rgb(28, 43, 72);
+  /* color: black; */
 }
 .emailllll {
   color: rgb(224, 205, 64);
@@ -314,7 +318,7 @@
   right: 5%;
 }
 .contact-details h1 {
-  color: var(--general-light, #fff);
+  /* color: var(--general-light, #fff); */
 
   /* /H2 */
   font-family: Montserrat;
@@ -325,7 +329,7 @@
 }
 .contact-details p,
 .contact-form p {
-  color: var(--general-light, #fff);
+  /* color: var(--general-light, #fff); */
 
   /* /Subtitle/Regular */
   font-family: Raleway;
@@ -342,7 +346,7 @@
 }
 .contact-details div a {
   display: flex;
-  color: white;
+  /* color: white; */
   text-decoration: none;
   transition: 0.2s ease;
   gap: 0.51rem;

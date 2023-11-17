@@ -2,7 +2,6 @@ import {
   FaFacebook,
   FaInstagram,
   FaMapMarkerAlt,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
 import "./footer.css";
@@ -48,13 +47,11 @@ export default function Footer() {
             <NavLink to="www.facebbok.com">
               <FaFacebook size="1.5rem" />
             </NavLink>
-            <NavLink to="instagram.com">
+            <NavLink to="https://www.instagram.com/asherpraiseconcert/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
               <FaInstagram size="1.5rem" />
             </NavLink>
-            <NavLink to="x.com">
-              <FaTwitter size="1.5rem" />
-            </NavLink>
-            <NavLink to="mailto:alloolorunfemi@gmail.com">
+
+            <NavLink to="hhtps://youtube.com">
               <FaYoutube size="1.5rem" />
             </NavLink>
           </div>
