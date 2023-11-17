@@ -431,6 +431,7 @@ export default function Home() {
         id="gallery"
         style={{ backgroundColor: "rgb(28, 43, 72)" }}
       >
+        <h1>Conveyer&apos;s note</h1>
         <div className="container container-fluid conveyner">
           <div className="content gap-3 d-flex flex-column">
             <cite>

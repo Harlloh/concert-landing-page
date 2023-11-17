@@ -355,6 +355,12 @@
 .contact-details div a:hover {
   text-decoration: underline;
 }
+.gallery-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
 .contact-form {
   background-color: #e9e7e7;
   display: flex;

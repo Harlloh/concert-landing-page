@@ -246,7 +246,22 @@ section {
     overflow-x: hidden;
   }
   .swiper-slide .swiper-slide-img {
-    height: 70vh;
-    width: 150vw;
+    height: 60vh;
+    width: 100vw;
+  }
+  .bout-confetti1 {
+    bottom: 42%;
+    right: 0;
+  }
+  .confetti4 {
+    top: 15%;
+    right: 0;
+    width: 5rem;
+  }
+  .detail-details h4 {
+    font-size: 1.2rem;
+  }
+  .detail-details p {
+    font-size: 0.71rem;
   }
 }
