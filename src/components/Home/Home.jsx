@@ -11,13 +11,7 @@ import partConfetti1 from "../../assets/Confetti (5).png";
 // import gallery from "../../assets/minister.jpg";
 import partConfetti2 from "../../assets/Confetti (6).png";
 import contactconfettiii from "../../assets/Confetti (7).png";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import { Navigation, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import emailjs from "@emailjs/browser";
@@ -172,16 +166,6 @@ export default function Home() {
   };
   return (
     <div className="home">
-      {/* <section className="herosect">
-        <div className="container container-md container-sm hero-container">
-          <h1>
-            The best celestial Experience happening live in lagos this year
-          </h1>
-          <Countdown />
-        </div>
-      </section> */}
-      {/* <Hero /> */}
-
       <Carousel />
       <section className="aboutsect" id="about">
         <div className="detailsss">
@@ -403,11 +387,9 @@ export default function Home() {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            modules={[Autoplay, Pagination, Navigation, A11y, Scrollbar]}
+
+            modules={[Autoplay, Navigation, A11y, Scrollbar]}
             style={{ height: "fit-content" }}
           >
             {partners.map((partner) => (
@@ -431,7 +413,7 @@ export default function Home() {
         id="gallery"
         style={{ backgroundColor: "rgb(28, 43, 72)" }}
       >
-        <h1>Conveyer&apos;s note</h1>
+        <h1 className="conveyners">Convener&apos;s note</h1>
         <div className="container container-fluid conveyner">
           <div className="content gap-3 d-flex flex-column">
             <cite>

@@ -257,6 +257,9 @@
 /* //////////////////////// */
 /* //////////////////////// */
 /* PARTNERS */
+.mySwiper {
+  border-radius: 0;
+}
 .partners-sect {
   padding: 6rem 0;
   display: flex;
@@ -270,7 +273,7 @@
 }
 .partnerSlide .slidImg {
   width: 10%;
-  background-color: red;
+  /* background-color: red; */
   /* display: none; */
 }
 
@@ -354,6 +357,13 @@
 }
 .contact-details div a:hover {
   text-decoration: underline;
+}
+.conveyners {
+  text-align: center;
+  /* background-color: red; */
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  font-family: monospace;
 }
 .gallery-sect {
   display: flex;

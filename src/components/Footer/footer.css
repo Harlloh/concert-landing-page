@@ -6,12 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: red; */
   padding: 3rem 5vw;
   color: white;
 }
 .footer-container .comp ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
   align-items: center;
@@ -25,10 +25,13 @@
   padding: 0.71rem;
   border: 0.31px solid white;
   border-radius: 50%;
+  transition: 0.3s;
 }
 .socials a:hover {
-  color: #6b2323;
-  border-color: red;
+  cursor: pointer;
+  border-color: rgb(224, 205, 64);
+  color: white;
+  transform: scale(1.1);
 }
 .sociall h4 {
   font-size: 1rem;
