@@ -59,10 +59,7 @@ export default function Give() {
         <div className="give-details">
           <p>
             This edition target feeding and ameliorating the pains of 100 widows
-            and indgent ones in out communities across lagos. I STILL DO NOT GET
-            THIS :people can send in thier entries(Do you mean the people
-            donating or the people we are donating to). We will invite 50 to the
-            venue(who are we inviting to the venue) for the donation and prayer.{" "}
+            and indgent ones in out communities across lagos.
           </p>
           <h4>What can i donate?</h4>
           <ol>
@@ -72,7 +69,7 @@ export default function Give() {
             <li>Stationeries</li>
             <li>BIbles</li>
             <li>Household Items</li>
-            <li>Monetary</li>
+            <li>Monetarily</li>
           </ol>
         </div>
         <section className="givesect  d-flex justify-content-center flex-wrap">

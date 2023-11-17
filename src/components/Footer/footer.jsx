@@ -19,16 +19,16 @@ export default function Footer() {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#ministers">Ministers</a>
+              <a href="/#ministers">Ministers</a>
             </li>
             <li>
-              <a href="#volunteer">Volunteer</a>
+              <a href="/#volunteer">Volunteer</a>
             </li>
             <li>
-              <a href="#contact" className="btn">
+              <a href="/#contact" className="btn">
                 Contact
               </a>
             </li>
