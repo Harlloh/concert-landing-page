@@ -249,7 +249,7 @@ section {
     border-radius: 0;
   }
   .swiper-slide .swiper-slide-img {
-    height: 70vh;
+    height: 60vh;
     width: 100vw;
     border-radius: 0;
   }
@@ -267,5 +267,8 @@ section {
   }
   .detail-details p {
     font-size: 0.71rem;
+  }
+  .swipe-text p {
+    font-weight: bold;
   }
 }
