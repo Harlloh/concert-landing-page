@@ -52,6 +52,7 @@ import Harjovy from "../../assets/Harjovy.jpg";
 import harmony from "../../assets/Moses Harmony.jpg";
 import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
 import aluko from "../../assets/Evang Tunde Aluko.jpg";
+import RevealSection from "../revealAnimation";
 // import Victorade from "../../assets/v";
 export default function Home() {
   const form = useRef();
@@ -167,118 +168,140 @@ export default function Home() {
   return (
     <div className="home">
       <Carousel />
-      <section className="aboutsect" id="about">
-        <div className="detailsss">
-          <div className="detail d-flex gap-2 align-items-center">
-            <FaCalendarAlt color="white" />
-            <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: ".82rem",
-                  lineHeight: "none",
-                }}
-              >
-                December 27th, 2023.
-              </p>
-            </div>
-          </div>
-          <div className="detail d-flex gap-2 align-items-center">
-            <FaMapMarkerAlt color="white" />
-            <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: ".82rem",
-                  lineHeight: "none",
-                  // width: "75%",
-                }}
-              >
-                Freudes place maryland ikeja, Lagos state
-              </p>
-            </div>
-          </div>
-          <div className="detail d-flex gap-2 align-items-center">
-            <FaClock color="white" />
-            <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: ".82rem",
-                  lineHeight: "none",
-                }}
-              >
-                4:00pm GMT+1(WAT)
-              </p>
-            </div>
-          </div>
-        </div>
-        <img className="confetti about-confetti" src={confetti1} alt="" />
-        <img className="confetti  bout-confetti1" src={confetti11} alt="" />
-        <img className="confetti dot-confetti" src={dot} alt="" />
-        <div className="container container-md container-sm about-container">
-          <div className=" about ">
-            {/* <div className="img"> */}
-            <img className="img1" src={aboutImg} alt="" />
-            {/* </div> */}
-            <div className="aboutcontent">
-              <h2>
-                About <b>Asher Praise Concert</b>{" "}
-              </h2>
-              {/* <h5>Visions and missions</h5> */}
-              <p>
-                Join us for an enchanting evening filled with soul-stirring
-                melodies, powerful performances, and heartfelt worship. Our
-                talented choir and special guests will lead us in an
-                unforgettable experience of praise and worship.
-              </p>
-              <div className="socialssss">
-                <p>
-                  Follow us, for the latest updates and behind-the-scenes
-                  glimpses leading up to the concert.
+      <RevealSection>
+        <section className="aboutsect " id="about">
+          <div className="detailsss">
+            <div className="detail d-flex gap-2 align-items-center">
+              <FaCalendarAlt color="white" />
+              <div className="detail-details text-white">
+                <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
+                <p
+                  style={{
+                    margin: 0,
+                    padding: 0,
+                    fontSize: ".82rem",
+                    lineHeight: "none",
+                  }}
+                >
+                  December 27th, 2023.
                 </p>
-                <span>
-                  <Link
-                    to="https://youtube.com"
-                    className="sociallll"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaYoutube color="black" />
-                    <p>Youtube</p>
-                  </Link>
-                  <Link
-                    to="facebook.com"
-                    className="sociallll"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaFacebook color="black" />
-                    <p>Facebook</p>
-                  </Link>
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    to={
-                      "https://www.instagram.com/asherpraiseconcert/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                    }
-                    className="sociallll"
-                  >
-                    <FaInstagram color="black" />
-                    <p>Instagram</p>
-                  </Link>
-                </span>
+              </div>
+            </div>
+            <div className="detail d-flex gap-2 align-items-center">
+              <FaMapMarkerAlt color="white" />
+              <div className="detail-details text-white">
+                <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
+                <p
+                  style={{
+                    margin: 0,
+                    padding: 0,
+                    fontSize: ".82rem",
+                    lineHeight: "none",
+                    // width: "75%",
+                  }}
+                >
+                  Freudes place maryland ikeja, Lagos state
+                </p>
+              </div>
+            </div>
+            <div className="detail d-flex gap-2 align-items-center">
+              <FaClock color="white" />
+              <div className="detail-details text-white">
+                <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
+                <p
+                  style={{
+                    margin: 0,
+                    padding: 0,
+                    fontSize: ".82rem",
+                    lineHeight: "none",
+                  }}
+                >
+                  4:00pm GMT+1(WAT)
+                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+          <img
+            loading="lazy"
+            className="confetti about-confetti"
+            src={confetti1}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+          />
+          <img
+            loading="lazy"
+            className="confetti  bout-confetti1"
+            src={confetti11}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+          />
+          <img
+            loading="lazy"
+            className="confetti dot-confetti"
+            src={dot}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+          />
+          <div className="container container-md container-sm about-container">
+            <div className=" about ">
+              {/* <div className="img"> */}
+              <img
+                loading="lazy"
+                className="img1 reveal fade-right"
+                src={aboutImg}
+                alt="Asher Praise Concert - Crowd enjoying the event"
+              />
+              {/* </div> */}
+              <div className="aboutcontent reveal fade-left">
+                <h2>
+                  About <b>Asher Praise Concert</b>{" "}
+                </h2>
+                {/* <h5>Visions and missions</h5> */}
+                <p>
+                  Join us for an enchanting evening filled with soul-stirring
+                  melodies, powerful performances, and heartfelt worship. Our
+                  talented choir and special guests will lead us in an
+                  unforgettable experience of praise and worship.
+                </p>
+                <div className="socialssss">
+                  <p>
+                    Follow us, for the latest updates and behind-the-scenes
+                    glimpses leading up to the concert.
+                  </p>
+                  <span>
+                    <Link
+                      to="https://youtube.com"
+                      className="sociallll"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaYoutube color="black" />
+                      <p>Youtube</p>
+                    </Link>
+                    <Link
+                      to="facebook.com"
+                      className="sociallll"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebook color="black" />
+                      <p>Facebook</p>
+                    </Link>
+                    <Link
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      to={
+                        "https://www.instagram.com/asherpraiseconcert/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+                      }
+                      className="sociallll"
+                    >
+                      <FaInstagram color="black" />
+                      <p>Instagram</p>
+                    </Link>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </RevealSection>
 
       {/* QUOTE */}
       <section className="quoteSect">
@@ -291,57 +314,82 @@ export default function Home() {
           </h3>
         </div>
       </section>
-
-      <section className="ministers-sect confetti-sect" id="ministers">
-        <img src={confetti2} alt="" className="confetti confetti2" />
-        <img src={confetti3} alt="" className="confetti confetti3 " />
-        <img src={confetti4} alt="" className="confetti confetti4" />
+      <RevealSection>
+        <section className="ministers-sect confetti-sect" id="ministers">
+          <img
+            loading="lazy"
+            src={confetti2}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+            className="confetti confetti2"
+          />
+          <img
+            loading="lazy"
+            src={confetti3}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+            className="confetti confetti3 "
+          />
+          <img
+            loading="lazy"
+            src={confetti4}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+            className="confetti confetti4"
+          />
+          <div className="container container-md container-sm minister-container">
+            <div className="ministersContent reveal fade-bottom">
+              <h1>
+                AsherPraise 2023 <span>/meet the ministers</span>
+              </h1>
+              <p>
+                Welcome to a divine experience in Asher Praise 2023! As we
+                gather in God&apos;s presence, we invite you to meet the
+                ministers who will be leading us in an evening of worship and
+                musical celebration.
+              </p>
+            </div>
+            <div className="ministers reveal">
+              <div className="minister">
+                {ministers.map((minister) => (
+                  <div className="ministerdiv fade-right" key={minister.id}>
+                    <img
+                      loading="lazy"
+                      src={minister.url}
+                      alt={minister.ministerName}
+                    />
+                    <h2>{minister.ministerName}</h2>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
         <div className="container container-md container-sm minister-container">
-          <div className="ministersContent">
+          <div className="ministersContent reveal fade-right">
             <h1>
-              AsherPraise 2023 <span>/meet the ministers</span>
+              AsherPraise 2023 <span>/meet the word ministers</span>
             </h1>
             <p>
               Welcome to a divine experience in Asher Praise 2023! As we gather
               in God&apos;s presence, we invite you to meet the ministers who
-              will be leading us in an evening of worship and musical
+              will be leading us in an evening of God&apos;s word and musical
               celebration.
             </p>
           </div>
           <div className="ministers">
-            <div className="minister">
-              {ministers.map((minister) => (
-                <div className="ministerdiv" key={minister.id}>
-                  <img src={minister.url} alt={minister.ministerName} />
+            <div className="minister reveal fade-bottom">
+              {wordministers.map((minister) => (
+                <div className="ministerdiv " key={minister.id}>
+                  <img
+                    loading="lazy"
+                    src={minister.url}
+                    alt={minister.ministerName}
+                  />
                   <h2>{minister.ministerName}</h2>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section>
-      <div className="container container-md container-sm minister-container">
-        <div className="ministersContent">
-          <h1>
-            AsherPraise 2023 <span>/meet the word ministers</span>
-          </h1>
-          <p>
-            Welcome to a divine experience in Asher Praise 2023! As we gather in
-            God&apos;s presence, we invite you to meet the ministers who will be
-            leading us in an evening of God&apos;s word and musical celebration.
-          </p>
-        </div>
-        <div className="ministers">
-          <div className="minister">
-            {wordministers.map((minister) => (
-              <div className="ministerdiv" key={minister.id}>
-                <img src={minister.url} alt={minister.ministerName} />
-                <h2>{minister.ministerName}</h2>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      </RevealSection>
 
       {/* GET INVOLVED */}
       <section
@@ -364,9 +412,24 @@ export default function Home() {
 
       {/* PARTNERS */}
       <section className="partners-sect">
-        <img src={partConfetti} className="confetti partConfetti" alt="" />
-        <img src={partConfetti1} className="confetti partConfetti1" alt="" />
-        <img src={partConfetti2} className="confetti partConfetti2" alt="" />
+        <img
+          loading="lazy"
+          src={partConfetti}
+          className="confetti partConfetti"
+          alt="Asher Praise Concert - Crowd enjoying the event"
+        />
+        <img
+          loading="lazy"
+          src={partConfetti1}
+          className="confetti partConfetti1"
+          alt="Asher Praise Concert - Crowd enjoying the event"
+        />
+        <img
+          loading="lazy"
+          src={partConfetti2}
+          className="confetti partConfetti2"
+          alt="Asher Praise Concert - Crowd enjoying the event"
+        />
         <div className="container container-md container-sm partners-container">
           <div className="partner-content">
             <h1>Our Partners</h1>
@@ -396,6 +459,7 @@ export default function Home() {
               <div className="partner" key={partner.id}>
                 <SwiperSlide>
                   <img
+                    loading="lazy"
                     className="slidImg"
                     src={partner.url}
                     alt={partner.partnerName}
@@ -443,15 +507,29 @@ export default function Home() {
             </span>
           </div>
           <div className="image">
-            <img src={ministerurl} alt="" />
+            <img
+              loading="lazy"
+              src={ministerurl}
+              alt="Asher Praise Concert - Crowd enjoying the event"
+            />
           </div>
         </div>
       </section>
       {/* CONTACT */}
       <section className="contact-section" id="contact">
-        <img src={contactconfettiii} className="confetti" alt="" />
+        <img
+          loading="lazy"
+          src={contactconfettiii}
+          className="confetti"
+          alt="Asher Praise Concert - Crowd enjoying the event"
+        />
         <div className="contact-details">
-          <img src={contactconfetti} alt="" className="contactconfettiiiii" />
+          <img
+            loading="lazy"
+            src={contactconfetti}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+            className="contactconfettiiiii"
+          />
           <h1>Contact Us</h1>
           <p>
             If you have any questions or need further assistance, please
@@ -478,8 +556,9 @@ export default function Home() {
         </div>
         <div className="contact-form">
           <img
+            loading="lazy"
             src={contactconfetti2}
-            alt=""
+            alt="Asher Praise Concert - Crowd enjoying the event"
             className="contactconfettiiiii con"
           />
 
