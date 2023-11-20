@@ -13,7 +13,8 @@ import "swiper/css/pagination";
 import "./carousel.css";
 
 // import required modules
-import { Autoplay, EffectFade, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
+import Countdown from "../../hooks/countdown";
 
 export default function Carousel() {
   return (
@@ -24,10 +25,7 @@ export default function Carousel() {
       }}
       spaceBetween={30}
       effect={"fade"}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[EffectFade, Pagination, Autoplay]}
+      modules={[EffectFade, Autoplay]}
       className="mySwiper"
     >
       <SwiperSlide className="swiperslide swiperslide1">
@@ -35,6 +33,7 @@ export default function Carousel() {
         <div className="swipe-text">
           <h2>LAGOS</h2>
           <p>ARE YOU READY?</p>
+          <Countdown className="counting" />
         </div>
         {/* <img className="swiper-slide-img" src={bg1} /> */}
       </SwiperSlide>
@@ -43,6 +42,7 @@ export default function Carousel() {
           <h2>LAGOS</h2>
           <p>Save the date for</p>
           <p className="text-white text-5">ASHER PRAISE CONCERT</p>
+          <Countdown className="counting" />
           {/* <p>Freudes place maryland ikeja, Lagos state.</p> */}
         </div>
         {/* <img className="swiper-slide-img" src={bg3} /> */}
@@ -55,6 +55,7 @@ export default function Carousel() {
             Join us for an unforgettable journey filled with joy, music, and
             community spirit in God&apos;s presence.
           </p>
+          <Countdown className="counting" />
         </div>
         {/* <div className="overlay"></div> */}
         {/* <img className="swiper-slide-img" src={bg4} /> */}

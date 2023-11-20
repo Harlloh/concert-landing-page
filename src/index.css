@@ -278,6 +278,13 @@ section {
   .about-container {
     padding-top: 0.51rem;
   }
+  .counting {
+    font-size: 0.51rem;
+  }
+  .countdown h3 {
+    margin: 0 0.2rem;
+    -webkit-text-stroke-width: 1px;
+  }
 }
 
 .reveal {
