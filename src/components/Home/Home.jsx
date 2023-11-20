@@ -222,19 +222,16 @@ export default function Home() {
             </div>
           </div>
           <img
-            loading="lazy"
             className="confetti about-confetti"
             src={confetti1}
             alt="Asher Praise Concert - Crowd enjoying the event"
           />
           <img
-            loading="lazy"
             className="confetti  bout-confetti1"
             src={confetti11}
             alt="Asher Praise Concert - Crowd enjoying the event"
           />
           <img
-            loading="lazy"
             className="confetti dot-confetti"
             src={dot}
             alt="Asher Praise Concert - Crowd enjoying the event"
@@ -243,7 +240,6 @@ export default function Home() {
             <div className=" about ">
               {/* <div className="img"> */}
               <img
-                loading="lazy"
                 className="img1 reveal fade-right"
                 src={aboutImg}
                 alt="Asher Praise Concert - Crowd enjoying the event"
@@ -317,19 +313,16 @@ export default function Home() {
       <RevealSection>
         <section className="ministers-sect confetti-sect" id="ministers">
           <img
-            loading="lazy"
             src={confetti2}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="confetti confetti2"
           />
           <img
-            loading="lazy"
             src={confetti3}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="confetti confetti3 "
           />
           <img
-            loading="lazy"
             src={confetti4}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="confetti confetti4"
@@ -350,11 +343,7 @@ export default function Home() {
               <div className="minister">
                 {ministers.map((minister) => (
                   <div className="ministerdiv fade-right" key={minister.id}>
-                    <img
-                      loading="lazy"
-                      src={minister.url}
-                      alt={minister.ministerName}
-                    />
+                    <img src={minister.url} alt={minister.ministerName} />
                     <h2>{minister.ministerName}</h2>
                   </div>
                 ))}
@@ -378,11 +367,7 @@ export default function Home() {
             <div className="minister reveal fade-bottom">
               {wordministers.map((minister) => (
                 <div className="ministerdiv " key={minister.id}>
-                  <img
-                    loading="lazy"
-                    src={minister.url}
-                    alt={minister.ministerName}
-                  />
+                  <img src={minister.url} alt={minister.ministerName} />
                   <h2>{minister.ministerName}</h2>
                 </div>
               ))}
@@ -413,19 +398,16 @@ export default function Home() {
       {/* PARTNERS */}
       <section className="partners-sect">
         <img
-          loading="lazy"
           src={partConfetti}
           className="confetti partConfetti"
           alt="Asher Praise Concert - Crowd enjoying the event"
         />
         <img
-          loading="lazy"
           src={partConfetti1}
           className="confetti partConfetti1"
           alt="Asher Praise Concert - Crowd enjoying the event"
         />
         <img
-          loading="lazy"
           src={partConfetti2}
           className="confetti partConfetti2"
           alt="Asher Praise Concert - Crowd enjoying the event"
@@ -459,7 +441,6 @@ export default function Home() {
               <div className="partner" key={partner.id}>
                 <SwiperSlide>
                   <img
-                    loading="lazy"
                     className="slidImg"
                     src={partner.url}
                     alt={partner.partnerName}
@@ -508,7 +489,6 @@ export default function Home() {
           </div>
           <div className="image">
             <img
-              loading="lazy"
               src={ministerurl}
               alt="Asher Praise Concert - Crowd enjoying the event"
             />
@@ -518,14 +498,12 @@ export default function Home() {
       {/* CONTACT */}
       <section className="contact-section" id="contact">
         <img
-          loading="lazy"
           src={contactconfettiii}
           className="confetti"
           alt="Asher Praise Concert - Crowd enjoying the event"
         />
         <div className="contact-details">
           <img
-            loading="lazy"
             src={contactconfetti}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="contactconfettiiiii"
@@ -556,7 +534,6 @@ export default function Home() {
         </div>
         <div className="contact-form">
           <img
-            loading="lazy"
             src={contactconfetti2}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="contactconfettiiiii con"
