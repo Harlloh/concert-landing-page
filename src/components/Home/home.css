@@ -49,6 +49,14 @@
 }
 
 /* ABOUT SECTION */
+.detail-details h4 {
+  font-family: designer;
+}
+.detail-details p {
+  font-family: klsalite;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+}
 .aboutsect {
   position: relative;
   height: fit-content;
@@ -126,11 +134,14 @@
 .minister-container .ministersContent h1 {
   color: var(--general-dark, #222);
   /* /H2 */
-  font-family: Montserrat;
+  font-family: designer;
   font-size: 2.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: 130%; /* 2.7625rem */
+}
+.aboutcontent h2 {
+  font-family: designer;
 }
 .aboutcontent p,
 .minister-container .ministersContent p {

@@ -2,6 +2,18 @@
 body {
   overflow-x: hidden;
 }
+@font-face {
+  font-family: designer;
+  src: url("./fonts/DESIGNER.otf");
+}
+@font-face {
+  font-family: ladyLemon;
+  src: url("./fonts/Lady\ Lemons.ttf");
+}
+@font-face {
+  font-family: klsalite;
+  src: url("./fonts/Klsaltlime.ttf");
+}
 * {
   padding: 0;
   margin: 0;
@@ -26,7 +38,7 @@ h1 {
   line-height: normal;
 }
 p {
-  font-family: Inter;
+  font-family: Raleway;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -37,6 +49,12 @@ ul {
 }
 ul li {
   display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .swipe-text {
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media screen and (max-width: 675px) {
   .container {
@@ -58,7 +76,7 @@ body {
 }
 .countdown h3 {
   text-align: center;
-  font-family: Montserrat;
+  font-family: designer;
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
@@ -68,7 +86,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1.5px;
   /* font-size: 16pt; */
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 .title h1 {
   font-size: 6rem;

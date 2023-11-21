@@ -40,9 +40,9 @@ export default function Countdown() {
   return (
     <div className="countdown">
       {/* <h3 className="countdown-h3"> */}
-      <h3>{days}Days</h3>
-      <h3>{hour}Hours</h3>
-      <h3>{min}Min</h3>
+      <h3>{days}days</h3>
+      <h3>{hour}hours</h3>
+      <h3>{min}min</h3>
       <h3>{sec}sec</h3>
       {/* </h3> */}
     </div>

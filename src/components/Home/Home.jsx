@@ -53,6 +53,7 @@ import harmony from "../../assets/Moses Harmony.jpg";
 import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
 import aluko from "../../assets/Evang Tunde Aluko.jpg";
 import RevealSection from "../revealAnimation";
+import { toast } from "react-toastify";
 // import Victorade from "../../assets/v";
 export default function Home() {
   const form = useRef();
@@ -150,17 +151,19 @@ export default function Home() {
 
     emailjs
       .sendForm(
-        "service_tucsc17",
-        "template_xewlvcq",
+        "service_zowvbey",
+        "template_dk2xxuf",
         form.current,
-        "PDrtfi1e08Upd-uN7"
+        "_dav46sRXvD_65HCc"
       )
       .then(
         (result) => {
           console.log(result.text);
+          toast.success("Your message has been sent succesfully");
         },
         (error) => {
           console.log(error.text);
+          toast.error(error);
         }
       );
     e.target.reset();
@@ -387,8 +390,8 @@ export default function Home() {
             Would you like to contribute your talents to the concert or
             volunteer to help with preparations? We welcome your involvement!
             Contact us at{" "}
-            <Link to="mailto:goke.adedamola@gmail.com" className="emailllll">
-              goke.adedamola@gmail.com
+            <Link to="mailto:pr@asherpraiseconcert.com" className="emailllll">
+              pr@asherpraiseconcert.com
             </Link>{" "}
             for more information.
           </p>
@@ -522,9 +525,9 @@ export default function Home() {
               <FaPhoneAlt color="#FFA3A3" />
               +2348166906999
             </Link>
-            <Link to="mailto:goke.adedamola@gmail.com">
+            <Link to="mailto:pr@asherpraiseconcert.com">
               <FaEnvelope color="#FFA3A3" />
-              goke.adedamola@gmail.com
+              pr@asherpraiseconcert.com
             </Link>
             <Link to="#">
               <FaMapMarker color="#FFA3A3" />

@@ -21,7 +21,7 @@
 .swiperslide2,
 .swiperslide3 {
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   max-width: 100%;
 
   background-size: contain;
@@ -59,11 +59,12 @@
 .swipe-text p {
   font-size: 2.5rem;
   width: 100%;
-  color: #d5ba22;
+  color: #e5cf57;
   font-weight: 600;
   letter-spacing: 10px;
   margin: 0;
   line-height: 2rem;
+  font-family: ladyLemon;
 }
 .counting {
   position: inherit;
