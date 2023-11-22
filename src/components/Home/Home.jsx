@@ -209,7 +209,7 @@ export default function Home() {
               textAlign: "center",
               color: "white",
               margin: 0,
-              marginTop: "-2rem",
+              // marginTop: "-2rem",
             }}
           >
             Join us:
