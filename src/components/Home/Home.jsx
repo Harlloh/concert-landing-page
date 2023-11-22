@@ -282,7 +282,9 @@ export default function Home() {
           >
             We can&apos;t wait to have you
           </h1>
-          <p>Get your free ticket to #asherpraiseconcert2023</p>
+          <p style={{ textAlign: "center" }}>
+            Get your free ticket to #asherpraiseconcert2023
+          </p>
           <form action="" onSubmit={handleSubmit} ref={form}>
             <div className="inputs">
               <label htmlFor="name">Full Name:</label>
