@@ -204,15 +204,6 @@ export default function Home() {
           />
         </div>
         <div className="detailsss">
-          <h1
-            style={{
-              fontFamily: "hazard",
-              color: "white",
-              textAlign: "center",
-            }}
-          >
-            We can&apos;t wait to have you
-          </h1>
           <p
             style={{
               textAlign: "center",
@@ -221,7 +212,7 @@ export default function Home() {
               marginTop: "-2rem",
             }}
           >
-            Join us @
+            Join us:
           </p>
           <div className="detail d-flex gap-2 align-items-center">
             <FaCalendarAlt color="white" />
