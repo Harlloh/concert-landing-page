@@ -27,6 +27,12 @@
   border-radius: 50%;
   transition: 0.3s;
 }
+.footer-text a {
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  color: rgb(224, 189, 64);
+}
 .socials a:hover {
   cursor: pointer;
   border-color: rgb(224, 205, 64);

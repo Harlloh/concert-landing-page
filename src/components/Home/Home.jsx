@@ -10,6 +10,7 @@ import partConfetti from "../../assets/Confetti (4).png";
 import partConfetti1 from "../../assets/Confetti (5).png";
 // import gallery from "../../assets/minister.jpg";
 import partConfetti2 from "../../assets/Confetti (6).png";
+import asherimage from "../../assets/asherimage.jpg";
 import contactconfettiii from "../../assets/Confetti (7).png";
 import { Navigation, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
@@ -23,7 +24,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ministerurl from "../../assets/minister.jpg";
 import partnerUrl from "../../assets/theblock.webp";
-import contactconfetti from "../../assets/Shape.png";
+// import contactconfetti from "../../assets/Shape.png";
 import contactconfetti2 from "../../assets/Shape (1).png";
 import "./home.css";
 import { Link } from "react-router-dom";
@@ -31,12 +32,9 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import {
   FaCalendarAlt,
   FaClock,
-  FaEnvelope,
   FaFacebook,
   FaInstagram,
-  FaMapMarker,
   FaMapMarkerAlt,
-  FaPhoneAlt,
   FaYoutube,
 } from "react-icons/fa";
 // import Countdown from "../../hooks/countdown";
@@ -502,48 +500,33 @@ export default function Home() {
       <section className="contact-section" id="contact">
         <img
           src={contactconfettiii}
-          className="confetti"
+          className="confetti contact-confetti"
           alt="Asher Praise Concert - Crowd enjoying the event"
         />
-        <div className="contact-details">
+        {/* <div className="contact-details">
           <img
             src={contactconfetti}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="contactconfettiiiii"
           />
-          <h1>Contact Us</h1>
-          <p>
-            If you have any questions or need further assistance, please
-            don&apos;t hesitate to reach out to us
-          </p>
-          <div>
-            <Link to="tel:+2347017170126">
-              <FaPhoneAlt color="#FFA3A3" />
-              +2348067021210
-            </Link>
-            <Link to="tel:+2347017170126">
-              <FaPhoneAlt color="#FFA3A3" />
-              +2348166906999
-            </Link>
-            <Link to="mailto:pr@asherpraiseconcert.com">
-              <FaEnvelope color="#FFA3A3" />
-              pr@asherpraiseconcert.com
-            </Link>
-            <Link to="#">
-              <FaMapMarker color="#FFA3A3" />
-              Freudes place maryland ikeja, Lagos state
-            </Link>
-          </div>
-        </div>
-        <div className="contact-form">
+          
+        </div> */}
+        <img
+          src={asherimage}
+          style={{ width: "100%" }}
+          alt="Image of an asher concert person ;)"
+        />
+        <div className="contact-form" id="register">
           <img
             src={contactconfetti2}
             alt="Asher Praise Concert - Crowd enjoying the event"
             className="contactconfettiiiii con"
           />
 
-          <h1>Fill in your details</h1>
-          <p>send us a message</p>
+          <h1 style={{ fontFamily: "designer", color: "rgb(224, 189, 64)" }}>
+            Register For #AsherPraiseConcert2023
+          </h1>
+          <p>fill in your details:</p>
           <form action="" onSubmit={handleSubmit} ref={form}>
             <div className="inputs">
               <label htmlFor="name">Full Name:</label>
@@ -561,6 +544,32 @@ export default function Home() {
                 name="email"
                 required
                 placeholder="Enter your email address..."
+              />
+            </div>
+            <div className="inputs">
+              <label htmlFor="invitee">
+                {" "}
+                Email(s) of people you will invite
+              </label>
+              <input
+                type="email"
+                name="invitee"
+                id="invitee"
+                required
+                placeholder="I will invite...."
+              />
+            </div>
+            <div className="inputs">
+              <label htmlFor="invitee">
+                {" "}
+                Tell us where you&apos;ll be coming from:
+              </label>
+              <input
+                type="text"
+                name="location"
+                id="lcation"
+                required
+                placeholder="I am coming from..."
               />
             </div>
             <div className="inputs">

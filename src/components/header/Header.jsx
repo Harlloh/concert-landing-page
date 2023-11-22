@@ -46,6 +46,9 @@ export default function Header() {
               <li onClick={toggleMobileMenu}>
                 <a href="/#volunteer">Volunteer</a>
               </li>
+              <li onClick={toggleMobileMenu}>
+                <a href="/#register">Register</a>
+              </li>
 
               {/* <li onClick={toggleMobileMenu}>
                 <a href="#gallery">Gallery</a>

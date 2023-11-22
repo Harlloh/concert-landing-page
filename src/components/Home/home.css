@@ -294,6 +294,10 @@
 /* //////////////////////// */
 /* //////////////////////// */
 /* //////////////////////// */
+.contact-confetti {
+  right: 0;
+  position: absolute;
+}
 #contact {
   display: grid;
   grid-template-columns: 1fr 1fr;

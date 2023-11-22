@@ -1,11 +1,13 @@
 import {
+  FaEnvelope,
   FaFacebook,
   FaInstagram,
-  FaMapMarkerAlt,
+  FaMapMarker,
+  FaPhoneAlt,
   FaYoutube,
 } from "react-icons/fa";
 import "./footer.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 export default function Footer() {
@@ -33,13 +35,31 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-          <span>
+          {/* <span>
             <p>
               <FaMapMarkerAlt />
               Freudes place maryland ikeja, Lagos state
             </p>
             <p>goke.adedamola@gmail.com</p>
-          </span>
+          </span> */}
+          <div className="d-flex flex-column gap-3 footer-text">
+            <Link to="tel:+2347017170126">
+              <FaPhoneAlt color="#FFA3A3" />
+              +2348067021210
+            </Link>
+            <Link to="tel:+2347017170126">
+              <FaPhoneAlt color="#FFA3A3" />
+              +2348166906999
+            </Link>
+            <Link to="mailto:pr@asherpraiseconcert.com">
+              <FaEnvelope color="#FFA3A3" />
+              pr@asherpraiseconcert.com
+            </Link>
+            <Link to="#">
+              <FaMapMarker color="#FFA3A3" />
+              Freudes place maryland ikeja, Lagos state
+            </Link>
+          </div>
         </div>
         <div className="sociall">
           <h4>Stay connected</h4>
