@@ -11,6 +11,8 @@ import partConfetti1 from "../../assets/Confetti (5).png";
 // import gallery from "../../assets/minister.jpg";
 import partConfetti2 from "../../assets/Confetti (6).png";
 import asherimage from "../../assets/asherimage.jpg";
+import asherimage1 from "../../assets/asherimage1.jpg";
+import asherimage2 from "../../assets/asherimage2.jpg";
 import contactconfettiii from "../../assets/Confetti (7).png";
 import { Navigation, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
@@ -169,136 +171,206 @@ export default function Home() {
   return (
     <div className="home">
       <Carousel />
-      <RevealSection>
-        <section className="aboutsect " id="about">
-          <div className="detailsss">
-            <div className="detail d-flex gap-2 align-items-center">
-              <FaCalendarAlt color="white" />
-              <div className="detail-details text-white">
-                <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
-                <p
-                  style={{
-                    margin: 0,
-                    padding: 0,
-                    fontSize: ".82rem",
-                    lineHeight: "none",
-                  }}
-                >
-                  December 27th, 2023.
-                </p>
-              </div>
-            </div>
-            <div className="detail d-flex gap-2 align-items-center">
-              <FaMapMarkerAlt color="white" />
-              <div className="detail-details text-white">
-                <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
-                <p
-                  style={{
-                    margin: 0,
-                    padding: 0,
-                    fontSize: ".82rem",
-                    lineHeight: "none",
-                    // width: "75%",
-                  }}
-                >
-                  Freudes place maryland ikeja, Lagos state
-                </p>
-              </div>
-            </div>
-            <div className="detail d-flex gap-2 align-items-center">
-              <FaClock color="white" />
-              <div className="detail-details text-white">
-                <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
-                <p
-                  style={{
-                    margin: 0,
-                    padding: 0,
-                    fontSize: ".82rem",
-                    lineHeight: "none",
-                  }}
-                >
-                  4:00pm GMT+1(WAT)
-                </p>
-              </div>
+      {/* CONTACT */}
+      <section className="contact-section" id="contact">
+        <img
+          src={contactconfettiii}
+          className="confetti contact-confetti"
+          alt="Asher Praise Concert - Crowd enjoying the event"
+        />
+        {/* <div className="contact-details">
+          <img
+            src={contactconfetti}
+            alt="Asher Praise Concert - Crowd enjoying the event"
+            className="contactconfettiiiii"
+          />
+          
+        </div> */}
+        <div style={{ overflow: "scroll" }} className="d-flex">
+          <img
+            src={asherimage}
+            style={{ width: "100%" }}
+            alt="Image of an asher concert person ;)"
+          />
+          <img
+            src={asherimage1}
+            style={{ width: "100%" }}
+            alt="Image of an asher concert person ;)"
+          />
+          <img
+            src={asherimage2}
+            style={{ width: "100%" }}
+            alt="Image of an asher concert person ;)"
+          />
+        </div>
+        <div className="detailsss">
+          <h1
+            style={{
+              fontFamily: "hazard",
+              color: "white",
+              textAlign: "center",
+            }}
+          >
+            We can&apos;t wait to have you
+          </h1>
+          <p
+            style={{
+              textAlign: "center",
+              color: "white",
+              margin: 0,
+              marginTop: "-2rem",
+            }}
+          >
+            Join us @
+          </p>
+          <div className="detail d-flex gap-2 align-items-center">
+            <FaCalendarAlt color="white" />
+            <div className="detail-details text-white">
+              <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
+              <p
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  fontSize: ".82rem",
+                  lineHeight: "none",
+                }}
+              >
+                December 27th, 2023.
+              </p>
             </div>
           </div>
+          <div className="detail d-flex gap-2 align-items-center">
+            <FaMapMarkerAlt color="white" />
+            <div className="detail-details text-white">
+              <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
+              <p
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  fontSize: ".92rem",
+                  lineHeight: "none",
+                  // width: "75%",
+                }}
+              >
+                Freudes place maryland ikeja, Lagos state
+              </p>
+            </div>
+          </div>
+          <div className="detail d-flex gap-2 align-items-center">
+            <FaClock color="white" />
+            <div className="detail-details text-white">
+              <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
+              <p
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  fontSize: ".82rem",
+                  lineHeight: "none",
+                }}
+              >
+                4:00pm GMT+1(WAT)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="contact-form" id="register">
           <img
-            className="confetti about-confetti"
-            src={confetti1}
+            src={contactconfetti2}
             alt="Asher Praise Concert - Crowd enjoying the event"
+            className="contactconfettiiiii con"
           />
-          <img
-            className="confetti  bout-confetti1"
-            src={confetti11}
-            alt="Asher Praise Concert - Crowd enjoying the event"
-          />
-          <img
-            className="confetti dot-confetti"
-            src={dot}
-            alt="Asher Praise Concert - Crowd enjoying the event"
-          />
-          <div className="container container-md container-sm about-container">
-            <div className=" about ">
-              {/* <div className="img"> */}
-              <img
-                className="img1 reveal fade-right"
-                src={aboutImg}
-                alt="Asher Praise Concert - Crowd enjoying the event"
+
+          <h1
+            style={{
+              fontFamily: "hazard",
+              textAlign: "center",
+              fontSize: "2rem",
+              color: "rgb(224, 189, 64)",
+              letterSpacing: ".3rem",
+            }}
+          >
+            We can&apos;t wait to have you
+          </h1>
+          <p>Get your free ticket to #asherpraiseconcert2023</p>
+          <form action="" onSubmit={handleSubmit} ref={form}>
+            <div className="inputs">
+              <label htmlFor="name">Full Name:</label>
+              <input
+                type="text"
+                name="name"
+                required
+                placeholder="Enter your name here..."
               />
-              {/* </div> */}
-              <div className="aboutcontent reveal fade-left">
-                <h2>
-                  About <b>Asher Praise Concert</b>{" "}
-                </h2>
-                {/* <h5>Visions and missions</h5> */}
-                <p>
-                  Join us for an enchanting evening filled with soul-stirring
-                  melodies, powerful performances, and heartfelt worship. Our
-                  talented choir and special guests will lead us in an
-                  unforgettable experience of praise and worship.
-                </p>
-                <div className="socialssss">
-                  <p>
-                    Follow us, for the latest updates and behind-the-scenes
-                    glimpses leading up to the concert.
-                  </p>
-                  <span>
-                    <Link
-                      to="https://youtube.com"
-                      className="sociallll"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaYoutube color="black" />
-                      <p>Youtube</p>
-                    </Link>
-                    <Link
-                      to="facebook.com"
-                      className="sociallll"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaFacebook color="black" />
-                      <p>Facebook</p>
-                    </Link>
-                    <Link
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      to={
-                        "https://www.instagram.com/asherpraiseconcert/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                      }
-                      className="sociallll"
-                    >
-                      <FaInstagram color="black" />
-                      <p>Instagram</p>
-                    </Link>
-                  </span>
-                </div>
-              </div>
             </div>
-          </div>
-        </section>
-      </RevealSection>
+            <div className="inputs">
+              <label htmlFor="email">Email Address:</label>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Enter your email address..."
+              />
+            </div>
+            <div className="inputs">
+              <label htmlFor="invitee">
+                {" "}
+                Email(s) of people you would invite{" "}
+                <cite>
+                  <i>
+                    (List emails of people you want us to send ticket in your
+                    name)
+                  </i>
+                </cite>
+              </label>
+              <input
+                type="email"
+                name="invitee"
+                id="invitee"
+                required
+                placeholder="Send ticket to...."
+              />
+            </div>
+            <div className="inputs">
+              <label htmlFor="invitee">
+                {" "}
+                Tell us where you&apos;ll be coming from:
+              </label>
+              <input
+                type="text"
+                name="location"
+                id="lcation"
+                required
+                placeholder="I am coming from..."
+              />
+            </div>
+            <div className="inputs">
+              <label htmlFor="invitee">
+                {" "}
+                Whatsapp number(s) we can send in tickets
+              </label>
+              <input
+                type="number"
+                name="whatsappNumber"
+                id="whatsappNumber"
+                required
+              />
+            </div>
+            <div className="inputs">
+              <label htmlFor="message">Message:</label>
+              <textarea
+                name="message"
+                rows="4"
+                cols="50"
+                required
+                placeholder="ANything you want us to know..."
+              ></textarea>
+            </div>
+            <button type="submit" className="btn " id="formbtn">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
 
       {/* QUOTE */}
       <section className="quoteSect">
@@ -376,7 +448,6 @@ export default function Home() {
           </div>
         </div>
       </RevealSection>
-
       {/* GET INVOLVED */}
       <section
         className=" text-white py-5 align-items-center volunteer-sect"
@@ -395,7 +466,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
       {/* PARTNERS */}
       <section className="partners-sect">
         <img
@@ -452,7 +522,6 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-
       {/* GALLERY */}
       <section
         className="gallery-sect text-white py-5"
@@ -494,98 +563,6 @@ export default function Home() {
               alt="Asher Praise Concert - Crowd enjoying the event"
             />
           </div>
-        </div>
-      </section>
-      {/* CONTACT */}
-      <section className="contact-section" id="contact">
-        <img
-          src={contactconfettiii}
-          className="confetti contact-confetti"
-          alt="Asher Praise Concert - Crowd enjoying the event"
-        />
-        {/* <div className="contact-details">
-          <img
-            src={contactconfetti}
-            alt="Asher Praise Concert - Crowd enjoying the event"
-            className="contactconfettiiiii"
-          />
-          
-        </div> */}
-        <img
-          src={asherimage}
-          style={{ width: "100%" }}
-          alt="Image of an asher concert person ;)"
-        />
-        <div className="contact-form" id="register">
-          <img
-            src={contactconfetti2}
-            alt="Asher Praise Concert - Crowd enjoying the event"
-            className="contactconfettiiiii con"
-          />
-
-          <h1 style={{ fontFamily: "designer", color: "rgb(224, 189, 64)" }}>
-            Register For #AsherPraiseConcert2023
-          </h1>
-          <p>fill in your details:</p>
-          <form action="" onSubmit={handleSubmit} ref={form}>
-            <div className="inputs">
-              <label htmlFor="name">Full Name:</label>
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Enter your name here..."
-              />
-            </div>
-            <div className="inputs">
-              <label htmlFor="email">Email Address:</label>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="Enter your email address..."
-              />
-            </div>
-            <div className="inputs">
-              <label htmlFor="invitee">
-                {" "}
-                Email(s) of people you will invite
-              </label>
-              <input
-                type="email"
-                name="invitee"
-                id="invitee"
-                required
-                placeholder="I will invite...."
-              />
-            </div>
-            <div className="inputs">
-              <label htmlFor="invitee">
-                {" "}
-                Tell us where you&apos;ll be coming from:
-              </label>
-              <input
-                type="text"
-                name="location"
-                id="lcation"
-                required
-                placeholder="I am coming from..."
-              />
-            </div>
-            <div className="inputs">
-              <label htmlFor="message">Message:</label>
-              <textarea
-                name="message"
-                rows="4"
-                cols="50"
-                required
-                placeholder="Send us a message..."
-              ></textarea>
-            </div>
-            <button type="submit" className="btn " id="formbtn">
-              Send Message
-            </button>
-          </form>
         </div>
       </section>
     </div>

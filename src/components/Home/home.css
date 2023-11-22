@@ -248,7 +248,7 @@
   width: 15rem;
   border: 2px solid grey;
 
-  border-radius: 50%;
+  border-radius: 10px;
   box-shadow: 0 5px 10px black;
 }
 .ministers .minister .ministerdiv h2 {

@@ -40,6 +40,7 @@
   background-size: cover;
   background-image: url("../../assets/xan-griffin-eA2t5EvcxU4-unsplash.jpg");
 }
+
 .swipe-text {
   position: absolute;
   color: white;
@@ -54,6 +55,7 @@
 .swipe-text h2 {
   font-size: 12rem;
   margin-bottom: 0;
+  font-family: Ornate;
   opacity: 0.6;
 }
 .swipe-text p {

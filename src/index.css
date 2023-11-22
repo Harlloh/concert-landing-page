@@ -2,6 +2,7 @@
 body {
   overflow-x: hidden;
 }
+
 @font-face {
   font-family: designer;
   src: url("./fonts/DESIGNER.otf");
@@ -13,6 +14,14 @@ body {
 @font-face {
   font-family: klsalite;
   src: url("./fonts/Klsaltlime.ttf");
+}
+@font-face {
+  font-family: Ornate;
+  src: url("./fonts/Ornate.otf");
+}
+@font-face {
+  font-family: hazard;
+  src: url("./fonts/Hazard.otf");
 }
 * {
   padding: 0;
@@ -304,6 +313,9 @@ section {
   }
   .counting {
     font-size: 0.51rem;
+  }
+  .detailsss {
+    position: static;
   }
   .countdown h3 {
     margin: 0 0.2rem;
