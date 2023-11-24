@@ -41,10 +41,12 @@ import { useRef } from "react";
 import paulTomisin from "../../assets/paultomisin.jpg";
 import YinkaAlase from "../../assets/alaseyori.jpg";
 import Debora from "../../assets/Deborah Pelumi.jpg";
+import sammyMoore from "../../assets/sammyMoore.jpg";
 import Harjovy from "../../assets/Harjovy.jpg";
 import harmony from "../../assets/Moses Harmony.jpg";
 import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
 import aluko from "../../assets/Evang Tunde Aluko.jpg";
+import engo from "../../assets/engo.jpeg";
 import RevealSection from "../revealAnimation";
 // import Victorade from "../../assets/v";
 export default function Home() {
@@ -73,8 +75,8 @@ export default function Home() {
     },
     {
       id: 5,
-      ministerName: "Victor Ademofe",
-      url: ministerurl,
+      ministerName: "Sammy Moore",
+      url: sammyMoore,
     },
     {
       id: 5,
@@ -83,8 +85,8 @@ export default function Home() {
     },
     {
       id: 5,
-      ministerName: "Elijah Akintunde",
-      url: ministerurl,
+      ministerName: "Engo",
+      url: engo,
     },
   ];
 
