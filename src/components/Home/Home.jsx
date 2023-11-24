@@ -1,8 +1,8 @@
 // import ControlledCarousel from "../carousel/Carousel";
-import aboutImg from "../../assets/aboutImg.jpg";
-import dot from "../../assets/dot.png";
-import confetti1 from "../../assets/Confetti (1).png";
-import confetti11 from "../../assets/Pattern.png";
+// import aboutImg from "../../assets/aboutImg.jpg";
+// import dot from "../../assets/dot.png";
+// import confetti1 from "../../assets/Confetti (1).png";
+// import confetti11 from "../../assets/Pattern.png";
 import confetti2 from "../../assets/Confetti (2).png";
 import confetti3 from "../../assets/Confetti (3).png";
 import confetti4 from "../../assets/Pattern1.png";
@@ -31,14 +31,7 @@ import contactconfetti2 from "../../assets/Shape (1).png";
 import "./home.css";
 import { Link } from "react-router-dom";
 import "react-alice-carousel/lib/alice-carousel.css";
-import {
-  FaCalendarAlt,
-  FaClock,
-  FaFacebook,
-  FaInstagram,
-  FaMapMarkerAlt,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 // import Countdown from "../../hooks/countdown";
 import Carousel from "../carousel/Carousel";
 import { useRef } from "react";
@@ -53,7 +46,6 @@ import harmony from "../../assets/Moses Harmony.jpg";
 import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
 import aluko from "../../assets/Evang Tunde Aluko.jpg";
 import RevealSection from "../revealAnimation";
-import { toast } from "react-toastify";
 // import Victorade from "../../assets/v";
 export default function Home() {
   const form = useRef();
@@ -159,11 +151,11 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
-          toast.success("Your message has been sent succesfully");
+          alert("Your message has been sent succesfully");
         },
         (error) => {
           console.log(error.text);
-          toast.error(error);
+          alert(error);
         }
       );
     e.target.reset();
@@ -171,7 +163,72 @@ export default function Home() {
   return (
     <div className="home">
       <Carousel />
+      {/* <ToastContainer /> */}
       {/* CONTACT */}
+      <div className="detailsss">
+        <p
+          style={{
+            textAlign: "center",
+            color: "white",
+            margin: 0,
+            // marginTop: "-2rem",
+          }}
+        >
+          Join us for <b>#asherpraiseconcert2023</b>
+        </p>
+        <div className="ddddd ">
+          <div className="detail d-flex gap-2 align-items-center">
+            <FaCalendarAlt color="white" />
+            <div className="detail-details text-white">
+              <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
+              <p
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  fontSize: ".82rem",
+                  lineHeight: "none",
+                }}
+              >
+                December 27th, 2023.
+              </p>
+            </div>
+          </div>
+          <div className="detail d-flex gap-2 align-items-center">
+            <FaMapMarkerAlt color="white" />
+            <div className="detail-details text-white">
+              <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
+              <p
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  fontSize: ".92rem",
+                  lineHeight: "none",
+                  // width: "75%",
+                }}
+              >
+                Freudes place maryland ikeja, Lagos state
+              </p>
+            </div>
+          </div>
+          <div className="detail d-flex gap-2 align-items-center">
+            <FaClock color="white" />
+            <div className="detail-details text-white">
+              <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
+              <p
+                style={{
+                  margin: 0,
+                  padding: 0,
+                  fontSize: ".82rem",
+                  lineHeight: "none",
+                }}
+              >
+                4:00pm GMT+1(WAT)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="contact-section" id="contact">
         <img
           src={contactconfettiii}
@@ -189,21 +246,22 @@ export default function Home() {
         <div style={{ overflow: "scroll" }} className="d-flex">
           <img
             src={asherimage}
-            style={{ width: "100%" }}
+            style={{ width: "95%", borderRight: "2px solid white" }}
             alt="Image of an asher concert person ;)"
           />
           <img
             src={asherimage1}
-            style={{ width: "100%" }}
+            style={{ width: "95%", borderRight: "2px solid white" }}
             alt="Image of an asher concert person ;)"
           />
           <img
             src={asherimage2}
-            style={{ width: "100%" }}
+            style={{ width: "95%", borderRight: "2px solid white" }}
             alt="Image of an asher concert person ;)"
           />
         </div>
-        <div className="detailsss">
+        {/* 
+        <div className="detailsss detailssseeee">
           <p
             style={{
               textAlign: "center",
@@ -263,7 +321,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
+
         <div className="contact-form" id="register">
           <img
             src={contactconfetti2}
@@ -275,15 +334,15 @@ export default function Home() {
             style={{
               fontFamily: "hazard",
               textAlign: "center",
-              fontSize: "2rem",
-              color: "rgb(224, 189, 64)",
+              fontSize: "1.72rem",
+              textDecoration: "underline",
               letterSpacing: ".3rem",
             }}
           >
             We can&apos;t wait to have you
           </h1>
           <p style={{ textAlign: "center" }}>
-            Get your free ticket to #asherpraiseconcert2023
+            Get your free ticket to <b>#asherpraiseconcert2023</b>
           </p>
           <form action="" onSubmit={handleSubmit} ref={form}>
             <div className="inputs">
@@ -316,7 +375,7 @@ export default function Home() {
                 </cite>
               </label>
               <input
-                type="email"
+                type="text"
                 name="invitee"
                 id="invitee"
                 required
@@ -324,14 +383,14 @@ export default function Home() {
               />
             </div>
             <div className="inputs">
-              <label htmlFor="invitee">
+              <label htmlFor="location">
                 {" "}
                 Tell us where you&apos;ll be coming from:
               </label>
               <input
                 type="text"
                 name="location"
-                id="lcation"
+                id="location"
                 required
                 placeholder="I am coming from..."
               />

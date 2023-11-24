@@ -65,10 +65,16 @@
   padding: 7rem 0;
   align-items: center;
 }
-.detailsss {
-  position: absolute;
+.ddddd {
   display: flex;
-  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+}
+.detailsss {
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   /* transform: translate(0%, 50%); */
   top: 0;
   background-color: rgb(28, 43, 72);
@@ -294,6 +300,9 @@
 /* //////////////////////// */
 /* //////////////////////// */
 /* //////////////////////// */
+.detailssseeee {
+  display: none;
+}
 .contact-confetti {
   right: 0;
   position: absolute;

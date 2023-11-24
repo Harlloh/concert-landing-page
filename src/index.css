@@ -302,6 +302,9 @@ section {
   .detail-details p {
     font-size: 0.71rem;
   }
+  .detailssseeee {
+    display: block;
+  }
   .swipe-text p {
     font-weight: bold;
   }
@@ -321,6 +324,12 @@ section {
   .countdown h3 {
     margin: 0 0.2rem;
     -webkit-text-stroke-width: 1px;
+  }
+  .ddddd {
+    display: flex;
+    flex-direction: column;
+    gap: 0.751rem;
+    align-items: start;
   }
 }
 
