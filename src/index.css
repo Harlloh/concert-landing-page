@@ -320,6 +320,7 @@ section {
   }
   .detailsss {
     position: static;
+    border-radius: 0;
   }
   .countdown h3 {
     margin: 0 0.2rem;
