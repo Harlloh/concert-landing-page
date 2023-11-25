@@ -332,6 +332,9 @@ section {
     gap: 0.751rem;
     align-items: start;
   }
+  .volunteer-sect {
+    background-repeat: no-repeat;
+  }
 }
 
 .reveal {

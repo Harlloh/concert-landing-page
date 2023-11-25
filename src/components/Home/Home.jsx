@@ -24,12 +24,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import ministerurl from "../../assets/minister.jpg";
+import adegoke from '../../assets/ADEGOKE.png';
 import partnerUrl from "../../assets/theblock.webp";
 // import contactconfetti from "../../assets/Shape.png";
 import contactconfetti2 from "../../assets/Shape (1).png";
 import "./home.css";
-import { Link } from "react-router-dom";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 // import Countdown from "../../hooks/countdown";
@@ -39,12 +38,13 @@ import { useRef } from "react";
 // import Hero from "../carousel/Carousel";
 
 import paulTomisin from "../../assets/paultomisin.jpg";
+import volunteer from "../../assets/Volunteers.jpeg.jpg";
 import YinkaAlase from "../../assets/alaseyori.jpg";
 import Debora from "../../assets/Deborah Pelumi.jpg";
 import sammyMoore from "../../assets/sammyMoore.jpg";
 import Harjovy from "../../assets/Harjovy.jpg";
 import harmony from "../../assets/Moses Harmony.jpg";
-import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
+import topeOlo from "../../assets/topeolowo.png";
 import aluko from "../../assets/Evang Tunde Aluko.jpg";
 import engo from "../../assets/engo.jpeg";
 import RevealSection from "../revealAnimation";
@@ -189,6 +189,7 @@ export default function Home() {
                   padding: 0,
                   fontSize: ".82rem",
                   lineHeight: "none",
+                  color: "rgb(224, 189, 64)",
                 }}
               >
                 December 27th, 2023.
@@ -205,6 +206,7 @@ export default function Home() {
                   padding: 0,
                   fontSize: ".92rem",
                   lineHeight: "none",
+                  color: "rgb(224, 189, 64)",
                   // width: "75%",
                 }}
               >
@@ -222,6 +224,7 @@ export default function Home() {
                   padding: 0,
                   fontSize: ".82rem",
                   lineHeight: "none",
+                  color: "rgb(224, 189, 64)",
                 }}
               >
                 4:00pm GMT+1(WAT)
@@ -381,7 +384,7 @@ export default function Home() {
                 name="invitee"
                 id="invitee"
                 required
-                placeholder="Send ticket to...."
+                placeholder="Send ticket to(put comma between emails)...."
               />
             </div>
             <div className="inputs">
@@ -416,11 +419,11 @@ export default function Home() {
                 rows="4"
                 cols="50"
                 required
-                placeholder="ANything you want us to know..."
+                placeholder="anything you want us to know..."
               ></textarea>
             </div>
             <button type="submit" className="btn " id="formbtn">
-              Send Message
+              Submit
             </button>
           </form>
         </div>
@@ -504,10 +507,11 @@ export default function Home() {
       </RevealSection>
       {/* GET INVOLVED */}
       <section
-        className=" text-white py-5 align-items-center volunteer-sect"
+        className=" text-white align-items-center volunteer-sect"
         id="volunteer"
       >
-        <div className="container text-center">
+        <img src={volunteer} style={{width:'100%', height:'100%'}} alt="" />
+        {/* <div className="container text-center">
           <h1>Get Invoved.</h1>
           <p>
             Would you like to contribute your talents to the concert or
@@ -518,7 +522,7 @@ export default function Home() {
             </Link>{" "}
             for more information.
           </p>
-        </div>
+        </div> */}
       </section>
       {/* PARTNERS */}
       <section className="partners-sect">
@@ -584,6 +588,12 @@ export default function Home() {
       >
         <h1 className="conveyners">Convener&apos;s note</h1>
         <div className="container container-fluid conveyner">
+          <div className="image">
+            <img
+              src={adegoke}
+              alt="Asher Praise Concert - Crowd enjoying the event"
+            />
+          </div>
           <div className="content gap-3 d-flex flex-column">
             <cite>
               O Praise ye the LORD All ye heavenly hosts The great hour is at
@@ -611,12 +621,7 @@ export default function Home() {
               <cite>convener</cite>
             </span>
           </div>
-          <div className="image">
-            <img
-              src={ministerurl}
-              alt="Asher Praise Concert - Crowd enjoying the event"
-            />
-          </div>
+          
         </div>
       </section>
     </div>

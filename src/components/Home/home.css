@@ -130,7 +130,7 @@
 }
 
 .conveyner .image img {
-  width: 50%;
+  width: 75%;
   height: 100%;
   align-self: center;
   box-shadow: 5px 10px 5px rgb(42, 58, 92);
@@ -326,8 +326,12 @@
   color: white;
 }
 .volunteer-sect {
+  /* background-image: url("../../assets/Volunteers.jpeg.jpg"); */
+  background-size: contain;
+  background-repeat: repeat;
   background-color: rgb(28, 43, 72);
   margin: 4rem 0;
+  height: 70vh;
 }
 .contact-details,
 .contact-form {
@@ -386,8 +390,9 @@
   text-align: center;
   /* background-color: red; */
   margin-bottom: 1rem;
-  text-decoration: underline;
-  font-family: monospace;
+  /* text-decoration: underline; */
+  letter-spacing: 0.4rem;
+  font-family: Ornate;
 }
 .gallery-sect {
   display: flex;

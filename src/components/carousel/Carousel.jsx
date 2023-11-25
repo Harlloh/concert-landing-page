@@ -34,7 +34,12 @@ export default function Carousel() {
           {/* <h1>helooooo</h1> */}
           <div className="swipe-text">
             <h2 className="reveal fade-right lagos">LAGOS</h2>
-            <p>ARE YOU READY?</p>
+            <a
+              href="#register"
+              style={{ textDecoration: "none", cursor: "pointer" }}
+            >
+              <p>ARE YOU READY?</p>
+            </a>
             <Countdown className="counting" />
           </div>
           {/* <img className="swiper-slide-img" src={bg1} /> */}
