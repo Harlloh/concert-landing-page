@@ -510,7 +510,7 @@ export default function Home() {
         className=" text-white align-items-center volunteer-sect"
         id="volunteer"
       >
-        <img src={volunteer} style={{width:'100%', height:'100%'}} alt="" />
+        <img src={volunteer} style={{width:'100%', height:'auto'}} alt="" />
         {/* <div className="container text-center">
           <h1>Get Invoved.</h1>
           <p>
