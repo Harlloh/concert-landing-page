@@ -28,10 +28,15 @@
   transition: 0.3s;
 }
 .footer-text a {
+  font-size: .65rem;
   display: flex;
+  text-decoration: none;
   gap: 0.2rem;
   align-items: center;
   color: rgb(224, 189, 64);
+}
+.footer-text a svg{
+  font-size: 1rem;
 }
 .socials a:hover {
   cursor: pointer;

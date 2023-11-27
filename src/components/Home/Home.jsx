@@ -44,7 +44,7 @@ import Debora from "../../assets/Deborah Pelumi.jpg";
 import sammyMoore from "../../assets/sammyMoore.jpg";
 import Harjovy from "../../assets/Harjovy.jpg";
 import harmony from "../../assets/Moses Harmony.jpg";
-import topeOlo from "../../assets/topeolowo.png";
+import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
 import aluko from "../../assets/Evang Tunde Aluko.jpg";
 import engo from "../../assets/engo.jpeg";
 import RevealSection from "../revealAnimation";
@@ -524,7 +524,8 @@ export default function Home() {
           </p>
         </div> */}
       </section>
-      {/* PARTNERS */}
+
+     {/* PARTNERS
       <section className="partners-sect">
         <img
           src={partConfetti}
@@ -580,6 +581,7 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
+        */}
       {/* GALLERY */}
       <section
         className="gallery-sect text-white py-5"

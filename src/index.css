@@ -214,8 +214,8 @@ section {
   }
 
   .ministers .minister .ministerdiv img {
-    width: 13rem;
-    height: 15rem;
+    /* width: 13rem;
+    height: 15rem; */
     /* border-width: 5px; */
   }
   .footer-container {
