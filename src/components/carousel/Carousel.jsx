@@ -55,18 +55,7 @@ export default function Carousel() {
           {/* <img className="swiper-slide-img" src={bg3} /> */}
         </SwiperSlide>
 
-        <SwiperSlide className="swiperslide3">
-          <div className="swipe-text" style={{ zIndex: "2" }}>
-            <h2 className="reveal fade-bottom lagos">LAGOS</h2>
-            <p className="text-white">
-              Join us for an unforgettable journey filled with joy, music, and
-              community spirit in God&apos;s presence.
-            </p>
-            <Countdown className="counting" />
-          </div>
-          {/* <div className="overlay"></div> */}
-          {/* <img className="swiper-slide-img" src={bg4} /> */}
-        </SwiperSlide>
+       
         {/* <Countdown /> */}
       </Swiper>
     </RevealSection>

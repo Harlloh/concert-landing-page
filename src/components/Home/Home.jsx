@@ -37,16 +37,16 @@ import { useRef } from "react";
 // import Gallery from "../carousel/Carousel";
 // import Hero from "../carousel/Carousel";
 
-import paulTomisin from "../../assets/paultomisin.jpg";
+import paulTomisin from "../../assets/paultomisin1.png";
 import volunteer from "../../assets/Volunteers.jpeg.jpg";
-import YinkaAlase from "../../assets/alaseyori.jpg";
-import Debora from "../../assets/Deborah Pelumi.jpg";
-import sammyMoore from "../../assets/sammyMoore.jpg";
-import Harjovy from "../../assets/Harjovy.jpg";
-import harmony from "../../assets/Moses Harmony.jpg";
-import topeOlo from "../../assets/Pastor Tope Olowoporoku.jpg";
-import aluko from "../../assets/Evang Tunde Aluko.jpg";
-import engo from "../../assets/engo.jpeg";
+import YinkaAlase from "../../assets/alaseyori1.png";
+import Debora from "../../assets/Deborah Pelumi1.png";
+import sammyMoore from "../../assets/sammyMoore1.png";
+import Harjovy from "../../assets/Harjovy1.jpg.png";
+import harmony from "../../assets/Moses Harmony1.jpg.png";
+import topeOlo from "../../assets/topeolowo.png";
+import aluko from "../../assets/Evang Tunde Aluko1.png";
+import engo from "../../assets/engo1.png";
 import RevealSection from "../revealAnimation";
 // import Victorade from "../../assets/v";
 export default function Home() {
@@ -510,7 +510,7 @@ export default function Home() {
         className=" text-white align-items-center volunteer-sect"
         id="volunteer"
       >
-        <img src={volunteer} style={{width:'100%', height:'auto'}} alt="" />
+        <img src={volunteer} style={{width:'100%', height:'auto', }} alt="" />
         {/* <div className="container text-center">
           <h1>Get Invoved.</h1>
           <p>

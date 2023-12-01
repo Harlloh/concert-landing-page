@@ -7,6 +7,7 @@ import {
 import Layout from "./Layout/Layout";
 import Home from "./components/Home/Home";
 import Give from "./components/give/Give";
+import Playlist from "./components/playlist/Playlist";
 // import Carousel from "./components/carousel/Carousel";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" exact element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="give" element={<Give />} />
+          <Route path="playlist" element={<Playlist />} />
         </Route>
       </Route>
     )

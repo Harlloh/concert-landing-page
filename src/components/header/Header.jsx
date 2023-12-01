@@ -47,6 +47,9 @@ export default function Header() {
                 <a href="/#volunteer">Volunteer</a>
               </li>
               <li onClick={toggleMobileMenu}>
+                <NavLink to="/playlist">Playlist & Prayer</NavLink>
+              </li>
+              <li onClick={toggleMobileMenu}>
                 <a href="/#register">Register</a>
               </li>
 

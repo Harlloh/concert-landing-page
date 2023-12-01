@@ -1,0 +1,103 @@
+/* Add these styles to your existing stylesheet */
+
+.cardd {
+  border-bottom: 1px solid black;
+  padding-bottom: 8px;
+  width: 100%;
+  margin: 0 auto;
+  /* background-color: red; */
+}
+
+.give-secti {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.78)),
+    url("../../assets/high-angle-children-holding-hands.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top bottom;
+  height: 80vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  justify-content: center;
+  color: white; /* Set the default text color to white */
+}
+
+.give-sect p {
+  color: #ff9b0d;
+}
+
+.give-sect h3 cite {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.give-sect h3 span {
+  font-family: Inter;
+  color: #ff9b0d;
+  font-weight: 500;
+}
+
+/* Add a class for styling the prayer request section */
+.prayer-request-sect {
+  padding: 20px;
+  background-color: #f8f8f8;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form inside the prayer request section */
+.prayer-request-sect form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the label and textarea */
+.prayer-request-sect label {
+  margin-bottom: 8px;
+}
+
+.prayer-request-sect textarea, .prayer-request-sect input{
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.prayer-request-sect button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prayer-request-sect button:hover {
+  background-color: #45a049;
+}
+.imagee {
+    height: auto;
+    width: 10rem;
+    min-width: auto;
+    min-height: auto;
+    max-width: auto;
+    max-height: auto;
+    /* border: 2px solid grey; */
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgb(95, 95, 95);
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 640px) {
+  .give-sect {
+    background-size: cover;
+   
+  }
+}
+

@@ -45,32 +45,55 @@ export default function Give() {
         </h3>
       </section>
       <div className="container mt-5">
-        <span style={{ display: "none" }}>
-          By agreeing to give, you affirm that the seed/love offering/donation
-          you are giving to the benefiary is a legitimate proceed from your
-          job/business/ministry and you are making this donation voluntarily in
-          support of Dunsin Oyekan Ministries and all its Code Red subsidiaries
-          without any form of solicitation, inducement or coersion from the
-          ministry. By accepting to give, you are also indemnifying the
-          beneficiary and its successors and assigns from and against any claim,
-          demand, action, liability, charges or suits arising in connection to
-          your donation.
-        </span>
+        <h1>Do you love Me?</h1>
         <div className="give-details">
           <p>
-            This edition target feeding and ameliorating the pains of 100 widows
-            and indgent ones in out communities across lagos.
+            Loneliness at Christmas spurs more people into self-injury just the
+            day after the holiday. The Centre for Disease Control & Prevention
+            CDC affirms this much. While the delay in self-harm during the
+            holiday itself that is apparent from worldwide statistics have been
+            explained away as not wanting to spoil the experience for others,
+            the spike in this vice just after the holiday, remains a concern.
+            The very allure of holiday, it has been explained, contributes to
+            this behavior when feelings of disappointment heighten. Failure of
+            Xmas picture perfect to heal people has been explained by the Bible
+            as being the enemy’s doing. God’s creation which is originally good
+            has been corrupted by the enemy. His motive for doing this is to
+            derail God’s work and create feelings of disappointment in the
+            people whom God loves.
           </p>
-          <h4>What can i donate?</h4>
-          <ol>
-            <li>Food items</li>
-            <li>Provisions</li>
-            <li>CLothings</li>
-            <li>Stationeries</li>
-            <li>BIbles</li>
-            <li>Household Items</li>
-            <li>Monetarily</li>
-          </ol>
+          <h4>Feed My Sheep</h4>
+          <p>
+            The rumblings had settled of the noisy weeks before; the
+            earth-shaking event which followed the Passover, culminating into
+            the resurrection from death of their LORD. Fear, so palpable the
+            week before, was now giving way to faith and gratitude. Peter with
+            his brethren had seen with their eyes what the whole of humanity
+            would give everything to witness. Yet they had to eat and continue
+            with their normal lives. But there were multitudes who were supposed
+            to be part of the story; for whom the cause of the past weeks was
+            designed. Christ appeared in the dusk of a busy day when Peter had
+            beseeched his brethren to return to their daily lives. “Do you love
+            me more than these?” The third time that he asked, he followed with
+            a command; “Feed My Sheep”. The church today has lived their faith,
+            the great experiences of the miraculous so intensely that they are
+            potentially blinded to the real essence of their own salvation. What
+            about them? What about those who honestly have little to celebrate
+            at Christmas? What about them who have no feet to dance away the
+            Asher Praise concert evening happening on December 27th? Or them who
+            have no sight to behold the beautiful Christmas lights? It is when
+            the faithful lets the light and love of Christ shine through to
+            these ones that they can be sure that the word of God will come true
+            about the church as it was said in that prophetic Hymn 210 of the
+            Celestial Church;
+          </p>
+          <p>
+            <cite>
+              ALL ye people exalt ye Jesus, <br /> Kindle
+              the light amidst all darkness, That Father&apos;s promise be fulfilled
+              in the end
+            </cite>
+          </p>
         </div>
         <section className="givesect  d-flex justify-content-center flex-wrap">
           {giveObj.map((give, index) => {
