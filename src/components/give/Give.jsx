@@ -49,7 +49,7 @@ export default function Give() {
         </p>
       </section>
       <div className="container mt-5">
-        <h1>Do you love Me?</h1>
+        <h1>The day after the holiday</h1>
         <div className="give-details">
           <p>
             Loneliness at Christmas spurs more people into self-injury just the
@@ -69,7 +69,7 @@ export default function Give() {
           <Link to="/">
             <img src={bg3} alt="" className="bg3" />
           </Link>
-          <h4>The day after the holiday</h4>
+          <h4>Feed my sheep</h4>
           <p>
             The rumblings had settled of the noisy weeks before; the
             earth-shaking event which followed the Passover, culminating into
