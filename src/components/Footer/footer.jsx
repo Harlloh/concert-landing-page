@@ -12,7 +12,7 @@ import logo from "../../assets/logo.png";
 
 export default function Footer() {
   return (
-    <section className="footer-sect">
+    <section className="footer-sect" id="footer">
       <div className="container footer-container">
         <div className="comp">
           <img src={logo} className="logoFooter" alt="" />

@@ -34,21 +34,23 @@ export default function Header() {
               <li onClick={toggleMobileMenu}>
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li onClick={toggleMobileMenu}>
+              {/* <li onClick={toggleMobileMenu}>
                 <a href="/#about">About</a>
-              </li>
-              <li onClick={toggleMobileMenu}>
-                <NavLink to="give">Do you love me?</NavLink>
-              </li>
+              </li> */}
               <li onClick={toggleMobileMenu}>
                 <a href="/#ministers">Ministers</a>
               </li>
               <li onClick={toggleMobileMenu}>
-                <a href="/#volunteer">Volunteer</a>
-              </li>
-              <li onClick={toggleMobileMenu}>
                 <NavLink to="/playlist">Playlist & Prayer</NavLink>
               </li>
+              <li onClick={toggleMobileMenu}>
+                <NavLink to="give">Do you love me?</NavLink>
+              </li>
+
+              <li onClick={toggleMobileMenu}>
+                <a href="/#volunteer">Volunteer</a>
+              </li>
+
               <li onClick={toggleMobileMenu}>
                 <a href="/#register">Register</a>
               </li>
@@ -57,7 +59,7 @@ export default function Header() {
                 <a href="#gallery">Gallery</a>
               </li> */}
               <li onClick={toggleMobileMenu}>
-                <a href="/#contact" className="btn">
+                <a href="/#footer" className="btn">
                   Contact
                 </a>
               </li>

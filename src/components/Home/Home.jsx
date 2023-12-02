@@ -434,7 +434,7 @@ export default function Home() {
         <div className="container container-md container-sm quote">
           <h3>
             <i>
-              “The most effective preaching of the gospel is when it is
+              “The most effective power of the gospel is when it is
               accompanied by beautiful, appropriate music.”
             </i>
           </h3>
