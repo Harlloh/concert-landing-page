@@ -341,14 +341,14 @@ section {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
-  transition: 2s all ease;
+  transition: .92s all ease;
 }
 .reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
 .active.fade-bottom {
-  animation: fade-bottom 1s ease-in;
+  animation: fade-bottom .31s ease-in;
 }
 .active.fade-left {
   animation: fade-left 0.31s ease-in;

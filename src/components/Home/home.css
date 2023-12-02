@@ -131,7 +131,7 @@
 
 .conveyner .image img {
   width: auto;
-  height: auto;
+  height: 75vh;
   align-self: center;
   box-shadow: 5px 10px 5px rgb(42, 58, 92);
   border-radius: 10px;
