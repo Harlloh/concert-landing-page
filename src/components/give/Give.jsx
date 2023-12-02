@@ -41,11 +41,12 @@ export default function Give() {
   ];
   return (
     <>
-      <section className="give-sect">
-        <h3>
+      <section className="give-sect d-flex flex-column">
+        <h3>Do you love me?</h3>
+        <p>
           Charity to <span>Widows and Indigents</span>
           <br /> in the Community
-        </h3>
+        </p>
       </section>
       <div className="container mt-5">
         <h1>Do you love Me?</h1>
@@ -65,9 +66,8 @@ export default function Give() {
             derail God’s work and create feelings of disappointment in the
             people whom God loves.
           </p>
-          <Link to='/'>
-
-          <img src={bg3} alt="" className="bg3" />
+          <Link to="/">
+            <img src={bg3} alt="" className="bg3" />
           </Link>
           <h4>The day after the holiday</h4>
           <p>
@@ -96,9 +96,8 @@ export default function Give() {
           </p>
           <p>
             <cite>
-              ALL ye people exalt ye Jesus, <br /> Kindle
-              the light amidst all darkness, That Father&apos;s promise be fulfilled
-              in the end
+              ALL ye people exalt ye Jesus, <br /> Kindle the light amidst all
+              darkness, That Father&apos;s promise be fulfilled in the end
             </cite>
           </p>
         </div>

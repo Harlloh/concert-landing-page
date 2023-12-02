@@ -32,11 +32,11 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route>
+      <Route> 
         <Route path="/" exact element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="give" element={<Give />} />
-          <Route path="playlist" element={<Playlist />} />
+          <Route path="/give" element={<Give />} />
+          <Route path="/playlist" element={<Playlist />} />
         </Route>
       </Route>
     )
