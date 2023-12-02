@@ -71,7 +71,7 @@ export default function Footer() {
               <FaInstagram size="1.5rem" />
             </NavLink>
 
-            <NavLink to="hhtps://youtube.com">
+            <NavLink to="https://www.youtube.com/@adegokeadedamola159">
               <FaYoutube size="1.5rem" />
             </NavLink>
           </div>
