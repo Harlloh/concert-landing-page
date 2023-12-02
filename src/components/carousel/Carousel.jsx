@@ -54,13 +54,9 @@ export default function Carousel() {
           </div>
           {/* <img className="swiper-slide-img" src={bg3} /> */}
         </SwiperSlide>
-        <SwiperSlide className="swiperslide3">
-         
-          <img className="swiper-slide-img" src={bg3} />
-        </SwiperSlide>
+       
 
        
-        {/* <Countdown /> */}
       </Swiper>
     </RevealSection>
   );
