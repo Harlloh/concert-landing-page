@@ -64,7 +64,7 @@ export default function Footer() {
         <div className="sociall">
           <h4>Stay connected</h4>
           <div className="socials d-flex gap-3">
-            <NavLink to="www.facebbok.com">
+            <NavLink to="https://web.facebook.com/groups/3619767918302573/">
               <FaFacebook size="1.5rem" />
             </NavLink>
             <NavLink to="https://www.instagram.com/asherpraiseconcert/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==">
