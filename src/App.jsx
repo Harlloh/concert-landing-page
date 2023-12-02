@@ -1,6 +1,8 @@
 import {
+  BrowserRouter,
   Route,
   RouterProvider,
+  Routes,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
@@ -42,7 +44,18 @@ function App() {
     )
   );
   // return <Carousel />;
-  return <RouterProvider router={router} />;
+  return (
+    // <RouterProvider router={router} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="give" element={<Give />} />
+          <Route path="playlist" element={<Playlist />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
