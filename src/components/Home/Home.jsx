@@ -24,7 +24,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import adegoke from '../../assets/ADEGOKE.png';
+import adegoke from '../../assets/ADEGOKE.jpg';
 import partnerUrl from "../../assets/theblock.webp";
 // import contactconfetti from "../../assets/Shape.png";
 import contactconfetti2 from "../../assets/Shape (1).png";

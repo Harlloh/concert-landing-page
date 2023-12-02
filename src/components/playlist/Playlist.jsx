@@ -14,13 +14,14 @@ import harjovyaudio from "../../assets/harjovyaudio.mp3";
 import harmonysaudio from "../../assets/harmonyaudio.mp3";
 import sammoore from "../../assets/sammoore.mp3";
 import engosaudio from "../../assets/engoaudio.mp3";
-import emailjs  from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
+import bg3 from "../../assets/flier.jpg";
+import { Link } from "react-router-dom";
 
 export default function Playlist() {
   const [prayerRequest, setPrayerRequest] = useState("");
   const [name, setName] = useState("");
-  const form = useRef()
-
+  const form = useRef();
 
   const handlePrayerRequestSubmit = (e) => {
     e.preventDefault();
@@ -35,8 +36,8 @@ export default function Playlist() {
       .then(
         (result) => {
           console.log(result.text);
-          setPrayerRequest('')
-          setName('')
+          setPrayerRequest("");
+          setName("");
           alert("Prayer request submitted:");
         },
         (error) => {
@@ -130,6 +131,9 @@ export default function Playlist() {
         </form>
       </section>
 
+      <Link to="/" id="yy">
+        <img src={bg3} className="bg3" alt="" />
+      </Link>
       <section className="ministers-section align-items-center d-flex flex-column">
         <h4 style={{ fontFamily: "designer" }}>Featured Ministers</h4>
         <ul className="container mb-3">

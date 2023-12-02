@@ -37,8 +37,13 @@
   background-image: url("../../assets/edwin-andrade-6liebVeAfrY-unsplash.jpg");
 }
 .swiperslide3 {
-  background-size: cover;
-  background-image: url("../../assets/xan-griffin-eA2t5EvcxU4-unsplash.jpg");
+  background-size: contain;
+background-repeat: repeat;
+  background-image: url("../../assets/flier.jpg");
+}
+.swiperslide img{
+  width: 50%;
+  height: 100vh;
 }
 
 .swipe-text {

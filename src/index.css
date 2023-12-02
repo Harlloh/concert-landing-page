@@ -283,7 +283,7 @@ section {
     border-radius: 0;
   }
   .swiper-slide .swiper-slide-img {
-    height: 65vh;
+    height: 100%;
     width: 100vw;
     border-radius: 0;
   }

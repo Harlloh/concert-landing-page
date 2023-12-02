@@ -100,4 +100,14 @@
    
   }
 }
+#yy{
+  width: 100%;
+  margin: 0 auto;
+  background: #000;
+}
+.bg3{
+  width: 50%;
+  height: 50%;
+  margin: 2rem auto;
+}
 

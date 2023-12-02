@@ -1,5 +1,8 @@
 import { FaCheckCircle } from "react-icons/fa";
 import "./give.css";
+import bg3 from "../../assets/flier.jpg";
+import { Link } from "react-router-dom";
+
 
 export default function Give() {
   const giveObj = [
@@ -62,7 +65,11 @@ export default function Give() {
             derail God’s work and create feelings of disappointment in the
             people whom God loves.
           </p>
-          <h4>Feed My Sheep</h4>
+          <Link to='/'>
+
+          <img src={bg3} alt="" className="bg3" />
+          </Link>
+          <h4>The day after the holiday</h4>
           <p>
             The rumblings had settled of the noisy weeks before; the
             earth-shaking event which followed the Passover, culminating into

@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 // import bg1 from "../../assets/terren-hurst-KU66acygwIY-unsplash.jpg";
 // import bg2 from "../../assets/edward-cisneros-QSa-uv4WJ0k-unsplash.jpg";
-// import bg3 from "../../assets/edwin-andrade-6liebVeAfrY-unsplash.jpg";
+import bg3 from "../../assets/flier.jpg";
 // import bg4 from "../../assets/xan-griffin-eA2t5EvcxU4-unsplash.jpg";
 import "./carousel.css";
 
@@ -53,6 +53,10 @@ export default function Carousel() {
             {/* <p>Freudes place maryland ikeja lagos, Lagos state.</p> */}
           </div>
           {/* <img className="swiper-slide-img" src={bg3} /> */}
+        </SwiperSlide>
+        <SwiperSlide className="swiperslide3">
+         
+          <img className="swiper-slide-img" src={bg3} />
         </SwiperSlide>
 
        
