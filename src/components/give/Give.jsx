@@ -82,17 +82,21 @@ export default function Give() {
             designed. Christ appeared in the dusk of a busy day when Peter had
             beseeched his brethren to return to their daily lives. “Do you love
             me more than these?” The third time that he asked, he followed with
-            a command; “Feed My Sheep”. The church today has lived their faith,
-            the great experiences of the miraculous so intensely that they are
-            potentially blinded to the real essence of their own salvation. What
-            about them? What about those who honestly have little to celebrate
-            at Christmas? What about them who have no feet to dance away the
-            Asher Praise concert evening happening on December 27th? Or them who
-            have no sight to behold the beautiful Christmas lights? It is when
-            the faithful lets the light and love of Christ shine through to
-            these ones that they can be sure that the word of God will come true
-            about the church as it was said in that prophetic Hymn 210 of the
-            Celestial Church;
+            a command; “Feed My Sheep”.
+            <br />
+            <p className="mt-3">
+              The church today has lived their faith, the great experiences of
+              the miraculous so intensely that they are potentially blinded to
+              the real essence of their own salvation. What about them? What
+              about those who honestly have little to celebrate at Christmas?
+              What about them who have no feet to dance away the Asher Praise
+              concert evening happening on December 27th? Or them who have no
+              sight to behold the beautiful Christmas lights? It is when the
+              faithful lets the light and love of Christ shine through to these
+              ones that they can be sure that the word of God will come true
+              about the church as it was said in that prophetic Hymn 210 of the
+              Celestial Church;
+            </p>
           </p>
           <p>
             <cite>
