@@ -526,7 +526,7 @@ export default function Home() {
         </div> */}
       </section>
 
-     PARTNERS
+     
       <section className="partners-sect">
         <img
           src={partConfetti}
