@@ -25,7 +25,12 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import adegoke from '../../assets/ADEGOKE.jpg';
-import partnerUrl from "../../assets/theblock.webp";
+import partnerUrl from "../../assets/partner0.png";
+import partnerUrl1 from "../../assets/partner00.png";
+import partnerUrl2 from "../../assets/partners000.jpg";
+import partnerUrl3 from "../../assets/partners0000.jpg";
+import partnerUrl4 from "../../assets/partners00000.jpg";
+import partnerUrl5 from "../../assets/partners000000.png";
 // import contactconfetti from "../../assets/Shape.png";
 import contactconfetti2 from "../../assets/Shape (1).png";
 import "./home.css";
@@ -111,33 +116,29 @@ export default function Home() {
     {
       id: 2,
       ministerName: "Adeoye Sunday ",
-      url: partnerUrl,
+      url: partnerUrl1,
     },
     {
       id: 3,
       ministerName: "Kingston Frank",
-      url: partnerUrl,
+      url: partnerUrl2,
     },
     {
       id: 4,
       ministerName: "Kingston Frank",
-      url: partnerUrl,
+      url: partnerUrl3,
     },
     {
       id: 5,
       ministerName: "Kingston Frank",
-      url: partnerUrl,
+      url: partnerUrl4,
     },
     {
       id: 6,
       ministerName: "Kingston Frank",
-      url: partnerUrl,
+      url: partnerUrl5,
     },
-    {
-      id: 7,
-      ministerName: "Kingston Frank",
-      url: partnerUrl,
-    },
+   
   ];
 
   const handleSubmit = (e) => {
@@ -430,7 +431,7 @@ export default function Home() {
       </section>
 
       {/* QUOTE */}
-      <section className="quoteSect">
+      <section className="quoteSect">a
         <div className="container container-md container-sm quote">
           <h3>
             <i>
@@ -525,7 +526,7 @@ export default function Home() {
         </div> */}
       </section>
 
-     {/* PARTNERS
+     PARTNERS
       <section className="partners-sect">
         <img
           src={partConfetti}
@@ -555,7 +556,7 @@ export default function Home() {
             // install Swiper modules
 
             spaceBetween={1}
-            slidesPerView={5}
+            slidesPerView={4}
             // navigation
             loop={true} // Enable infinite loop
             autoplay={{
@@ -581,7 +582,7 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-        */}
+       
       {/* GALLERY */}
       <section
         className="gallery-sect text-white py-5"
