@@ -54,42 +54,56 @@ export default function Playlist() {
       ministerName: "Paul Tomisin",
       audios: paulaudio,
       url: paulTomisin,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December-December events in Lagos-Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
     },
     {
       id: 2,
       ministerName: "Yinka Alaseyori",
       audios: yinkaudio,
       url: YinkaAlase,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December-December events in Lagos-Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
     },
     {
       id: 3,
       ministerName: "Deborah Pelumi",
       audios: deborahaudio,
       url: Debora,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December-December events in Lagos-Praise Concert in Lagos - Asher Praise Concert-ADEGOKE&apos;concert",
     },
     {
       id: 4,
       ministerName: "Harjovy",
       audios: harjovyaudio,
       url: Harjovy,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December-December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
     },
     {
       id: 5,
       ministerName: "Sammy Moore",
       audios: sammoore,
       url: sammyMoore,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December-December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
     },
     {
       id: 6,
       ministerName: "Moses Harmony",
       audios: harmonysaudio,
       url: harmony,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December - December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
     },
     {
       id: 7,
       ministerName: "Engo",
       audios: engosaudio,
       url: engo,
+      ministersAlt:
+        "Asher praise concert - Concert in Lagos this December-December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
     },
   ];
 
@@ -132,7 +146,19 @@ export default function Playlist() {
       </section>
 
       <Link to="/" id="yy">
-        <img src={bg3} className="bg3" alt="" />
+        <img
+          src={bg3}
+          className="bg3"
+          alt="Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
+        />
       </Link>
       <section className="ministers-section align-items-center d-flex flex-column">
         <h4 style={{ fontFamily: "designer" }}>Featured Ministers</h4>
@@ -141,7 +167,7 @@ export default function Playlist() {
             <li key={minister.id} className="w-100 my-4">
               <img
                 src={minister.url}
-                alt={minister.ministerName}
+                alt={minister.ministersAlt}
                 className="imagee"
               />
               <span className="w-100 mx-1">

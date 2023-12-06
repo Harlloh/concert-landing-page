@@ -24,7 +24,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import adegoke from '../../assets/ADEGOKE.jpg';
+import adegoke from "../../assets/ADEGOKE.jpg";
 import partnerUrl from "../../assets/partner0.png";
 import partnerUrl1 from "../../assets/partner00.png";
 import partnerUrl2 from "../../assets/partners000.jpg";
@@ -38,7 +38,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa";
 // import Countdown from "../../hooks/countdown";
 import Carousel from "../carousel/Carousel";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 // import Gallery from "../carousel/Carousel";
 // import Hero from "../carousel/Carousel";
 
@@ -56,6 +56,21 @@ import RevealSection from "../revealAnimation";
 // import Victorade from "../../assets/v";
 export default function Home() {
   const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    invitee: "",
+    location: "",
+    whatsappNumber: "",
+    message: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const ministers = [
     {
@@ -138,8 +153,27 @@ export default function Home() {
       ministerName: "Kingston Frank",
       url: partnerUrl5,
     },
-   
   ];
+
+  // const handleSubmit = (e)=>{
+  //   const config = {
+  //     // SecureToken: "ce40f022-9817-4e7f-a7de-d746c464a439",
+  //     Host: "smtp.elasticemail.com",
+  //     Username: "alloolorunfemi17977@yopmail.com",
+  //     Password: "43AA8B545BD0980F87B1BE958777EE6C4422",
+  //     Port: 2525,
+
+  //     To: "alloolorunfemi@gmail.com",
+  //     From: formData.email,
+  //     Subject: "This is the from my register form",
+  //     Body: `${formData.name} just registered`,
+  //   };
+  //   e.preventDefault();
+  //   if(window.Email){
+  //     console.log('hellooooo')
+  //     window.Email.send(config).then(message => alert(message) )
+  //   }
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -239,12 +273,28 @@ export default function Home() {
         <img
           src={contactconfettiii}
           className="confetti contact-confetti"
-          alt="Asher Praise Concert - Crowd enjoying the event"
+          alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
         />
         {/* <div className="contact-details">
           <img
             src={contactconfetti}
-            alt="Asher Praise Concert - Crowd enjoying the event"
+            alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKEconcert"
             className="contactconfettiiiii"
           />
           
@@ -332,7 +382,15 @@ export default function Home() {
         <div className="contact-form" id="register">
           <img
             src={contactconfetti2}
-            alt="Asher Praise Concert - Crowd enjoying the event"
+            alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
             className="contactconfettiiiii con"
           />
 
@@ -358,6 +416,8 @@ export default function Home() {
                 name="name"
                 required
                 placeholder="Enter your name here..."
+                value={formData.name}
+                onChange={handleChange}
               />
             </div>
             <div className="inputs">
@@ -367,6 +427,8 @@ export default function Home() {
                 name="email"
                 required
                 placeholder="Enter your email address..."
+                value={formData.email}
+                onChange={handleChange}
               />
             </div>
             <div className="inputs">
@@ -386,6 +448,8 @@ export default function Home() {
                 id="invitee"
                 required
                 placeholder="Send ticket to(put comma between emails)...."
+                value={formData.invitee}
+                onChange={handleChange}
               />
             </div>
             <div className="inputs">
@@ -399,6 +463,8 @@ export default function Home() {
                 id="location"
                 required
                 placeholder="I am coming from..."
+                value={formData.location}
+                onChange={handleChange}
               />
             </div>
             <div className="inputs">
@@ -410,6 +476,8 @@ export default function Home() {
                 type="number"
                 name="whatsappNumber"
                 id="whatsappNumber"
+                value={formData.whatsappNumber}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -421,6 +489,8 @@ export default function Home() {
                 cols="50"
                 required
                 placeholder="anything you want us to know..."
+                value={formData.message}
+                onChange={handleChange}
               ></textarea>
             </div>
             <button type="submit" className="btn " id="formbtn">
@@ -431,12 +501,13 @@ export default function Home() {
       </section>
 
       {/* QUOTE */}
-      <section className="quoteSect">a
+      <section className="quoteSect">
+        a
         <div className="container container-md container-sm quote">
           <h3>
             <i>
-              “The most effective power of the gospel is when it is
-              accompanied by beautiful, appropriate music.”
+              “The most effective power of the gospel is when it is accompanied
+              by beautiful, appropriate music.”
             </i>
           </h3>
         </div>
@@ -445,17 +516,41 @@ export default function Home() {
         <section className="ministers-sect confetti-sect" id="ministers">
           <img
             src={confetti2}
-            alt="Asher Praise Concert - Crowd enjoying the event"
+            alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
             className="confetti confetti2"
           />
           <img
             src={confetti3}
-            alt="Asher Praise Concert - Crowd enjoying the event"
+            alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
             className="confetti confetti3 "
           />
           <img
             src={confetti4}
-            alt="Asher Praise Concert - Crowd enjoying the event"
+            alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
             className="confetti confetti4"
           />
           <div className="container container-md container-sm minister-container">
@@ -511,7 +606,7 @@ export default function Home() {
         className=" text-white align-items-center volunteer-sect"
         id="volunteer"
       >
-        <img src={volunteer} style={{width:'100%', height:'auto', }} alt="" />
+        <img src={volunteer} style={{ width: "100%", height: "auto" }} alt="" />
         {/* <div className="container text-center">
           <h1>Get Invoved.</h1>
           <p>
@@ -526,22 +621,45 @@ export default function Home() {
         </div> */}
       </section>
 
-     
       <section className="partners-sect">
         <img
           src={partConfetti}
           className="confetti partConfetti"
-          alt="Asher Praise Concert - Crowd enjoying the event"
+          alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
         />
         <img
           src={partConfetti1}
           className="confetti partConfetti1"
-          alt="Asher Praise Concert - Crowd enjoying the event"
+          alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
         />
         <img
           src={partConfetti2}
           className="confetti partConfetti2"
-          alt="Asher Praise Concert - Crowd enjoying the event"
+          alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
         />
         <div className="container container-md container-sm partners-container">
           <div className="partner-content">
@@ -582,7 +700,7 @@ export default function Home() {
           </Swiper>
         </div>
       </section>
-       
+
       {/* GALLERY */}
       <section
         className="gallery-sect text-white py-5"
@@ -594,7 +712,15 @@ export default function Home() {
           <div className="image">
             <img
               src={adegoke}
-              alt="Asher Praise Concert - Crowd enjoying the event"
+              alt="Asher Praise Concert - Concert in Lagos this December
+
+December events in Lagos
+
+Praise Concert in Lagos 
+
+Asher Praise Concert
+
+ADEGOKE concert"
             />
           </div>
           <div className="content gap-3 d-flex flex-column">
@@ -624,7 +750,6 @@ export default function Home() {
               <cite>convener</cite>
             </span>
           </div>
-          
         </div>
       </section>
     </div>
