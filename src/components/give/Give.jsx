@@ -54,17 +54,16 @@ export default function Give() {
           <p>
             Loneliness at Christmas spurs more people into self-injury just the
             day after the holiday. The Centre for Disease Control & Prevention
-            CDC affirms this much. While the delay in self-harm during the
-            holiday itself that is apparent from worldwide statistics have been
-            explained away as not wanting to spoil the experience for others,
-            the spike in this vice just after the holiday, remains a concern.
-            The very allure of holiday, it has been explained, contributes to
-            this behavior when feelings of disappointment heighten. Failure of
-            Xmas picture perfect to heal people has been explained by the Bible
-            as being the enemy’s doing. God’s creation which is originally good
-            has been corrupted by the enemy. His motive for doing this is to
-            derail God’s work and create feelings of disappointment in the
-            people whom God loves.
+            CDC affirms this much. While delay in self-harm during the holiday
+            itself that is apparent from worldwide statistics has been explained
+            away as not wanting to spoil the experience for others, the spike in
+            this vice just after festive seasons remains a concern. Actually the
+            very allure of the holiday contributes to this behavior when
+            feelings of disappointment heighten. Failure of Xmas picture-perfect
+            to heal people is the enemy&apos;s doing. God&apos;s creation which is
+            originally good has been corrupted by the adversary. His motive for
+            doing this is to derail God&apos;s work and create feelings of
+            disappointment in the people whom God loves.
           </p>
           <Link to="/">
             <img src={bg3} alt="" className="bg3" />
