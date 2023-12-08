@@ -10,34 +10,11 @@ export default function Give() {
       mode: "Naira",
       type: "NGN NAIRA",
       symbol: "N",
-      accounName: "AccounName of the bearer",
-      bank: "United bank for africa",
-      accountNumber: 1234567899,
+      accounName: "ASHER PRAISE CONCERT",
+      bank: "MONIEPOINT",
+      accountNumber: 6452080598,
     },
-    {
-      mode: "DOllar",
-      type: "USD DOLLAR",
-      symbol: "$",
-      accounName: "AccounName of the bearer",
-      bank: "United bank for africa",
-      accountNumber: 1234567899,
-    },
-    {
-      mode: "DOllar",
-      type: "USD DOLLAR",
-      symbol: "$",
-      accounName: "AccounName of the bearer",
-      bank: "United bank for africa",
-      accountNumber: 1234567899,
-    },
-    {
-      mode: "DOllar",
-      type: "USD DOLLAR",
-      symbol: "$",
-      accounName: "AccounName of the bearer",
-      bank: "United bank for africa",
-      accountNumber: 1234567899,
-    },
+
   ];
   return (
     <>
