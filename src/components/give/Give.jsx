@@ -37,9 +37,9 @@ export default function Give() {
             this vice just after festive seasons remains a concern. Actually the
             very allure of the holiday contributes to this behavior when
             feelings of disappointment heighten. Failure of Xmas picture-perfect
-            to heal people is the enemy&apos;s doing. God&apos;s creation which is
-            originally good has been corrupted by the adversary. His motive for
-            doing this is to derail God&apos;s work and create feelings of
+            to heal people is the enemy&apos;s doing. God&apos;s creation which
+            is originally good has been corrupted by the adversary. His motive
+            for doing this is to derail God&apos;s work and create feelings of
             disappointment in the people whom God loves.
           </p>
           <Link to="/">
@@ -108,6 +108,11 @@ export default function Give() {
             );
           })}
         </section>
+        <h4>Welfare endowment fund</h4>
+        <p>
+          CCC Zion Parish, Itedo Estate, Carwash Bus-stop,off Freedom way,
+          Ikate Lekki
+        </p>
       </div>
     </>
   );
