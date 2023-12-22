@@ -4,13 +4,14 @@ import awolola from "../../assets/oluwatosin awolola.jpg";
 import tope from "../../assets/Tope.jpg";
 import williams from "../../assets/olapeju williams.jpg";
 import Apoola from "../../assets/temitope apoola.jpg";
+import adegoke from "../../assets/ADEGOKE.jpg";
 
 const Team = () => {
   // Sample team members data (replace with your actual team members' information)
   const teamMembers = [
     {
       name: "Adeyemi Esq",
-      role: "CEO",
+      role: "Head of Prayers and intercession",
       url: yemiesq,
     },
 
@@ -33,6 +34,11 @@ const Team = () => {
       name: "Temitope Apoola CEO, LITCAF",
       role: "Project Lead.",
       url: Apoola,
+    },
+    {
+      name: "Adegoke ",
+      role: "convener",
+      url: adegoke,
     },
 
     // Add more team members as needed
