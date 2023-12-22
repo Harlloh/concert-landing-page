@@ -108,7 +108,7 @@ export default function Give() {
             );
           })}
         </section>
-        <h4>Welfare endowment fund</h4>
+        <h5 className="mt-5 text-brown">Welfare endowment fund</h5>
         <p>
           CCC Zion Parish, Itedo Estate, Carwash Bus-stop,off Freedom way,
           Ikate Lekki

@@ -52,6 +52,9 @@ export default function Header() {
               </li>
 
               <li onClick={toggleMobileMenu}>
+                <a href="/team">Meet the Team</a>
+              </li>
+              <li onClick={toggleMobileMenu}>
                 <a href="/#register">Register</a>
               </li>
 

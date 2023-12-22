@@ -10,6 +10,7 @@ import Layout from "./Layout/Layout";
 import Home from "./components/Home/Home";
 import Give from "./components/give/Give";
 import Playlist from "./components/playlist/Playlist";
+import Team from "./components/team/team";
 // import Carousel from "./components/carousel/Carousel";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="give" element={<Give />} />
           <Route path="playlist" element={<Playlist />} />
+          <Route path="team" element={<Team />} />
         </Route>
       </Routes>
     </BrowserRouter>
