@@ -6,6 +6,8 @@ import williams from "../../assets/olapeju williams.jpg";
 import Apoola from "../../assets/temitope apoola.jpg";
 import femii from "../../assets/oluwafemi babalola.jpg";
 import adegoke from "../../assets/ADEGOKE.jpg";
+import Eskeez from "../../assets/eskeez.jpg";
+import samkeyz from "../../assets/samkeyz.jpg";
 
 const Team = () => {
   // Sample team members data (replace with your actual team members' information)
@@ -32,9 +34,19 @@ const Team = () => {
       url: williams,
     },
     {
+      name: "Samuel Raymons",
+      role: "Head of Music",
+      url: samkeyz,
+    },
+    {
       name: "Temitope Apoola",
       role: "Project Lead.",
       url: Apoola,
+    },
+    {
+      name: "Eskeez",
+      role: "Music production & live performance.",
+      url: Eskeez,
     },
     {
       name: "Oluwafemi Babalola",
