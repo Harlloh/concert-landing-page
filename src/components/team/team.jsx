@@ -4,6 +4,7 @@ import awolola from "../../assets/oluwatosin awolola.jpg";
 import tope from "../../assets/Tope.jpg";
 import williams from "../../assets/olapeju williams.jpg";
 import Apoola from "../../assets/temitope apoola.jpg";
+import femii from "../../assets/oluwafemi babalola.jpg";
 import adegoke from "../../assets/ADEGOKE.jpg";
 
 const Team = () => {
@@ -31,9 +32,14 @@ const Team = () => {
       url: williams,
     },
     {
-      name: "Temitope Apoola CEO, LITCAF",
+      name: "Temitope Apoola",
       role: "Project Lead.",
       url: Apoola,
+    },
+    {
+      name: "Oluwafemi Babalola",
+      role: "Principal Partner & head(charity)",
+      url: femii,
     },
     {
       name: "Adegoke ",
