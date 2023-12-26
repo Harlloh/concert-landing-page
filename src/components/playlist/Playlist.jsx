@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./playlist.css";
 import paulTomisin from "../../assets/paultomisin1.png";
 import YinkaAlase from "../../assets/alaseyori1.png";
@@ -14,40 +14,76 @@ import harjovyaudio from "../../assets/harjovyaudio.mp3";
 import harmonysaudio from "../../assets/harmonyaudio.mp3";
 import sammoore from "../../assets/sammoore.mp3";
 import engosaudio from "../../assets/engoaudio.mp3";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import bg3 from "../../assets/flier.jpg";
 import { Link } from "react-router-dom";
 
 export default function Playlist() {
-  const [prayerRequest, setPrayerRequest] = useState("");
-  const [name, setName] = useState("");
-  const form = useRef();
-
-  const handlePrayerRequestSubmit = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_zowvbey",
-        "template_ed8bxaj",
-        form.current,
-        "_dav46sRXvD_65HCc"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setPrayerRequest("");
-          setName("");
-          alert("Prayer request submitted:");
-        },
-        (error) => {
-          console.log(error.text);
-          alert(error);
-        }
-      );
-    e.target.reset();
+  // const [prayerRequest, setPrayerRequest] = useState("");
+  // const [name, setName] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    prayerRequest: "",
+  });
+  // const form = useRef();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
+  // const handlePrayerRequestSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_zowvbey",
+  //       "template_ed8bxaj",
+  //       form.current,
+  //       "_dav46sRXvD_65HCc"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         setPrayerRequest("");
+  //         setName("");
+  //         alert("Prayer request submitted:");
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //         alert(error);
+  //       }
+  //     );
+  //   e.target.reset();
+  // };
+
+  const handlePrayerRequestSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      let res = await fetch("https://asherbackend.onrender.com/playlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formData),
+      });
+      let result = await res.json();
+      alert(result.status);
+      setIsLoading(false);
+      setFormData({
+        name: "",
+        email: "",
+        prayerRequest: "",
+      });
+    } catch (error) {
+      alert(error);
+    }
+  };
   const ministers = [
     {
       id: 1,
@@ -122,26 +158,36 @@ export default function Playlist() {
 
       <section className="prayer-request-sect">
         <h4>Submit Your Prayer Request</h4>
-        <form onSubmit={handlePrayerRequestSubmit} ref={form}>
+        <form onSubmit={handlePrayerRequestSubmit}>
           <label htmlFor="name">Your Name:</label>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="enter your name..."
-            onChange={(e) => setName(e.target.value)}
-            value={name}
+            placeholder="Enter your name..."
+            onChange={handleChange}
+            value={formData.name}
+          />
+          <label htmlFor="email">Your email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="enter your email"
+            onChange={handleChange}
+            value={formData.email}
           />
           <label htmlFor="prayerRequest">Your Prayer Request:</label>
-
           <textarea
-            id="message"
-            name="message"
-            value={prayerRequest}
-            onChange={(e) => setPrayerRequest(e.target.value)}
+            id="prayerRequest"
+            name="prayerRequest"
+            value={formData.prayerRequest}
+            onChange={handleChange}
             required
           />
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={isLoading}>
+            {isLoading ? "Submitting" : "Submit"}
+          </button>
         </form>
       </section>
 

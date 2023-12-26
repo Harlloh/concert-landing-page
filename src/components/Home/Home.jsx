@@ -55,6 +55,7 @@ import engo from "../../assets/engo1.png";
 import RevealSection from "../revealAnimation";
 // import Victorade from "../../assets/v";
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(false)
   const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
@@ -175,28 +176,57 @@ export default function Home() {
   //   }
   // }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_zowvbey",
-        "template_dk2xxuf",
-        form.current,
-        "_dav46sRXvD_65HCc"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert("Your message has been sent succesfully");
-        },
-        (error) => {
-          console.log(error.text);
-          alert(error);
-        }
-      );
-    e.target.reset();
-  };
+   const handleSubmit = async (e) => {
+    e.preventDefault()
+    setIsLoading(true)
+    try {
+        let res = await fetch("https://asherbackend.onrender.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json;charset=utf-8",
+          },
+          body: JSON.stringify(formData),
+        });
+        let result = await res.json();
+        alert(result.status);
+        setIsLoading(false);
+         setFormData({
+           name: "",
+           email: "",
+           invitee: "",
+           location: "",
+           whatsappNumber: "",
+           message: "",
+         });
+    } catch (error) {
+      alert(error)
+    }
+  
+   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_zowvbey",
+  //       "template_dk2xxuf",
+  //       form.current,
+  //       "_dav46sRXvD_65HCc"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         alert("Your message has been sent succesfully");
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //         alert(error);
+  //       }
+  //     );
+  //   e.target.reset();
+  // };
   return (
     <div className="home">
       <Carousel />
@@ -493,8 +523,8 @@ ADEGOKE concert"
                 onChange={handleChange}
               ></textarea>
             </div>
-            <button type="submit" className="btn " id="formbtn">
-              Submit
+            <button type="submit" className="btn " id="formbtn" disabled={isLoading}>
+              {isLoading ? 'Registering': 'Submit'}
             </button>
           </form>
         </div>
