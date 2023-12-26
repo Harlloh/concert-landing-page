@@ -201,6 +201,8 @@ export default function Home() {
          });
     } catch (error) {
       alert(error)
+            setIsLoading(false);
+
     }
   
    };

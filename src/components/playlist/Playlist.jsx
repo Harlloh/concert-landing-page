@@ -82,6 +82,8 @@ export default function Playlist() {
       });
     } catch (error) {
       alert(error);
+      setIsLoading(false);
+
     }
   };
   const ministers = [
