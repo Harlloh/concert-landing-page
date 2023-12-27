@@ -40,7 +40,7 @@ export default function Countdown() {
   return (
     <div className="countdown">
       {/* <h3 className="countdown-h3"> */}
-      Asher Praise COncert is Today!
+      Asher Praise Concert is Today!
       {/* <h3>{days}days</h3>
       <h3>{hour}hours</h3>
       <h3>{min}min</h3>
