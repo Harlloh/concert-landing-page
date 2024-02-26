@@ -17,7 +17,6 @@ import contactconfettiii from "../../assets/Confetti (7).png";
 import { Navigation, Scrollbar, A11y, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import emailjs from "@emailjs/browser";
 
 // Import Swiper styles
 import "swiper/css";
@@ -53,9 +52,10 @@ import topeOlo from "../../assets/topeolowo.png";
 import aluko from "../../assets/Evang Tunde Aluko1.png";
 import engo from "../../assets/engo1.png";
 import RevealSection from "../revealAnimation";
+import ConcertImages from "../concertimages/ConcertImages";
 // import Victorade from "../../assets/v";
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
   const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
@@ -176,59 +176,34 @@ export default function Home() {
   //   }
   // }
 
-
-   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsLoading(true)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
     try {
-        let res = await fetch("https://asherbackend.onrender.com", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json;charset=utf-8",
-          },
-          body: JSON.stringify(formData),
-        });
-        let result = await res.json();
-        alert(result.status);
-        setIsLoading(false);
-         setFormData({
-           name: "",
-           email: "",
-           invitee: "",
-           location: "",
-           whatsappNumber: "",
-           message: "",
-         });
+      let res = await fetch("https://asherbackend.onrender.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formData),
+      });
+      let result = await res.json();
+      alert(result.status);
+      setIsLoading(false);
+      setFormData({
+        name: "",
+        email: "",
+        invitee: "",
+        location: "",
+        whatsappNumber: "",
+        message: "",
+      });
     } catch (error) {
-      alert(error)
-            setIsLoading(false);
-
+      alert(error);
+      setIsLoading(false);
     }
-  
-   };
+  };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_zowvbey",
-  //       "template_dk2xxuf",
-  //       form.current,
-  //       "_dav46sRXvD_65HCc"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         alert("Your message has been sent succesfully");
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //         alert(error);
-  //       }
-  //     );
-  //   e.target.reset();
-  // };
   return (
     <div className="home">
       <Carousel />
@@ -525,8 +500,13 @@ ADEGOKE concert"
                 onChange={handleChange}
               ></textarea>
             </div>
-            <button type="submit" className="btn " id="formbtn" disabled={isLoading}>
-              {isLoading ? 'Registering': 'Submit'}
+            <button
+              type="submit"
+              className="btn "
+              id="formbtn"
+              disabled={isLoading}
+            >
+              {isLoading ? "Registering" : "Submit"}
             </button>
           </form>
         </div>
@@ -657,14 +637,9 @@ ADEGOKE concert"
         <img
           src={partConfetti}
           className="confetti partConfetti"
-          alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
+          alt="Asher Praise Concert - Concert in Lagos this December. December events in Lagos
 Praise Concert in Lagos 
-
 Asher Praise Concert
-
 ADEGOKE concert"
         />
         <img
@@ -784,6 +759,7 @@ ADEGOKE concert"
           </div>
         </div>
       </section>
+      <ConcertImages />
     </div>
   );
 }

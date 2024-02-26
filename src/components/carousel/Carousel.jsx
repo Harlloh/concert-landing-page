@@ -15,7 +15,7 @@ import "./carousel.css";
 import { Autoplay, EffectFade } from "swiper/modules";
 import Countdown from "../../hooks/countdown";
 import RevealSection from "../revealAnimation";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Carousel() {
   return (
@@ -33,15 +33,21 @@ export default function Carousel() {
         <SwiperSlide className="swiperslide swiperslide1">
           {/* <h1>helooooo</h1> */}
           <div className="swipe-text">
-            <h2 className="reveal fade-right lagos">JOIN US TODAY</h2>
+            <h2 className="reveal fade-right lagos">
+              JOIN US AGAIN <i>2024</i>{" "}
+            </h2>
+
             <a
               href="#register"
               style={{ textDecoration: "none", cursor: "pointer" }}
             >
-              <p>click the link below</p>
-              <Link className="text-white cursor-pointer" to="https://youtube.com/live/dCAWllvGafo?feature=share">
+              {/* <p>click the link below</p> */}
+              {/* <Link
+                className="text-white cursor-pointer"
+                to="https://youtube.com/live/dCAWllvGafo?feature=share"
+              >
                 JOIN US LIVE
-              </Link>
+              </Link> */}
             </a>
             <Countdown className="counting" />
           </div>
@@ -49,12 +55,15 @@ export default function Carousel() {
         </SwiperSlide>
         <SwiperSlide className="swiperslide2">
           <div className="swipe-text">
-            <h2 className="reveal fade-left lagos">JOIN US TODAY</h2>
-            <p>click the link below</p>
+            <h2 className="reveal fade-left lagos">SEE YOU 2024</h2>
+            {/* <p>click the link below</p> */}
 
-            <Link className="text-white cursor-pointer" to="https://youtube.com/live/dCAWllvGafo?feature=share">
+            {/* <Link
+              className="text-white cursor-pointer"
+              to="https://youtube.com/live/dCAWllvGafo?feature=share"
+            >
               JOIN US LIVE
-            </Link>
+            </Link> */}
             <Countdown className="counting" />
             {/* <p>Freudes place maryland ikeja lagos, Lagos state.</p> */}
           </div>

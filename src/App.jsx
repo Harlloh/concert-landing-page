@@ -1,7 +1,6 @@
 import {
   BrowserRouter,
   Route,
-  RouterProvider,
   Routes,
   createBrowserRouter,
   createRoutesFromElements,
@@ -11,6 +10,7 @@ import Home from "./components/Home/Home";
 import Give from "./components/give/Give";
 import Playlist from "./components/playlist/Playlist";
 import Team from "./components/team/team";
+import Gallery from "./components/gallery/Gallery";
 // import Carousel from "./components/carousel/Carousel";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route> 
+      <Route>
         <Route path="/" exact element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/give" element={<Give />} />
@@ -54,6 +54,7 @@ function App() {
           <Route path="give" element={<Give />} />
           <Route path="playlist" element={<Playlist />} />
           <Route path="team" element={<Team />} />
+          <Route path="gallery" element={<Gallery />} />
         </Route>
       </Routes>
     </BrowserRouter>
