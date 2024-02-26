@@ -31,12 +31,13 @@
 .swiperslide1 {
   background-size: cover;
   background-position: bottom bottom;
-  background: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.448)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.448)),
     url("https://lh3.googleusercontent.com/drive-viewer/AEYmBYSKm1oIOyNlmnZeE87bz_GqULeeA87qbpWM-Gcc6YxKbR1fxv7wIJ2Y4pg1W4b-6bsCMUwRAD4zMrzcMSttyElD6HtGpg=s1600");
 }
 .swiperslide2 {
   background-size: cover;
-  background-image: url("https://lh3.googleusercontent.com/drive-viewer/AEYmBYQdzjM40XOaR4y0QAJKYH_YZYwRtGwdvksj9E7ZwW8ygZyN4Qq6IyZFJpnboYH3g-LuCaEzFUtXiQTiWH4t8B2jciSPxA=s1600");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.448)),
+    url("https://lh3.googleusercontent.com/drive-viewer/AEYmBYQdzjM40XOaR4y0QAJKYH_YZYwRtGwdvksj9E7ZwW8ygZyN4Qq6IyZFJpnboYH3g-LuCaEzFUtXiQTiWH4t8B2jciSPxA=s1600");
 }
 .swiperslide3 {
   background-size: contain;
