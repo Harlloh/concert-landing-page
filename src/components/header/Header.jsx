@@ -30,13 +30,10 @@ export default function Header() {
             )}
           </div>
           <nav className={`menu ${mobileMenuOpen ? "active" : ""}`}>
-            <ul>
+            <ul className="navUl">
               <li onClick={toggleMobileMenu}>
                 <NavLink to="/">Home</NavLink>
               </li>
-              {/* <li onClick={toggleMobileMenu}>
-                <a href="/#about">About</a>
-              </li> */}
               <li onClick={toggleMobileMenu}>
                 <a href="/#ministers">Ministers</a>
               </li>
@@ -62,7 +59,7 @@ export default function Header() {
                 <a href="#gallery">Gallery</a>
               </li> */}
               <li onClick={toggleMobileMenu}>
-                <a href="/#footer" className="btn">
+                <a href="/#footer" className="btn navbtn">
                   Contact
                 </a>
               </li>

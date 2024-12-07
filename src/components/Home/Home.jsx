@@ -34,7 +34,7 @@ import partnerUrl5 from "../../assets/partners000000.png";
 import contactconfetti2 from "../../assets/Shape (1).png";
 import "./home.css";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { FaCalendarAlt, FaClock, FaMapMarkerAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaFacebook, FaInstagram, FaMapMarkerAlt, FaYoutube } from "react-icons/fa";
 // import Countdown from "../../hooks/countdown";
 import Carousel from "../carousel/Carousel";
 import { useRef, useState } from "react";
@@ -53,6 +53,7 @@ import aluko from "../../assets/Evang Tunde Aluko1.png";
 import engo from "../../assets/engo1.png";
 import RevealSection from "../revealAnimation";
 import ConcertImages from "../concertimages/ConcertImages";
+import Team from "../team/team";
 // import Victorade from "../../assets/v";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -76,37 +77,37 @@ export default function Home() {
   const ministers = [
     {
       id: 1,
-      ministerName: "Paul Tomisin",
+      name: "Paul Tomisin",
       url: paulTomisin,
     },
     {
       id: 2,
-      ministerName: " Yinka Alaseyori ",
+      name: " Yinka Alaseyori ",
       url: YinkaAlase,
     },
     {
       id: 3,
-      ministerName: "Deborah Pelumi",
+      name: "Deborah Pelumi",
       url: Debora,
     },
     {
       id: 4,
-      ministerName: "Harjovy ",
+      name: "Harjovy ",
       url: Harjovy,
     },
     {
       id: 5,
-      ministerName: "Sammy Moore",
+      name: "Sammy Moore",
       url: sammyMoore,
     },
     {
       id: 5,
-      ministerName: "Moses Harmony",
+      name: "Moses Harmony",
       url: harmony,
     },
     {
       id: 5,
-      ministerName: "Engo",
+      name: "Engo",
       url: engo,
     },
   ];
@@ -114,24 +115,24 @@ export default function Home() {
   const wordministers = [
     {
       id: 5,
-      ministerName: "Evang Tunde Aluko",
+      name: "Evang Tunde Aluko",
       url: aluko,
     },
     {
       id: 6,
-      ministerName: "Pastor Tope Olowoporoku",
+      name: "Pastor Tope Olowoporoku",
       url: topeOlo,
     },
   ];
   const partners = [
     {
       id: 1,
-      ministerName: "Kunle Adewole",
+      name: "Kunle Adewole",
       url: partnerUrl,
     },
     {
       id: 2,
-      ministerName: "Adeoye Sunday ",
+      name: "Adeoye Sunday ",
       url: partnerUrl1,
     },
     {
@@ -207,8 +208,11 @@ export default function Home() {
   return (
     <div className="home">
       <Carousel />
+
+
       {/* <ToastContainer /> */}
       {/* CONTACT */}
+
       <div className="detailsss">
         <p
           style={{
@@ -218,7 +222,7 @@ export default function Home() {
             // marginTop: "-2rem",
           }}
         >
-          Join us for <b>#asherpraiseconcert2023</b>
+          Join us for <b>#asherpraiseconcert2024</b>
         </p>
         <div className="ddddd ">
           <div className="detail d-flex gap-2 align-items-center">
@@ -234,14 +238,14 @@ export default function Home() {
                   color: "rgb(224, 189, 64)",
                 }}
               >
-                December 27th, 2023.
+                December 27th, 2024.
               </p>
             </div>
           </div>
           <div className="detail d-flex gap-2 align-items-center">
             <FaMapMarkerAlt color="white" />
             <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
+              <h4 style={{ margin: 0, padding: 0 }}>Venue:</h4>
               <p
                 style={{
                   margin: 0,
@@ -252,7 +256,7 @@ export default function Home() {
                   // width: "75%",
                 }}
               >
-                Freudes place maryland ikeja, Lagos state
+                The Lekki Centre. Lekki, Lagos state
               </p>
             </div>
           </div>
@@ -275,6 +279,47 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* ABOUT SECTION */}
+      <section
+      >
+        <div className="container container-fluid conveyner d-grid pt-5 pb-5"
+
+        >
+          <div className="video">
+            <iframe
+              src="https://www.youtube.com/embed/bzuLJxAnC6U?start=0&end=60&autoplay=1&mute=1"
+              title="Asher Praise Concert"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                width: "100%",
+                height: "315px", // Adjust height as needed
+                borderRadius: "10px", // Optional: rounded corners
+              }}
+            ></iframe>
+          </div>
+          <div className="content gap-3 d-flex flex-column">
+            <h2 className="asherhead">
+              Asher Praise Concert
+            </h2>
+            <p>
+              Asher praise concert is an uplifting gospel music event that gathers passionate worshippers and talented gospel artists from around the world. It’s a night dedicated to celebrating God’s goodness through heartfelt worship and inspiring music.
+            </p>
+            <p>
+              This annual gathering breaks barriers of culture and denomination, uniting voices to glorify God as one. More than a concert, it’s a powerful encounter with God’s presence, leaving hearts refreshed and faith renewed.
+            </p>
+            <div className="d-flex gap-3">
+              <a className="text-black" href="https://www.instagram.com/asherpraiseconcert/"><FaInstagram size={23} /></a>
+              <a className="text-black" href="https://web.facebook.com/people/Asher-Praise-Concert/61553785067875/?_rdc=1&_rdr#"><FaFacebook size={23} /></a>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </section>
+
+
 
       <section className="contact-section" id="contact">
         <img
@@ -290,114 +335,29 @@ Asher Praise Concert
 
 ADEGOKE concert"
         />
-        {/* <div className="contact-details">
-          <img
-            src={contactconfetti}
-            alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKEconcert"
-            className="contactconfettiiiii"
-          />
-          
-        </div> */}
         <div style={{ overflow: "scroll" }} className="d-flex">
           <img
             src={asherimage}
-            style={{ width: "95%", borderRight: "2px solid white" }}
+            style={{ width: "95%", height: "full", borderRight: "2px solid white" }}
             alt="Image of an asher concert person ;)"
           />
           <img
             src={asherimage1}
-            style={{ width: "95%", borderRight: "2px solid white" }}
+            style={{ width: "99%", height: "full", borderRight: "2px solid white" }}
             alt="Image of an asher concert person ;)"
           />
           <img
             src={asherimage2}
-            style={{ width: "95%", borderRight: "2px solid white" }}
+            style={{ width: "95%", height: "full", borderRight: "2px solid white" }}
             alt="Image of an asher concert person ;)"
           />
+
         </div>
-        {/* 
-        <div className="detailsss detailssseeee">
-          <p
-            style={{
-              textAlign: "center",
-              color: "white",
-              margin: 0,
-              // marginTop: "-2rem",
-            }}
-          >
-            Join us:
-          </p>
-          <div className="detail d-flex gap-2 align-items-center">
-            <FaCalendarAlt color="white" />
-            <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: ".82rem",
-                  lineHeight: "none",
-                }}
-              >
-                December 27th, 2023.
-              </p>
-            </div>
-          </div>
-          <div className="detail d-flex gap-2 align-items-center">
-            <FaMapMarkerAlt color="white" />
-            <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Location:</h4>
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: ".92rem",
-                  lineHeight: "none",
-                  // width: "75%",
-                }}
-              >
-                Freudes place maryland ikeja, Lagos state
-              </p>
-            </div>
-          </div>
-          <div className="detail d-flex gap-2 align-items-center">
-            <FaClock color="white" />
-            <div className="detail-details text-white">
-              <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
-              <p
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: ".82rem",
-                  lineHeight: "none",
-                }}
-              >
-                4:00pm GMT+1(WAT)
-              </p>
-            </div>
-          </div>
-        </div> */}
 
         <div className="contact-form" id="register">
           <img
             src={contactconfetti2}
-            alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+            alt="Asher Praise Concert - Concert in Lagos this December. December events in Lagos.Praise Concert in Lagos Asher Praise Concert.ADEGOKE concert"
             className="contactconfettiiiii con"
           />
 
@@ -413,7 +373,7 @@ ADEGOKE concert"
             We can&apos;t wait to have you
           </h1>
           <p style={{ textAlign: "center" }}>
-            Get your free ticket to <b>#asherpraiseconcert2023</b>
+            Get your free ticket to <b>#asherpraiseconcert2024</b>
           </p>
           <form action="" onSubmit={handleSubmit} ref={form}>
             <div className="inputs">
@@ -568,34 +528,30 @@ ADEGOKE concert"
           <div className="container container-md container-sm minister-container">
             <div className="ministersContent reveal fade-bottom">
               <h1>
-                AsherPraise 2023 <span>/meet the ministers</span>
+                AsherPraise 2024 <span>/meet the ministers</span>
               </h1>
-              <p>
-                Welcome to a divine experience in Asher Praise 2023! As we
-                gather in God&apos;s presence, we invite you to meet the
-                ministers who will be leading us in an evening of worship and
-                musical celebration.
-              </p>
             </div>
             <div className="ministers reveal">
-              <div className="minister">
+              {/* <div className="minister">
                 {ministers.map((minister) => (
                   <div className="ministerdiv fade-right" key={minister.id}>
                     <img src={minister.url} alt={minister.ministerName} />
                     <h2>{minister.ministerName}</h2>
                   </div>
                 ))}
-              </div>
+              </div> */}
+              <Team type={'Ministers'} others={ministers} />
+
             </div>
           </div>
         </section>
-        <div className="container container-md container-sm minister-container">
+        {/* <div className="container container-md container-sm minister-container">
           <div className="ministersContent reveal fade-right">
             <h1>
-              AsherPraise 2023 <span>/meet the word ministers</span>
+              AsherPraise 2024 <span>/meet the word ministers</span>
             </h1>
             <p>
-              Welcome to a divine experience in Asher Praise 2023! As we gather
+              Welcome to a divine experience in Asher Praise 2024! As we gather
               in God&apos;s presence, we invite you to meet the ministers who
               will be leading us in an evening of God&apos;s word and musical
               celebration.
@@ -611,26 +567,16 @@ ADEGOKE concert"
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
+        <Team type={'Word Ministers'} others={wordministers} />
       </RevealSection>
+
       {/* GET INVOLVED */}
       <section
         className=" text-white align-items-center volunteer-sect"
         id="volunteer"
       >
         <img src={volunteer} style={{ width: "100%", height: "auto" }} alt="" />
-        {/* <div className="container text-center">
-          <h1>Get Invoved.</h1>
-          <p>
-            Would you like to contribute your talents to the concert or
-            volunteer to help with preparations? We welcome your involvement!
-            Contact us at{" "}
-            <Link to="mailto:pr@asherpraiseconcert.com" className="emailllll">
-              pr@asherpraiseconcert.com
-            </Link>{" "}
-            for more information.
-          </p>
-        </div> */}
       </section>
 
       <section className="partners-sect">
@@ -759,7 +705,7 @@ ADEGOKE concert"
           </div>
         </div>
       </section>
-      <ConcertImages />
+      {/* <ConcertImages /> */}
     </div>
   );
 }

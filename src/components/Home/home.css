@@ -49,7 +49,7 @@
 }
 
 /* ABOUT SECTION */
-.detail-details h4 {
+.detail-details h4, .asherhead,.galle {
   font-family: designer;
 }
 .detail-details p {
@@ -67,7 +67,8 @@
 }
 .ddddd {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+    padding: 0 5rem;
   align-items: center;
 }
 .detailsss {
@@ -130,8 +131,8 @@
 }
 
 .conveyner .image img {
-  width: auto;
-  height: 75vh;
+  width: 25vw;
+  height:70vh;
   align-self: center;
   box-shadow: 5px 10px 5px rgb(42, 58, 92);
   border-radius: 10px;

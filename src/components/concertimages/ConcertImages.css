@@ -1,6 +1,6 @@
 .concert-images-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 5px;
   justify-content: space-around;
   align-items: center;

@@ -32,7 +32,7 @@ function Gallery() {
   ];
   return (
     <div className="gallery-parent">
-      <h3>Down the memory lane for asher praise concert 2023</h3>
+      <h3>Down the memory lane for asher praise concert 2024</h3>
       <div className="concert-images-container">
         {concertImageLinks.map((link, index) => (
           <img

@@ -31,43 +31,27 @@ export default function Carousel() {
         className="mySwiper"
       >
         <SwiperSlide className="swiperslide swiperslide1">
-          {/* <h1>helooooo</h1> */}
           <div className="swipe-text">
-            <h2 className="reveal fade-right lagos">
-              JOIN US AGAIN <i>2024</i>{" "}
-            </h2>
-
             <a
               href="#register"
               style={{ textDecoration: "none", cursor: "pointer" }}
             >
-              {/* <p>click the link below</p> */}
-              {/* <Link
-                className="text-white cursor-pointer"
-                to="https://youtube.com/live/dCAWllvGafo?feature=share"
-              >
-                JOIN US LIVE
-              </Link> */}
+
             </a>
             <Countdown className="counting" />
           </div>
-          {/* <img className="swiper-slide-img" src={bg1} /> */}
         </SwiperSlide>
         <SwiperSlide className="swiperslide2">
           <div className="swipe-text">
-            <h2 className="reveal fade-left lagos">SEE YOU 2024</h2>
-            {/* <p>click the link below</p> */}
 
-            {/* <Link
-              className="text-white cursor-pointer"
-              to="https://youtube.com/live/dCAWllvGafo?feature=share"
-            >
-              JOIN US LIVE
-            </Link> */}
             <Countdown className="counting" />
-            {/* <p>Freudes place maryland ikeja lagos, Lagos state.</p> */}
           </div>
-          {/* <img className="swiper-slide-img" src={bg3} /> */}
+        </SwiperSlide>
+        <SwiperSlide className="swiperslide3">
+          <div className="swipe-text">
+
+            <Countdown className="counting" />
+          </div>
         </SwiperSlide>
       </Swiper>
     </RevealSection>

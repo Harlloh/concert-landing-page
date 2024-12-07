@@ -51,14 +51,18 @@ nav li a {
   /* color: #fff; */
   /* font-size: 16px; */
   font-family: Montserrat;
-  font-size: 0.775rem;
+  font-size: 0.6rem;
   font-style: normal;
   color: white;
   font-weight: 500;
   line-height: 1.25rem; /* 142.857% */
   text-transform: uppercase;
-  padding: 0.5rem;
+  padding: 0.2rem;
   transition: 0.2s;
+}
+.navbtn{
+    font-size: 0.6rem !important;
+
 }
 nav li a:hover {
   background-color: rgb(28, 43, 72);

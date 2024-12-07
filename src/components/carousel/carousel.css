@@ -32,17 +32,22 @@
   background-size: cover;
   background-position: bottom bottom;
   background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.448)),
-    url("https://lh3.googleusercontent.com/drive-viewer/AEYmBYSKm1oIOyNlmnZeE87bz_GqULeeA87qbpWM-Gcc6YxKbR1fxv7wIJ2Y4pg1W4b-6bsCMUwRAD4zMrzcMSttyElD6HtGpg=s1600");
+    url("../../assets/sliderbg1.jpg");
 }
 .swiperslide2 {
   background-size: cover;
   background-image: linear-gradient(rgba(0, 0, 0, 0.551), rgba(0, 0, 0, 0.448)),
-    url("https://lh3.googleusercontent.com/drive-viewer/AEYmBYQdzjM40XOaR4y0QAJKYH_YZYwRtGwdvksj9E7ZwW8ygZyN4Qq6IyZFJpnboYH3g-LuCaEzFUtXiQTiWH4t8B2jciSPxA=s1600");
+    url("../../assets/sliderbg2.jpg");
 }
 .swiperslide3 {
   background-size: contain;
   background-repeat: repeat;
-  background-image: url("../../assets/flier.jpg");
+  background-image: url("../../assets/sliderbg3.jpg");
+}
+.swiperslide4 {
+  background-size: contain;
+  background-repeat: repeat;
+  background-image: url("../../assets/SLIDERBG4.jpg");
 }
 .swiperslide img {
   border-radius: 0;
@@ -71,11 +76,11 @@
   font-size: 2.5rem;
   width: 100%;
   color: #e5cf57;
-  font-weight: 600;
-  letter-spacing: 10px;
+  font-weight: 400;
+  letter-spacing: 5px;
   margin: 0;
   line-height: 2rem;
-  font-family: ladyLemon;
+  font-family: designer;
 }
 .counting {
   position: inherit;

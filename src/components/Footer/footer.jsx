@@ -76,7 +76,7 @@ export default function Footer() {
             </NavLink>
           </div>
         </div>
-        <div className="copyright">&copy; Asher Praise Concert 2023</div>
+        <div className="copyright">&copy; Asher Praise Concert 2024</div>
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ export default function Countdown() {
   const [sec, setSec] = useState(0);
   let interval = useRef();
   const startTimer = () => {
-    const countdownDate = new Date("December 27 2023 00:00:00").getTime();
+    const countdownDate = new Date("December 27 2024 00:00:00").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
@@ -39,13 +39,13 @@ export default function Countdown() {
 
   return (
     <div className="countdown">
-      {/* <h3 className="countdown-h3"> */}
-      Asher Praise Concert is Today!
-      {/* <h3>{days}days</h3>
-      <h3>{hour}hours</h3>
-      <h3>{min}min</h3>
-      <h3>{sec}sec</h3> */}
-      {/* </h3> */}
+      <span className="countdown-h3 d-flex gap-3">
+        <h3>{days}days</h3>
+        <h3>{hour}hours</h3>
+        <h3>{min}min</h3>
+        <h3>{sec}sec</h3>
+      </span>
+      <p>to #asherpraise2024</p>
     </div>
   );
 }
