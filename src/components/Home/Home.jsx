@@ -43,14 +43,15 @@ import { useRef, useState } from "react";
 
 import paulTomisin from "../../assets/paultomisin1.png";
 import volunteer from "../../assets/Volunteers.jpeg.jpg";
-import YinkaAlase from "../../assets/alaseyori1.png";
+import MikeAbdul from "../../assets/mike abdul.jpg";
 import Debora from "../../assets/Deborah Pelumi1.png";
-import sammyMoore from "../../assets/sammyMoore1.png";
-import Harjovy from "../../assets/Harjovy1.jpg.png";
-import harmony from "../../assets/Moses Harmony1.jpg.png";
+import micToyinbo from "../../assets/mic toyinbo.jpg";
+import YinkaErinle from "../../assets/yinka erinle.jpeg";
+import gokeBajowa from "../../assets/goke bajowa.jpeg";
 import topeOlo from "../../assets/topeolowo.png";
 import aluko from "../../assets/Evang Tunde Aluko1.png";
-import engo from "../../assets/engo1.png";
+import dareJustified from "../../assets/dare justified.jpg";
+import favorOjo from "../../assets/favour ojo.jpeg";
 import RevealSection from "../revealAnimation";
 import ConcertImages from "../concertimages/ConcertImages";
 import Team from "../team/team";
@@ -82,8 +83,8 @@ export default function Home() {
     },
     {
       id: 2,
-      name: " Yinka Alaseyori ",
-      url: YinkaAlase,
+      name: "Mike Abdul",
+      url: MikeAbdul,
     },
     {
       id: 3,
@@ -92,38 +93,43 @@ export default function Home() {
     },
     {
       id: 4,
-      name: "Harjovy ",
-      url: Harjovy,
+      name: "Yinka Erinle",
+      url: YinkaErinle,
     },
     {
       id: 5,
-      name: "Sammy Moore",
-      url: sammyMoore,
-    },
-    {
-      id: 5,
-      name: "Moses Harmony",
-      url: harmony,
-    },
-    {
-      id: 5,
-      name: "Engo",
-      url: engo,
-    },
-  ];
-
-  const wordministers = [
-    {
-      id: 5,
-      name: "Evang Tunde Aluko",
-      url: aluko,
+      name: "Michael Toyinbo",
+      url: micToyinbo,
     },
     {
       id: 6,
-      name: "Pastor Tope Olowoporoku",
-      url: topeOlo,
+      name: "Goke Bajowa",
+      url: gokeBajowa,
+    },
+    {
+      id: 7,
+      name: "Dare Justified",
+      url: dareJustified,
+    },
+    {
+      id: 8,
+      name: "Favour Ojo",
+      url: favorOjo,
     },
   ];
+
+  // const wordministers = [
+  //   {
+  //     id: 5,
+  //     name: "Evang Tunde Aluko",
+  //     url: aluko,
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Pastor Tope Olowoporoku",
+  //     url: topeOlo,
+  //   },
+  // ];
   const partners = [
     {
       id: 1,
@@ -325,15 +331,7 @@ export default function Home() {
         <img
           src={contactconfettiii}
           className="confetti contact-confetti"
-          alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+          alt="Ashser Praise image"
         />
         <div style={{ overflow: "scroll" }} className="d-flex">
           <img
@@ -488,41 +486,17 @@ ADEGOKE concert"
         <section className="ministers-sect confetti-sect" id="ministers">
           <img
             src={confetti2}
-            alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+            alt="Ashser Praise image"
             className="confetti confetti2"
           />
           <img
             src={confetti3}
-            alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+            alt="Ashser Praise image"
             className="confetti confetti3 "
           />
           <img
             src={confetti4}
-            alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+            alt="Ashser Praise image"
             className="confetti confetti4"
           />
           <div className="container container-md container-sm minister-container">
@@ -568,7 +542,7 @@ ADEGOKE concert"
             </div>
           </div>
         </div> */}
-        <Team type={'Word Ministers'} others={wordministers} />
+        {/* <Team type={'Word Ministers'} others={wordministers} /> */}
       </RevealSection>
 
       {/* GET INVOLVED */}
@@ -591,28 +565,12 @@ ADEGOKE concert"
         <img
           src={partConfetti1}
           className="confetti partConfetti1"
-          alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+          alt="Ashser Praise image"
         />
         <img
           src={partConfetti2}
           className="confetti partConfetti2"
-          alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+          alt="Ashser Praise image"
         />
         <div className="container container-md container-sm partners-container">
           <div className="partner-content">
@@ -665,15 +623,7 @@ ADEGOKE concert"
           <div className="image">
             <img
               src={adegoke}
-              alt="Asher Praise Concert - Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
+              alt="Ashser Praise image"
             />
           </div>
           <div className="content gap-3 d-flex flex-column">
