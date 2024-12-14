@@ -69,6 +69,10 @@ ul li {
   .container {
     width: 95%;
   }
+  .countdown{
+    flex-direction: column;
+  }
+
 }
 
 body {

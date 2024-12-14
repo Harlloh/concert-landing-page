@@ -41,7 +41,7 @@
 }
 .swiperslide3 {
   background-size: contain;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-image: url("../../assets/sliderbg3.jpg");
 }
 .swiperslide4 {
