@@ -15,7 +15,7 @@ import paulTomisin from "../../assets/paultomisin1.png";
 // import sammoore from "../../assets/sammoore.mp3";
 // import engosaudio from "../../assets/engoaudio.mp3";
 // import emailjs from "@emailjs/browser";
-import bg3 from "../../assets/flier.jpg";
+import bg3 from "../../assets/flier.jpeg";
 import { Link } from "react-router-dom";
 
 export default function Playlist() {
@@ -208,7 +208,7 @@ Asher Praise Concert
 ADEGOKE concert"
         />
       </Link>
-      <section className="ministers-section align-items-center d-flex flex-column">
+      {/* <section className="ministers-section align-items-center d-flex flex-column">
         <h4 style={{ fontFamily: "designer" }}>Featured Ministers</h4>
         <ul className="container mb-3">
           {ministers.map((minister) => (
@@ -228,7 +228,7 @@ ADEGOKE concert"
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </>
   );
 }

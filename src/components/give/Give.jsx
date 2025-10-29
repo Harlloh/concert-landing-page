@@ -1,6 +1,6 @@
 import { FaCheckCircle } from "react-icons/fa";
 import "./give.css";
-import bg3 from "../../assets/flier.jpg";
+import bg3 from "../../assets/flier.jpeg";
 import { Link } from "react-router-dom";
 
 

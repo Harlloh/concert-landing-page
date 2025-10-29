@@ -55,6 +55,7 @@ import favorOjo from "../../assets/favour ojo.jpeg";
 import RevealSection from "../revealAnimation";
 import ConcertImages from "../concertimages/ConcertImages";
 import Team from "../team/team";
+import MinistersPlaceholder from "../ministerPlaceholder";
 // import Victorade from "../../assets/v";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
@@ -228,7 +229,7 @@ export default function Home() {
             // marginTop: "-2rem",
           }}
         >
-          Join us for <b>#asherpraiseconcert2024</b>
+          Join us for <b>#asherpraiseconcert2025</b>
         </p>
         <div className="ddddd ">
           <div className="detail d-flex gap-2 align-items-center">
@@ -244,7 +245,7 @@ export default function Home() {
                   color: "rgb(224, 189, 64)",
                 }}
               >
-                December 27th, 2024.
+                December 27th, 2025.
               </p>
             </div>
           </div>
@@ -262,7 +263,7 @@ export default function Home() {
                   // width: "75%",
                 }}
               >
-                The Lekki Centre. Lekki, Lagos state
+                Solution Arena. Palmgrove, Lagos state
               </p>
             </div>
           </div>
@@ -371,7 +372,7 @@ export default function Home() {
             We can&apos;t wait to have you
           </h1>
           <p style={{ textAlign: "center" }}>
-            Get your free ticket to <b>#asherpraiseconcert2024</b>
+            Get your free ticket to <b>#asherpraiseconcert2025</b>
           </p>
           <form action="" onSubmit={handleSubmit} ref={form}>
             <div className="inputs">
@@ -502,7 +503,7 @@ export default function Home() {
           <div className="container container-md container-sm minister-container">
             <div className="ministersContent reveal fade-bottom">
               <h1>
-                AsherPraise 2024 <span>/meet the ministers</span>
+                AsherPraise 2025 <span>/meet the ministers</span>
               </h1>
             </div>
             <div className="ministers reveal">
@@ -514,7 +515,9 @@ export default function Home() {
                   </div>
                 ))}
               </div> */}
-              <Team type={'Ministers'} others={ministers} />
+
+              {/* <Team type={'Ministers'} others={ministers} /> */}
+              <MinistersPlaceholder />
 
             </div>
           </div>

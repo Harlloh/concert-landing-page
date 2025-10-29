@@ -11,6 +11,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 export default function Footer() {
+  const date = new Date().getFullYear();
   return (
     <section className="footer-sect" id="footer">
       <div className="container footer-container">
@@ -57,7 +58,7 @@ export default function Footer() {
             </Link>
             <Link to="#">
               <FaMapMarker color="#FFA3A3" />
-              Freudes place maryland ikeja, Lagos state
+              Solution Arena. Palmgrove, Lagos state
             </Link>
           </div>
         </div>
@@ -76,7 +77,7 @@ export default function Footer() {
             </NavLink>
           </div>
         </div>
-        <div className="copyright">&copy; Asher Praise Concert 2024</div>
+        <div className="copyright">&copy; Asher Praise Concert {date}</div>
       </div>
     </section>
   );

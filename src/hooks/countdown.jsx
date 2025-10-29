@@ -7,7 +7,7 @@ export default function Countdown() {
   const [sec, setSec] = useState(0);
   let interval = useRef();
   const startTimer = () => {
-    const countdownDate = new Date("December 27 2024 00:00:00").getTime();
+    const countdownDate = new Date("December 27 2025 00:00:00").getTime();
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
@@ -45,7 +45,7 @@ export default function Countdown() {
         <h3>{min}min</h3>
         <h3>{sec}sec</h3>
       </span>
-      <p>to #asherpraise2024</p>
+      <p>to #asherpraise2025</p>
     </div>
   );
 }
