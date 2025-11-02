@@ -188,7 +188,7 @@ export default function Home() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      let res = await fetch("https://asherbackend.onrender.com", {
+      let res = await fetch("https://bitsos-backend-123.onrender.com/asherpraise", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -232,9 +232,9 @@ export default function Home() {
           Join us for <b>#asherpraiseconcert2025</b>
         </p>
         <div className="ddddd ">
-          <div className="detail d-flex gap-2 align-items-center">
+          <div className="gap-2 detail d-flex align-items-center">
             <FaCalendarAlt color="white" />
-            <div className="detail-details text-white">
+            <div className="text-white detail-details">
               <h4 style={{ margin: 0, padding: 0 }}>Date</h4>
               <p
                 style={{
@@ -249,9 +249,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="detail d-flex gap-2 align-items-center">
+          <div className="gap-2 detail d-flex align-items-center">
             <FaMapMarkerAlt color="white" />
-            <div className="detail-details text-white">
+            <div className="text-white detail-details">
               <h4 style={{ margin: 0, padding: 0 }}>Venue:</h4>
               <p
                 style={{
@@ -267,9 +267,9 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="detail d-flex gap-2 align-items-center">
+          <div className="gap-2 detail d-flex align-items-center">
             <FaClock color="white" />
-            <div className="detail-details text-white">
+            <div className="text-white detail-details">
               <h4 style={{ margin: 0, padding: 0 }}>Time</h4>
               <p
                 style={{
@@ -289,7 +289,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section
       >
-        <div className="container container-fluid conveyner d-grid pt-5 pb-5"
+        <div className="container pt-5 pb-5 container-fluid conveyner d-grid"
 
         >
           <div className="video">
@@ -306,7 +306,7 @@ export default function Home() {
               }}
             ></iframe>
           </div>
-          <div className="content gap-3 d-flex flex-column">
+          <div className="gap-3 content d-flex flex-column">
             <h2 className="asherhead">
               Asher Praise Concert
             </h2>
@@ -316,7 +316,7 @@ export default function Home() {
             <p>
               This annual gathering breaks barriers of culture and denomination, uniting voices to glorify God as one. More than a concert, it’s a powerful encounter with God’s presence, leaving hearts refreshed and faith renewed.
             </p>
-            <div className="d-flex gap-3">
+            <div className="gap-3 d-flex">
               <a className="text-black" href="https://www.instagram.com/asherpraiseconcert/"><FaInstagram size={23} /></a>
               <a className="text-black" href="https://web.facebook.com/people/Asher-Praise-Concert/61553785067875/?_rdc=1&_rdr#"><FaFacebook size={23} /></a>
             </div>
@@ -550,7 +550,7 @@ export default function Home() {
 
       {/* GET INVOLVED */}
       <section
-        className=" text-white align-items-center volunteer-sect"
+        className="text-white  align-items-center volunteer-sect"
         id="volunteer"
       >
         <img src={volunteer} style={{ width: "100%", height: "auto" }} alt="" />
@@ -617,7 +617,7 @@ ADEGOKE concert"
 
       {/* GALLERY */}
       <section
-        className="gallery-sect text-white py-5"
+        className="py-5 text-white gallery-sect"
         id="gallery"
         style={{ backgroundColor: "rgb(28, 43, 72)" }}
       >
@@ -629,7 +629,7 @@ ADEGOKE concert"
               alt="Ashser Praise image"
             />
           </div>
-          <div className="content gap-3 d-flex flex-column">
+          <div className="gap-3 content d-flex flex-column">
             <cite>
               O Praise ye the LORD All ye heavenly hosts The great hour is at
               hand

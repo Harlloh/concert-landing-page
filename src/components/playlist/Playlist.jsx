@@ -65,7 +65,7 @@ export default function Playlist() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      let res = await fetch("https://asherbackend.onrender.com/playlist", {
+      let res = await fetch("https://bitsos-backend-123.onrender.com/asherpraise/playlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -212,13 +212,13 @@ ADEGOKE concert"
         <h4 style={{ fontFamily: "designer" }}>Featured Ministers</h4>
         <ul className="container mb-3">
           {ministers.map((minister) => (
-            <li key={minister.id} className="w-100 my-4">
+            <li key={minister.id} className="my-4 w-100">
               <img
                 src={minister.url}
                 alt={minister.ministersAlt}
                 className="imagee"
               />
-              <span className="w-100 mx-1">
+              <span className="mx-1 w-100">
                 <strong>{minister.ministerName}</strong>
                 <audio controls className="w-100">
                   <source src={minister.audios} type="audio/mp3" />
