@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 
+// eslint-disable-next-line react/prop-types
 function RevealSection({ children }) {
   useEffect(() => {
     function reveal() {

@@ -1,8 +1,8 @@
 import { FaCheckCircle } from "react-icons/fa";
+import { currentEvent, concertDateLabel } from "../../data/event";
 import "./give.css";
 import bg3 from "../../assets/flier.jpeg";
 import { Link } from "react-router-dom";
-
 
 export default function Give() {
   const giveObj = [
@@ -14,7 +14,6 @@ export default function Give() {
       bank: "MONIEPOINT",
       accountNumber: 6452080598,
     },
-
   ];
   return (
     <>
@@ -66,7 +65,7 @@ export default function Give() {
               the real essence of their own salvation. What about them? What
               about those who honestly have little to celebrate at Christmas?
               What about them who have no feet to dance away the Asher Praise
-              concert evening happening on December 27th? Or them who have no
+              concert evening happening on {concertDateLabel(currentEvent)}? Or them who have no
               sight to behold the beautiful Christmas lights? It is when the
               faithful lets the light and love of Christ shine through to these
               ones that they can be sure that the word of God will come true

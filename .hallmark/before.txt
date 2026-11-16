@@ -1,0 +1,98 @@
+FAIL 6a src/components/Home/home.css:5 hero sized in vh: height: 100vh on .herosect | fix: dvh or svh
+FAIL 7a src/components/Home/home.css:44 pure #fff: color: white (.hero-container .countdown-h3) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/Home/home.css:288 pure #fff: background-color: white (.partners-sect) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/Home/home.css:320 pure #fff: background-color: white (.contact-details) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/Home/home.css:331 pure #fff: color: white (#formbtn) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/Home/home.css:429 pure #000: color: black (.contact-form p) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/Home/home.css:460 pure #fff: color: white (.quote) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/header/header.css:11 pure #fff: color: white (.header, .headerr) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/header/header.css:41 pure #fff: color: white (a.btn) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/header/header.css:45 pure #fff: color: rgb(255, 255, 255) (a.btn:hover) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/header/header.css:56 pure #fff: color: white (nav li a) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/header/header.css:69 pure #fff: color: white (nav li a:hover) | fix: Tint the base toward the anchor hue
+FAIL 7a src/components/header/header.css:90 pure #000: background: rgba(0, 0, 0, 1) (.header.sticky) | fix: Tint the base toward the anchor hue
+FAIL 7a src/index.css:101 pure #fff: color: white (.countdown h3) | fix: Tint the base toward the anchor hue
+FAIL 26a src/components/Home/home.css:1 no :focus-visible styling anywhere | fix: A focus ring at 3:1 or better, instant
+FAIL 26a src/components/header/header.css:1 no :focus-visible styling anywhere | fix: A focus ring at 3:1 or better, instant
+FAIL 27 src/index.css:371 motion present, no prefers-reduced-motion block | fix: Add a prefers-reduced-motion fallback
+FAIL 34 src/components/Home/home.css:113 width: 100vw on .aboutcontent (scrollbar overflow) | fix: width: 100% with container padding
+FAIL 34 src/components/Home/home.css:482 width: 100vw on .imggggg (scrollbar overflow) | fix: width: 100% with container padding
+FAIL 34 src/index.css:180 width: 100vw on nav ul (scrollbar overflow) | fix: width: 100% with container padding
+FAIL 34 src/index.css:254 width: 100vw on .contact-details, .contact-form (scrollbar overflow) | fix: width: 100% with container padding
+FAIL 34 src/index.css:291 overflow-x: hidden on html (breaks sticky) | fix: Use overflow-x: clip on both html and body, never hidden
+FAIL 34 src/index.css:298 width: 100vw on .swiper-slide .swiper-slide-img (scrollbar overflow) | fix: width: 100% with container padding
+FAIL 38i src/components/Home/Home.jsx:478 <em>/<i> inside <h3> | fix: Roman headers; emphasis via weight or accent
+FAIL 48 src/components/Home/home.css:6 colour literal rgba(0, 0, 0, 0.311) outside tokens (background on .herosect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:6 colour literal rgba(0, 0, 0, 0.446) outside tokens (background on .herosect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:24 colour literal #fff outside tokens (color on .hero-container h1) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:26 font-family literal "Montserrat" on .hero-container h1 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:39 font-family literal "Montserrat" on .hero-container .countdown-h3 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:48 font-family literal "Arial, sans-serif" on .hero-container .countdown-h3 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:53 font-family literal "designer" on .detail-details h4, .asherhead,.galle | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:56 font-family literal "klsalite" on .detail-details p | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:81 colour literal rgb(28, 43, 72) outside tokens (background-color on .detailsss) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:137 colour literal rgb(42, 58, 92) outside tokens (box-shadow on .conveyner .image img) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:142 colour literal #222 outside tokens (color on .aboutcontent h2, .minister-c…) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:144 font-family literal "designer" on .aboutcontent h2, .minister-container .ministersContent h1 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:151 font-family literal "designer" on .aboutcontent h2 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:155 colour literal #222 outside tokens (color on .aboutcontent p, .minister-co…) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:158 font-family literal "Raleway" on .aboutcontent p, .minister-container .ministersContent p | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:177 colour literal rgba(56, 29, 219, 0.05) outside tokens (background on .confetti-sect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:266 colour literal #222 outside tokens (color on .ministers .minister .ministe…) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:268 font-family literal "Raleway" on .ministers .minister .ministerdiv h2 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:322 colour literal rgb(28, 43, 72) outside tokens (color on .contact-details) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:326 colour literal rgb(224, 205, 64) outside tokens (color on .emailllll) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:329 colour literal rgb(28, 43, 72) outside tokens (background on #formbtn) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:337 colour literal rgb(28, 43, 72) outside tokens (background-color on .volunteer-sect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:339 colour literal rgba(0, 0, 0, 0.127) outside tokens (box-shadow on .volunteer-sect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:361 font-family literal "Montserrat" on .contact-details h1 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:372 font-family literal "Raleway" on .contact-details p, .contact-form p | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:402 font-family literal "Ornate" on .conveyners | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:412 colour literal #e9e7e7 outside tokens (background-color on .contact-form) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:418 colour literal #222 outside tokens (color on .contact-form h1) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:422 font-family literal "Montserrat" on .contact-form h1 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:449 colour literal rgba(0, 0, 0, 0.49) outside tokens (background on .quoteSect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:449 colour literal rgba(0, 0, 0, 0.466) outside tokens (background on .quoteSect) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:465 colour literal #e9e9e9 outside tokens (color on .quote h3) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:467 font-family literal "Inter" on .quote h3 | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:538 colour literal rgb(224, 189, 64) outside tokens (color on .aboutcontent h2, .minister-c…) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:543 colour literal #333 outside tokens (color on .coming-soon-text) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:547 colour literal #f8f8f8 outside tokens (background-color on .coming-soon-text) | fix: Lift the value into the token block
+FAIL 48 src/components/Home/home.css:549 colour literal rgba(0, 0, 0, 0.1) outside tokens (box-shadow on .coming-soon-text) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:5 colour literal #615f5f outside tokens (box-shadow on .header, .headerr) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:44 colour literal rgb(28, 43, 72) outside tokens (background-color on a.btn:hover) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:45 colour literal rgb(255, 255, 255) outside tokens (color on a.btn:hover) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:53 font-family literal "Montserrat" on nav li a | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:68 colour literal rgb(28, 43, 72) outside tokens (background-color on nav li a:hover) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:74 colour literal rgb(224, 205, 64) outside tokens (border-bottom on nav li a.active) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:77 colour literal rgba(
+    0,
+    0,
+    0,
+  … outside tokens (background on .header) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:90 colour literal rgba(0, 0, 0, 1) outside tokens (background on .header.sticky) | fix: Lift the value into the token block
+FAIL 48 src/components/header/header.css:91 colour literal #615f5f outside tokens (box-shadow on .header.sticky) | fix: Lift the value into the token block
+FAIL 48 src/index.css:46 font-family literal "Inter" on h1 | fix: Lift the value into the token block
+FAIL 48 src/index.css:53 font-family literal "Raleway" on p | fix: Lift the value into the token block
+FAIL 48 src/index.css:95 font-family literal "designer" on .countdown h3 | fix: Lift the value into the token block
+FAIL 48 src/index.css:109 colour literal #ffffffc4 outside tokens (color on .title h1) | fix: Lift the value into the token block
+FAIL 48 src/index.css:110 font-family literal "inter" on .title h1 | fix: Lift the value into the token block
+FAIL 48 src/index.css:177 colour literal #615f5f outside tokens (background-color on nav ul) | fix: Lift the value into the token block
+FAIL 48 src/index.css:268 colour literal #d5ba22 outside tokens (color on .swipe-text p) | fix: Lift the value into the token block
+FAIL 48 src/index.css:273 colour literal rgba(0, 0, 0, 0.496) outside tokens (box-shadow on .swipe-text p) | fix: Lift the value into the token block
+FAIL 50 src/components/Home/home.css:121 bare 1fr track holds images (.conveyner) | fix: Use minmax(0, 1fr) for image tracks
+FAIL 62 src/index.css:354 .reveal is hidden at rest (opacity: 0) and depends on a script to appear | fix: Visible by default: scope the hidden state under a .js class the script adds, or animate from visible with @starting-style
+FAIL 67 src/components/header/header.css:49 nav li a: uppercase at 10px in a label role | fix: Labels, captions, table heads, nav links and meta are the body face (or the theme's label face), a step smaller, sentence case, untracked
+REFLEX 1 src/components/Home/home.css:467 display font "inter" (.quote h3) | fix: Pick a display face from the typography catalog
+REFLEX 1 src/index.css:46 display font "inter" (h1) | fix: Pick a display face from the typography catalog
+REFLEX 1 src/index.css:110 display font "inter" (.title h1) | fix: Pick a display face from the typography catalog
+REFLEX 7b src/components/Home/home.css:24 pure #fff: color: var(--general-light, #fff) (.hero-container h1) | fix: Tint the base toward the anchor hue
+REFLEX 26b src/components/Home/home.css:1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+REFLEX 26b src/components/Home/home.css:1 no :disabled styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+REFLEX 26b src/components/header/header.css:1 no :active styling anywhere | fix: All eight states; guard: not a form control, no aria-disabled anywhere
+REFLEX 37 src/components/Home/home.css:56 7 font families: montserrat, arial, designer, klsalite, raleway, ornate,… | fix: Drop the extra family; three is the ceiling
+REFLEX 38iii src/components/Home/home.css:244 accented word inside a heading (.minister-container .ministersContent h1 span) | fix: Set the whole head one way: a line break, a second line at a second size, or the whole head in the accent. Guard: the theme names the coloured word as its signature and it appears once on the page, in the hero
+WARN F3 src/components/Home/home.css:23 no text-wrap: balance on any display head (8 head rule(s), e.g. .hero-container h1) | fix: Add text-wrap: balance to h1/h2-level heads
+WARN F3 src/index.css:45 no text-wrap: balance on any display head (3 head rule(s), e.g. h1) | fix: Add text-wrap: balance to h1/h2-level heads
+WARN F6 src/components/Home/home.css:40 numeric selector .hero-container .countdown-h3 at display size without tabular figures | fix: Add font-variant-numeric: tabular-nums
+WARN F6 src/index.css:96 numeric selector .countdown h3 at display size without tabular figures | fix: Add font-variant-numeric: tabular-nums

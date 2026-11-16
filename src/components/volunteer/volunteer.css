@@ -1,0 +1,237 @@
+/* Hallmark · v2.0.0 · shape: Feature Stack · theme: Ink (existing site palette retained) · draw: 2d2fa1 · genre: editorial · job: join */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · weakest: specificity; lead with the real concert image and an honest, unconnected application */
+.volunteer-hero {
+  background: var(--forest);
+  color: var(--ivory);
+}
+.volunteer-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  align-items: center;
+  gap: clamp(32px,6vw,88px);
+  padding-block: clamp(56px,8vw,112px);
+}
+.volunteer-hero-copy {
+  min-width: 0;
+}
+.volunteer-hero .section-label {
+  color: var(--gold);
+}
+.volunteer-hero h1 {
+  max-width: 10ch;
+  margin-bottom: 24px;
+  color: var(--ivory);
+  font-size: clamp(2.8rem,6vw,5rem);
+  text-wrap: balance;
+}
+.volunteer-hero-copy > p:not(.lead) {
+  max-width: 48ch;
+  color: var(--ivory);
+}
+.volunteer-hero .lead {
+  max-width: 32ch;
+  margin-bottom: 16px;
+}
+.volunteer-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 28px;
+}
+.volunteer-hero-actions .text-link {
+  color: var(--ivory);
+}
+.volunteer-hero-image {
+  min-width: 0;
+  margin: 0;
+}
+.volunteer-hero-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.volunteer-hero-image figcaption {
+  margin-top: 12px;
+  color: var(--ivory);
+  font-size: .8rem;
+}
+.volunteer-event {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+.volunteer-event-facts {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 24px;
+  padding-block: 28px;
+}
+.volunteer-event-facts > div {
+  min-width: 0;
+}
+.volunteer-event-facts > div + div {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+.volunteer-event-facts span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.volunteer-event-facts p {
+  margin: 0;
+  line-height: 1.5;
+}
+.volunteer-form-layout {
+  display: grid;
+  grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
+  align-items: start;
+  gap: clamp(32px,6vw,88px);
+}
+.volunteer-form-copy h2 {
+  max-width: 12ch;
+  text-wrap: balance;
+}
+.volunteer-form-copy > p {
+  max-width: 52ch;
+}
+.volunteer-contact {
+  margin-top: 32px;
+  font-size: .9rem;
+  overflow-wrap: anywhere;
+}
+.volunteer-form {
+  min-width: 0;
+  padding: clamp(24px,4vw,40px);
+  background: var(--paper);
+  border-top: 3px solid var(--forest);
+}
+.volunteer-form fieldset {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  margin: 0 0 24px;
+}
+.volunteer-form legend {
+  margin-bottom: 8px;
+  font: 400 1.25rem var(--display);
+}
+.volunteer-form-note {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: .85rem;
+}
+.volunteer-fields {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 0 20px;
+}
+.volunteer-field {
+  min-width: 0;
+  margin-bottom: 16px;
+}
+.volunteer-field-wide {
+  grid-column: 1 / -1;
+}
+.volunteer-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .85rem;
+}
+.volunteer-field input,
+.volunteer-field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  background: var(--ivory);
+  color: var(--ink);
+}
+.volunteer-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.volunteer-field input:hover,
+.volunteer-field textarea:hover {
+  border-color: var(--forest);
+}
+.volunteer-field input:focus-visible,
+.volunteer-field textarea:focus-visible {
+  border-color: transparent;
+  outline-offset: -2px;
+}
+.volunteer-form .button {
+  width: 100%;
+}
+.volunteer-form .button:active {
+  transform: translateY(1px);
+}
+.volunteer-form .button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+.volunteer-form[aria-busy="true"] .button {
+  cursor: progress;
+}
+.volunteer-feedback {
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: .9rem;
+}
+.volunteer-feedback.error {
+  color: var(--ink);
+}
+.volunteer-feedback:focus {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+}
+@media(max-width:850px) {
+  .volunteer-hero-layout {
+    grid-template-columns: minmax(0,1fr);
+    gap: 36px;
+  }
+  .volunteer-hero-image {
+    max-width: 680px;
+  }
+  .volunteer-form-layout {
+    grid-template-columns: minmax(0,1fr);
+    gap: 32px;
+  }
+  .volunteer-form-copy h2 {
+    max-width: 18ch;
+  }
+}
+@media(max-width:600px) {
+  .volunteer-hero-layout {
+    padding-block: 48px 56px;
+  }
+  .volunteer-hero h1 {
+    font-size: clamp(2.6rem,12vw,4rem);
+  }
+  .volunteer-event-facts {
+    grid-template-columns: minmax(0,1fr);
+    gap: 0;
+  }
+  .volunteer-event-facts > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 16px 0 0;
+    margin-top: 12px;
+  }
+  .volunteer-fields {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .volunteer-field-wide {
+    grid-column: auto;
+  }
+  .volunteer-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

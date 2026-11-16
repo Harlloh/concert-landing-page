@@ -1,59 +1,58 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-// import bg1 from "../../assets/terren-hurst-KU66acygwIY-unsplash.jpg";
-// import bg2 from "../../assets/edward-cisneros-QSa-uv4WJ0k-unsplash.jpg";
-// import bg4 from "../../assets/xan-griffin-eA2t5EvcxU4-unsplash.jpg";
-import "./carousel.css";
-
-// import required modules
-import { Autoplay, EffectFade } from "swiper/modules";
+import { currentEvent, concertDateLabel } from "../../data/event";
 import Countdown from "../../hooks/countdown";
-import RevealSection from "../revealAnimation";
-// import { Link } from "react-router-dom";
-
+import "./carousel.css";
 export default function Carousel() {
+  const [first, ...rest] = currentEvent.theme.split(" ");
   return (
-    <RevealSection>
-      <Swiper
-        autoplay={{
-          delay: 3000, // Set the delay in milliseconds (5 seconds in this case)
-          disableOnInteraction: false, // Allow user interaction to stop autoplay
-        }}
-        spaceBetween={30}
-        effect={"fade"}
-        modules={[EffectFade, Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide className="swiperslide swiperslide1">
-          <div className="swipe-text">
-            <a
-              href="#register"
-              style={{ textDecoration: "none", cursor: "pointer" }}
-            >
-
+    <section className="concert-hero" aria-labelledby="hero-title">
+      <img
+        className="hero-image"
+        src={currentEvent.hero.src}
+        alt={currentEvent.hero.alt}
+        width="1600"
+        height="900"
+      />
+      <div className="hero-shade" aria-hidden="true" />
+      <div className="shell hero-inner">
+        <div className="hero-copy">
+          <p className="hero-edition">
+            Asher Praise Concert {currentEvent.edition}{" "}
+            <span>/ {currentEvent.year}</span>
+          </p>
+          <h1 id="hero-title">
+            {first}
+            <br />
+            <span>{rest.join(" ")}</span>
+          </h1>
+          <p className="hero-invitation">
+            {currentEvent.hero.invitation.map((line) => (
+              <span key={line}>
+                {line}
+                <br />
+              </span>
+            ))}
+          </p>
+          <div className="hero-actions">
+            <a href="#register" className="button">
+              Register to attend
             </a>
-            <Countdown className="counting" />
+            {/* <a href="#about" className="hero-learn">Discover the gathering</a> */}
           </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiperslide2">
-          <div className="swipe-text">
-
-            <Countdown className="counting" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiperslide3">
-          <div className="swipe-text">
-
-            <Countdown className="counting" />
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </RevealSection>
+        </div>
+        <div className="hero-location">
+          <time dateTime={currentEvent.date}>{concertDateLabel()}</time>
+          <span>
+            {currentEvent.venue}
+            <br />
+            {currentEvent.location}
+          </span>
+        </div>
+      </div>
+      <div className="hero-countdown">
+        <div className="shell">
+          <Countdown />
+        </div>
+      </div>
+    </section>
   );
 }

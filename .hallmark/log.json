@@ -1,0 +1,26 @@
+[
+ {
+  "shape": "Feature Stack",
+  "theme": "Ink (site forest/ivory palette retained)",
+  "axes": "existing Asher Praise colors and type",
+  "hero": "real concert photograph beside volunteer invitation",
+  "nav": "existing site navigation; volunteer route added",
+  "footer": "existing shared footer",
+  "imagery": "public/images/worship.jpg",
+  "photos": [
+   "public/images/worship.jpg"
+  ],
+  "entry": "2d2fa1",
+  "fingerprint": "photo-led volunteer page with honest frontend-only form",
+  "sections": [
+   "hero",
+   "concert details",
+   "volunteer interest form"
+  ],
+  "signature": "existing concert photograph",
+  "waived": [],
+  "prompt": "Volunteer page for Asher Praise Concert; frontend-only form",
+  "date": "2026-11-16",
+  "mode": "build"
+ }
+]

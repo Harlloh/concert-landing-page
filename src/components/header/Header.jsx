@@ -1,70 +1,59 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { site } from "../../data/event";
 import "./header.css";
-import logo from "../../assets/logo.png";
-
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
-
+  const [open, setOpen] = useState(false);
+  const toggle = useRef(null);
+  const location = useLocation();
+  useEffect(() => {
+    setOpen(false);
+  }, [location]);
+  useEffect(() => {
+    function close(e) {
+      if (e.key === "Escape" && open) {
+        setOpen(false);
+        toggle.current?.focus();
+      }
+    }
+    document.addEventListener("keydown", close);
+    return () => document.removeEventListener("keydown", close);
+  }, [open]);
   return (
-    <header className={`header ${mobileMenuOpen ? "mobile-open" : ""}`}>
-      <div className="container header-container">
-        <div className="logo">
-          <h1>
-            <NavLink to="#">
-              <img className="logo" src={logo} alt="" />
-            </NavLink>
-          </h1>
-        </div>
-        <div className="both-div-icon">
-          <div className="mobile-menu-icons">
-            {!mobileMenuOpen ? (
-              <FaTimes className="cancel-icon" onClick={toggleMobileMenu} />
-            ) : (
-              <FaBars className="menu-icon" onClick={toggleMobileMenu} />
-            )}
-          </div>
-          <nav className={`menu ${mobileMenuOpen ? "active" : ""}`}>
-            <ul className="navUl">
-              <li onClick={toggleMobileMenu}>
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li onClick={toggleMobileMenu}>
-                <a href="/#ministers">Ministers</a>
-              </li>
-              <li onClick={toggleMobileMenu}>
-                <NavLink to="/playlist">Playlist & Prayer</NavLink>
-              </li>
-              <li onClick={toggleMobileMenu}>
-                <NavLink to="give">Do you love me?</NavLink>
-              </li>
-
-              <li onClick={toggleMobileMenu}>
-                <a href="/#volunteer">Volunteer</a>
-              </li>
-
-              <li onClick={toggleMobileMenu}>
-                <a href="/team">Meet the Team</a>
-              </li>
-              <li onClick={toggleMobileMenu}>
-                <a href="/#register">Register</a>
-              </li>
-
-              {/* <li onClick={toggleMobileMenu}>
-                <a href="#gallery">Gallery</a>
-              </li> */}
-              <li onClick={toggleMobileMenu}>
-                <a href="/#footer" className="btn navbtn">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
+    <header className="site-header">
+      <div className="shell header-inner">
+        <Link className="brand" to="/" aria-label="Asher Praise Concert home">
+          <img src={site.logo} alt={site.name} width="76" height="76" />
+        </Link>
+        <nav
+          id="main-navigation"
+          className={open ? "site-nav is-open" : "site-nav"}
+          aria-label="Main navigation"
+          onClick={(e) => {
+            if (e.target.closest("a")) setOpen(false);
+          }}
+        >
+          <Link to="/">Home</Link>
+          <a href="/#ministers">Ministers</a>
+          <Link to="/gallery">Gallery</Link>
+          <Link to="/playlist">Playlist & prayer</Link>
+          <Link to="/team">Meet the team</Link>
+          <Link to="/volunteer">Volunteer</Link>
+        </nav>
+        <div className="header-actions">
+          <a href="/#register" className="button nav-register">
+            Register
+          </a>
+          <button
+            className="menu-toggle"
+            type="button"
+            ref={toggle}
+            aria-expanded={open}
+            aria-controls="main-navigation"
+            onClick={() => setOpen((value) => !value)}
+          >
+            {open ? "Close" : "Menu"}
+          </button>
         </div>
       </div>
     </header>

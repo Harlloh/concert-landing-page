@@ -9,8 +9,8 @@ import adegoke from "../../assets/ADEGOKE.jpg";
 import Eskeez from "../../assets/eskeez.jpg";
 import samkeyz from "../../assets/samkeyz.jpg";
 
+// eslint-disable-next-line react/prop-types
 const Team = ({ others, type }) => {
-  // Sample team members data (replace with your actual team members' information)
   const teamMembers = [
     { name: "Adeyemi Esq", role: "Head of Prayers and Intercession", url: yemiesq },
     { name: "Oluwatosin Awolola", role: "Head Protocol and Finance", url: awolola },
@@ -20,7 +20,7 @@ const Team = ({ others, type }) => {
     { name: "Temitope Apoola", role: "Project Lead", url: Apoola },
     { name: "Eskeez", role: "Music Production & Live Performance", url: Eskeez },
     { name: "Oluwafemi Babalola", role: "Principal Partner & Head (Charity)", url: femii },
-    { name: "Adegoke", role: "Convener", url: adegoke },
+    { name: "Adegoke", role: "Convener", url: adegoke }
   ];
 
   return (
@@ -32,7 +32,7 @@ const Team = ({ others, type }) => {
         {(others ? others : teamMembers).map((member, index) => (
           <div key={index} className="team-member">
             <div className="team-member-overlay">
-              <img src={member.url} alt={member.name} />
+              <img src={member.url} alt={member.name} loading="lazy" />
               <div className="overlay-content">
                 <h3>{member.name}</h3>
                 <p>{member.role}</p>

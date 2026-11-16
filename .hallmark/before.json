@@ -1,0 +1,107 @@
+{
+ "v": 1,
+ "at": "2026-11-16T14:58:08.375Z",
+ "scope": "page",
+ "summary": {
+  "fails": 81,
+  "reflex": 9,
+  "warns": 4
+ },
+ "files": {
+  "src/components/Home/Home.jsx": {
+   "handlers": [
+    "onChange={handleChange}",
+    "onSubmit={handleSubmit}"
+   ],
+   "links": [
+    "#contact",
+    "https://web.facebook.com/people/Asher-Praise-Concert/61553785067875/?_rdc=1&_rdr#",
+    "https://www.instagram.com/asherpraiseconcert/"
+   ],
+   "fields": [
+    "email",
+    "invitee",
+    "location",
+    "message",
+    "name",
+    "whatsappNumber"
+   ],
+   "hooks": [],
+   "ids": [
+    "contact",
+    "formbtn",
+    "gallery",
+    "invitee",
+    "location",
+    "ministers",
+    "register",
+    "volunteer",
+    "whatsappNumber"
+   ],
+   "scripts": []
+  },
+  "src/components/header/Header.jsx": {
+   "handlers": [
+    "onClick={toggleMobileMenu}"
+   ],
+   "links": [
+    "#gallery",
+    "/",
+    "/#footer",
+    "/#ministers",
+    "/#register",
+    "/#volunteer",
+    "/playlist",
+    "/team",
+    "give"
+   ],
+   "fields": [],
+   "hooks": [],
+   "ids": [],
+   "scripts": []
+  }
+ },
+ "wiring": {
+  "handlers": [
+   "onChange={handleChange}",
+   "onClick={toggleMobileMenu}",
+   "onSubmit={handleSubmit}"
+  ],
+  "links": [
+   "#contact",
+   "#gallery",
+   "/",
+   "/#footer",
+   "/#ministers",
+   "/#register",
+   "/#volunteer",
+   "/playlist",
+   "/team",
+   "give",
+   "https://web.facebook.com/people/Asher-Praise-Concert/61553785067875/?_rdc=1&_rdr#",
+   "https://www.instagram.com/asherpraiseconcert/"
+  ],
+  "fields": [
+   "email",
+   "invitee",
+   "location",
+   "message",
+   "name",
+   "whatsappNumber"
+  ],
+  "hooks": [],
+  "ids": [
+   "contact",
+   "formbtn",
+   "gallery",
+   "invitee",
+   "location",
+   "ministers",
+   "register",
+   "volunteer",
+   "whatsappNumber"
+  ]
+ },
+ "scripts": {},
+ "pages": {}
+}

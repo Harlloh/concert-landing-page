@@ -1,113 +1,278 @@
-/* Add these styles to your existing stylesheet */
-
-.cardd {
-  border-bottom: 1px solid black;
-  padding-bottom: 8px;
-  width: 100%;
-  margin: 0 auto;
-  /* background-color: red; */
+/* Hallmark · existing Asher Praise palette · editorial worship and prayer page */
+/* Hallmark · pre-emit critique: P4 H5 E4 S5 R5 V4 · weakest execution; check desktop and mobile audio and prayer layouts */
+.playlist-page {
+  --playlist-column-gap: clamp(24px,4vw,48px);
 }
-
-.give-secti {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.78)),
-    url("../../assets/laura-allen-QEVICslCN5o-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top bottom;
-  height: 80vh;
+.playlist-hero {
+  background: var(--forest);
+  color: var(--ivory);
+}
+.playlist-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-attachment: fixed;
-  justify-content: center;
-  color: white; /* Set the default text color to white */
+  gap: var(--playlist-column-gap);
+  padding-block: clamp(56px,8vw,112px);
 }
-
-.give-sect p {
-  color: #ff9b0d;
+.playlist-hero-copy {
+  min-width: 0;
 }
-
-.give-sect h3 cite {
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
+.playlist-hero h1 {
+  max-width: 11ch;
+  margin-bottom: 28px;
+  color: var(--ivory);
+  font-size: clamp(2.8rem,5.8vw,4.8rem);
+  text-wrap: balance;
 }
-
-.give-sect h3 span {
-  font-family: Inter;
-  color: #ff9b0d;
-  font-weight: 500;
+.playlist-scripture {
+  max-width: 55ch;
+  margin: 0 0 28px;
+  padding-left: 20px;
+  border-left: 2px solid var(--gold);
 }
-
-/* Add a class for styling the prayer request section */
-.prayer-request-sect {
-  padding: 20px;
-  background-color: #f8f8f8;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.playlist-scripture p {
+  margin-bottom: 12px;
+  font-size: clamp(1rem,1.5vw,1.2rem);
+  line-height: 1.65;
 }
-
-/* Style the form inside the prayer request section */
-.prayer-request-sect form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.playlist-scripture cite {
+  color: var(--gold);
+  font-size: .9rem;
+  font-style: normal;
 }
-
-/* Style the label and textarea */
-.prayer-request-sect label {
-  margin-bottom: 8px;
+.playlist-hero-image {
+  min-width: 0;
+  margin: 0;
 }
-
-.prayer-request-sect textarea, .prayer-request-sect input{
+.playlist-hero-image img {
   width: 100%;
-  padding: 8px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.playlist-hero-image figcaption {
+  margin-top: 12px;
+  color: var(--ivory);
+  font-size: .8rem;
+}
+.playlist-music {
+  background: var(--paper);
+}
+.playlist-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--playlist-column-gap);
+  margin-bottom: 36px;
+}
+.playlist-section-heading h2 {
+  max-width: 15ch;
+  margin: 0;
+}
+.playlist-section-heading > p {
+  max-width: 45ch;
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+.playlist-tracks {
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid var(--forest);
+  list-style: none;
+}
+.playlist-tracks li {
+  display: grid;
+  grid-template-columns: minmax(0,.8fr) minmax(0,1fr) minmax(240px,1.2fr);
+  align-items: center;
+  gap: var(--playlist-column-gap);
+  min-width: 0;
+  padding-block: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.playlist-track-artist {
+  min-width: 0;
+  font-family: var(--display);
+  font-size: clamp(1.15rem,2vw,1.5rem);
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+.playlist-track-caption {
+  color: var(--muted);
+  font-size: .85rem;
+}
+.playlist-tracks audio {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+.prayer-section {
+  background: var(--sage);
+}
+.prayer-layout {
+  display: grid;
+  grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
+  align-items: start;
+  gap: var(--playlist-column-gap);
+}
+.prayer-copy h2 {
+  max-width: 12ch;
+  margin-bottom: 20px;
+}
+.prayer-copy > p {
+  max-width: 48ch;
+}
+.prayer-support {
+  margin-top: 28px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.prayer-form {
+  min-width: 0;
+  padding: clamp(24px,4vw,40px);
+  border-top: 3px solid var(--forest);
+  background: var(--paper);
+}
+.prayer-form fieldset {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  margin: 0 0 24px;
+}
+.prayer-form legend {
+  margin-bottom: 20px;
+  font-family: var(--display);
+  font-size: 1.4rem;
+}
+.prayer-field {
+  min-width: 0;
   margin-bottom: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
 }
-
-.prayer-request-sect button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.prayer-field:last-child {
+  margin-bottom: 0;
 }
-
-.prayer-request-sect button:hover {
-  background-color: #45a049;
+.prayer-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .85rem;
 }
-.imagee {
-    height: auto;
-    width: 10rem;
-    min-width: auto;
-    min-height: auto;
-    max-width: auto;
-    max-height: auto;
-    /* border: 2px solid grey; */
-    border-radius: 10px;
-    box-shadow: 0 3px 5px rgb(95, 95, 95);
+.prayer-field input,
+.prayer-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: 12px;
+  border: 1px solid var(--muted);
+  border-radius: var(--radius);
+  background: var(--ivory);
+  color: var(--ink);
 }
-
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 640px) {
-  .give-sect {
-    background-size: cover;
-   
+.prayer-field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.prayer-field input:hover,
+.prayer-field textarea:hover {
+  border-color: var(--forest);
+}
+.prayer-field input:focus-visible,
+.prayer-field textarea:focus-visible {
+  border-color: transparent;
+  outline-offset: -2px;
+}
+.prayer-form .button {
+  width: 100%;
+}
+.prayer-form .button:active {
+  transform: translateY(1px);
+}
+.prayer-form .button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+.prayer-feedback {
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: .9rem;
+}
+.prayer-feedback:focus {
+  outline: 3px solid var(--forest);
+  outline-offset: 3px;
+}
+.playlist-event {
+  background: var(--deep);
+  color: var(--ivory);
+  padding-block: clamp(48px,6vw,80px);
+}
+.playlist-event-layout {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  align-items: center;
+  gap: var(--playlist-column-gap);
+}
+.playlist-event .section-label {
+  color: var(--gold);
+}
+.playlist-event h2 {
+  max-width: 14ch;
+  margin-bottom: 0;
+  color: var(--ivory);
+}
+.playlist-event-details {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 8px var(--playlist-column-gap);
+  align-items: start;
+}
+.playlist-event-details p {
+  margin: 0;
+}
+.playlist-event-details .button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  margin-top: 12px;
+}
+@media(max-width:850px) {
+  .playlist-hero-layout,
+  .prayer-layout,
+  .playlist-event-layout {
+    grid-template-columns: minmax(0,1fr);
+    gap: var(--playlist-column-gap);
+  }
+  .playlist-hero-image {
+    max-width: 680px;
+  }
+  .prayer-copy h2 {
+    max-width: 18ch;
   }
 }
-#yy{
-  width: 100%;
-  margin: 0 auto;
-  background: #000;
+@media(max-width:650px) {
+  .playlist-hero-layout {
+    padding-block: 48px 56px;
+  }
+  .playlist-hero h1 {
+    font-size: clamp(2.6rem,11vw,4rem);
+  }
+  .playlist-section-heading {
+    display: block;
+  }
+  .playlist-section-heading > p {
+    margin-top: 16px;
+  }
+  .playlist-tracks li {
+    grid-template-columns: minmax(0,1fr);
+    gap: 8px;
+    padding-block: 16px;
+  }
+  .playlist-tracks audio {
+    margin-top: 8px;
+  }
+  .playlist-event-details {
+    grid-template-columns: minmax(0,1fr);
+    gap: 12px;
+  }
+  .playlist-event-details .button {
+    grid-column: auto;
+  }
 }
-.bg3{
-  width: 55%;
-  height: 55%;
-  margin: 2rem auto;
-}
-

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FaGift, FaCalendarAlt } from 'react-icons/fa';
 import { BsStars } from 'react-icons/bs';
 
@@ -271,7 +271,7 @@ const MinistersPlaceholder = () => {
                             <div className="subheading-container">
                                 <BsStars />
                                 <p className="subheading-text">
-                                    Meet This Year's Anointed Ministers
+                                    Meet This Year&apos;s Anointed Ministers
                                 </p>
                                 <BsStars />
                             </div>
@@ -296,7 +296,7 @@ const MinistersPlaceholder = () => {
                             </div>
 
                             <p className="quote-text">
-                                "Prepare your heart for a divine encounter"
+                                &quot;Prepare your heart for a divine encounter&quot;
                             </p>
                         </div>
 

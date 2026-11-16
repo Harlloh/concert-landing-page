@@ -1,234 +1,191 @@
-import { useState } from "react";
-import "./playlist.css";
-import paulTomisin from "../../assets/paultomisin1.png";
-// import YinkaAlase from "../../assets/alaseyori1.png";
-// import Debora from "../../assets/Deborah Pelumi1.png";
-// import sammyMoore from "../../assets/sammyMoore1.png";
-// import Harjovy from "../../assets/Harjovy1.jpg.png";
-// import harmony from "../../assets/Moses Harmony1.jpg.png";
-// import engo from "../../assets/engo1.png";
-// import paulaudio from "../../assets/paultomisinaudio.mp3";
-// import yinkaudio from "../../assets/yinkaaudio.mp3";
-// import deborahaudio from "../../assets/deborahaudio.mp3";
-// import harjovyaudio from "../../assets/harjovyaudio.mp3";
-// import harmonysaudio from "../../assets/harmonyaudio.mp3";
-// import sammoore from "../../assets/sammoore.mp3";
-// import engosaudio from "../../assets/engoaudio.mp3";
-// import emailjs from "@emailjs/browser";
-import bg3 from "../../assets/flier.jpeg";
-import { Link } from "react-router-dom";
+import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { currentEvent, concertDateLabel } from '../../data/event';
+import './playlist.css';
+
+const emptyPrayer = {
+  name: '',
+  email: '',
+  prayerRequest: ''
+};
 
 export default function Playlist() {
-  // const [prayerRequest, setPrayerRequest] = useState("");
-  // const [name, setName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    prayerRequest: "",
-  });
-  // const form = useRef();
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
+  const [formData, setFormData] = useState(emptyPrayer);
+  const [feedback, setFeedback] = useState(null);
+  const form = useRef(null);
+  const feedbackNode = useRef(null);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((previous) => ({
+      ...previous,
+      [name]: value
     }));
   };
 
-  // const handlePrayerRequestSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm(
-  //       "service_zowvbey",
-  //       "template_ed8bxaj",
-  //       form.current,
-  //       "_dav46sRXvD_65HCc"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //         setPrayerRequest("");
-  //         setName("");
-  //         alert("Prayer request submitted:");
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //         alert(error);
-  //       }
-  //     );
-  //   e.target.reset();
-  // };
-
-  const handlePrayerRequestSubmit = async (e) => {
-    e.preventDefault();
+  const handlePrayerRequestSubmit = async (event) => {
+    event.preventDefault();
     setIsLoading(true);
+    setFeedback(null);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 30000);
+
     try {
-      let res = await fetch("https://bitsos-backend-123.onrender.com/asherpraise/playlist", {
-        method: "POST",
+      const response = await fetch(currentEvent.prayer.endpoint, {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json;charset=utf-8",
+          'Content-Type': 'application/json;charset=utf-8'
         },
         body: JSON.stringify(formData),
+        signal: controller.signal
       });
-      let result = await res.json();
-      alert(result.status);
-      setIsLoading(false);
-      setFormData({
-        name: "",
-        email: "",
-        prayerRequest: "",
+      const result = await response.json();
+
+      if (!response.ok || String(result?.status || '').toUpperCase() !== 'SUCCESS') {
+        throw new Error('Prayer request was not confirmed');
+      }
+
+      setFormData({ ...emptyPrayer });
+      form.current?.reset();
+      setFeedback({
+        type: 'success',
+        text: 'Your prayer request has been shared with the Asher Praise team.'
       });
     } catch (error) {
-      alert(error);
+      setFeedback({
+        type: 'error',
+        text: error.name === 'AbortError'
+          ? 'The request timed out. Your prayer request was not confirmed; your details are still here. Please try again.'
+          : 'We could not confirm your prayer request. Your details are still here; please try again.'
+      });
+    } finally {
+      clearTimeout(timeout);
       setIsLoading(false);
-
+      requestAnimationFrame(() => feedbackNode.current?.focus());
     }
   };
-  const ministers = [
-    // {
-    //   id: 1,
-    //   ministerName: "Paul Tomisin",
-    //   audios: paulaudio,
-    //   url: paulTomisin,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December-December events in Lagos-Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-    // {
-    //   id: 2,
-    //   ministerName: "Yinka Alaseyori",
-    //   audios: yinkaudio,
-    //   url: YinkaAlase,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December-December events in Lagos-Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-    // {
-    //   id: 3,
-    //   ministerName: "Deborah Pelumi",
-    //   audios: deborahaudio,
-    //   url: Debora,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December-December events in Lagos-Praise Concert in Lagos - Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-    // {
-    //   id: 4,
-    //   ministerName: "Harjovy",
-    //   audios: harjovyaudio,
-    //   url: Harjovy,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December-December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-    // {
-    //   id: 5,
-    //   ministerName: "Sammy Moore",
-    //   audios: sammoore,
-    //   url: sammyMoore,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December-December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-    // {
-    //   id: 6,
-    //   ministerName: "Moses Harmony",
-    //   audios: harmonysaudio,
-    //   url: harmony,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December - December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-    // {
-    //   id: 7,
-    //   ministerName: "Engo",
-    //   audios: engosaudio,
-    //   url: engo,
-    //   ministersAlt:
-    //     "Asher praise concert - Concert in Lagos this December-December events in Lagos - Praise Concert in Lagos-Asher Praise Concert-ADEGOKE&apos;concert",
-    // },
-  ];
 
-  return (
-    <>
-      <section className="give-secti">
-        <h3>
-          <cite>
-            Do not be anxious about anything, but in every situation, by prayer
-            and petition, with thanksgiving, present your requests to God
-          </cite>
-          .
-        </h3>
-        <p>Philippians 4:6</p>
-      </section>
+  return <div className="playlist-page">
+    <section className="playlist-hero" aria-labelledby="playlist-title">
+      <div className="shell playlist-hero-layout">
+        <div className="playlist-hero-copy">
+          <h1 id="playlist-title">Bring your requests to God.</h1>
+          <blockquote className="playlist-scripture">
+            <p>“Present your requests to God.”</p>
+            <cite>Philippians 4:6</cite>
+          </blockquote>
+          <a className="button" href="#prayer-request">Share a prayer request</a>
+        </div>
+        <figure className="playlist-hero-image">
+          <img
+            src={currentEvent.hero.src}
+            alt={currentEvent.hero.alt}
+            width="1600"
+            height="900"
+          />
+          <figcaption>{currentEvent.hero.caption}</figcaption>
+        </figure>
+      </div>
+    </section>
 
-      <section className="prayer-request-sect">
-        <h4>Submit Your Prayer Request</h4>
-        <form onSubmit={handlePrayerRequestSubmit}>
-          <label htmlFor="name">Your Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name..."
-            onChange={handleChange}
-            value={formData.name}
-          />
-          <label htmlFor="email">Your email</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="enter your email"
-            onChange={handleChange}
-            value={formData.email}
-          />
-          <label htmlFor="prayerRequest">Your Prayer Request:</label>
-          <textarea
-            id="prayerRequest"
-            name="prayerRequest"
-            value={formData.prayerRequest}
-            onChange={handleChange}
-            required
-          />
-          <button type="submit" disabled={isLoading}>
-            {isLoading ? "Submitting" : "Submit"}
+    <section className="playlist-music section-space" aria-labelledby="playlist-music-title">
+      <div className="shell">
+        <div className="playlist-section-heading">
+          <div>
+            <h2 id="playlist-music-title">Let the praise stay with you.</h2>
+          </div>
+          <p>Listen again to music from Asher Praise.</p>
+        </div>
+        <ol className="playlist-tracks">
+          {currentEvent.playlist.tracks.map((song) => <li key={song.artist}>
+            <span className="playlist-track-artist">{song.artist}</span>
+            <span className="playlist-track-caption">Asher Praise selection</span>
+            <audio controls preload="none" aria-label={`Listen to the Asher Praise selection by ${song.artist}`}>
+              <source src={song.src} type="audio/mpeg" />
+              Your browser does not support audio playback.
+            </audio>
+          </li>)}
+        </ol>
+      </div>
+    </section>
+
+    <section className="prayer-section section-space" id="prayer-request" aria-labelledby="prayer-title">
+      <div className="shell prayer-layout">
+        <div className="prayer-copy">
+          <h2 id="prayer-title">There is room for your prayer.</h2>
+          <p>Share what is on your heart with the Asher Praise team.</p>
+          <p className="prayer-support">Your request is sent to the team by email. Please share only what you are comfortable sending.</p>
+        </div>
+
+        <form ref={form} className="prayer-form" onSubmit={handlePrayerRequestSubmit} aria-busy={isLoading}>
+          <fieldset disabled={isLoading}>
+            <legend>Your prayer request</legend>
+            <div className="prayer-fields">
+              <div className="prayer-field">
+                <label htmlFor="prayer-name">Your name</label>
+                <input
+                  type="text"
+                  id="prayer-name"
+                  name="name"
+                  autoComplete="name"
+                  maxLength="160"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="prayer-field">
+                <label htmlFor="prayer-email">Your email</label>
+                <input
+                  type="email"
+                  id="prayer-email"
+                  name="email"
+                  autoComplete="email"
+                  maxLength="254"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="prayer-field">
+                <label htmlFor="prayer-text">Your prayer request</label>
+                <textarea
+                  id="prayer-text"
+                  name="prayerRequest"
+                  rows="5"
+                  maxLength="4000"
+                  required
+                  value={formData.prayerRequest}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </fieldset>
+          <button className="button" type="submit" disabled={isLoading}>
+            {isLoading ? 'Sharing your request…' : 'Submit prayer request'}
           </button>
+          {feedback && <p
+            className={`prayer-feedback ${feedback.type}`}
+            role={feedback.type === 'error' ? 'alert' : 'status'}
+            tabIndex="-1"
+            ref={feedbackNode}
+          >{feedback.text}</p>}
         </form>
-      </section>
+      </div>
+    </section>
 
-      <Link to="/" id="yy">
-        <img
-          src={bg3}
-          className="bg3"
-          alt="Concert in Lagos this December
-
-December events in Lagos
-
-Praise Concert in Lagos 
-
-Asher Praise Concert
-
-ADEGOKE concert"
-        />
-      </Link>
-      {/* <section className="ministers-section align-items-center d-flex flex-column">
-        <h4 style={{ fontFamily: "designer" }}>Featured Ministers</h4>
-        <ul className="container mb-3">
-          {ministers.map((minister) => (
-            <li key={minister.id} className="my-4 w-100">
-              <img
-                src={minister.url}
-                alt={minister.ministersAlt}
-                className="imagee"
-              />
-              <span className="mx-1 w-100">
-                <strong>{minister.ministerName}</strong>
-                <audio controls className="w-100">
-                  <source src={minister.audios} type="audio/mp3" />
-                  Your browser does not support the audio element.
-                </audio>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </section> */}
-    </>
-  );
+    <section className="playlist-event" aria-labelledby="playlist-event-title">
+      <div className="shell playlist-event-layout">
+        <div>
+          <h2 id="playlist-event-title">Praise is better shared.</h2>
+        </div>
+        <div className="playlist-event-details">
+          <p><time dateTime={currentEvent.date}>{concertDateLabel()}</time></p>
+          <p>{currentEvent.venue}<br />{currentEvent.location}</p>
+          <Link className="button" to="/#register">Register for the concert</Link>
+        </div>
+      </div>
+    </section>
+  </div>;
 }
