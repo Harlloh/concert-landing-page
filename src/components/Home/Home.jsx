@@ -44,6 +44,7 @@ export default function Home() {
           <p className="lead">Across cultures and denominations, we gather to celebrate the goodness of God.</p>
           <p>Asher Praise Concert brings passionate worshippers and gospel artists together in heartfelt worship and music. This annual gathering unites voices to glorify God as one.</p>
           <p>For Asher Praise {event.edition}, we gather under the theme <strong>{event.theme}</strong>.</p>
+          <p>Join our free gospel praise and worship concert in Lagos on {concertDateLabel(event)} at {event.startTime}, {event.venue}, {event.location}. Celebrate this December with music, prayer and community. <a href="#register">Register to attend</a>.</p>
         </div>
       </div>
     </section>
