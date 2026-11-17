@@ -20,7 +20,7 @@ export default function Home() {
           <a href={event.directions} target="_blank" rel="noreferrer">Get directions</a>
         </div>
         <div>
-          <span>Time & attendance</span>
+          <span>Time</span>
           <p>{event.startTime || 'Start time to be announced'}</p>
           <a href="#register">{event.registration.status === 'open' ? event.registration.openLabel : event.registration.closedLabel}</a>
         </div>
