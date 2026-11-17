@@ -1,8 +1,24 @@
-# React + Vite
+# Asher Praise Concert website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Updating the event
 
-Currently, two official plugins are available:
+Edit [`src/data/event.js`](./src/data/event.js) when preparing a new edition. The homepage, countdown, registration, volunteer, playlist, event metadata, and event partner section read their changing details from `currentEvent`:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Update the edition, year, theme, date (`YYYY-MM-DD`), time, venue, location, and directions.
+- Replace the hero image and update its alt text, caption, and invitation.
+- Set registration to `open` or `closed`, update its price and open/closed labels and endpoint, and update the volunteer and prayer endpoints if needed.
+- Update the ministers, playlist tracks, and event partners for the new edition.
+
+The date labels are formatted from the ISO date, so there is no separate date string to keep in sync. After the previous edition is complete, update `archive` in the same file with its year, gallery images, video, and homepage photos.
+
+Assets used by the event configuration are in `public/images` or `src/assets`. Audio and partner assets are resolved from `src/assets` by the configuration module.
+
+## Development
+
+```sh
+npm install
+npm run dev
+npm test
+npm run lint
+npm run build
+```

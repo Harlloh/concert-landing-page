@@ -1,50 +1,14 @@
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import Home from "./components/Home/Home";
 import Give from "./components/give/Give";
 import Playlist from "./components/playlist/Playlist";
 import Team from "./components/team/team";
 import Gallery from "./components/gallery/Gallery";
+import Volunteer from "./components/volunteer/Volunteer";
 // import Carousel from "./components/carousel/Carousel";
 
 function App() {
-  //  function reveal() {
-  //    var reveals = document.querySelectorAll(".reveal");
-  //    for (var i = 0; i < reveals.length; i++) {
-  //      var windowHeight = window.innerHeight;
-  //      var elementTop = reveals[i].getBoundingClientRect().top;
-  //      var elementVisible = 150;
-  //      if (elementTop < windowHeight - elementVisible) {
-  //        reveals[i].classList.add("active");
-  //      } else {
-  //        reveals[i].classList.remove("active");
-  //      }
-  //    }
-  //  }
-
-  //  window.addEventListener("scroll", reveal);
-
-  //  // To check the scroll position on page load
-  //  reveal();
-
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route>
-        <Route path="/" exact element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/give" element={<Give />} />
-          <Route path="/playlist" element={<Playlist />} />
-        </Route>
-      </Route>
-    )
-  );
-  // return <Carousel />;
   return (
     // <RouterProvider router={router} />
     <BrowserRouter>
@@ -55,10 +19,10 @@ function App() {
           <Route path="playlist" element={<Playlist />} />
           <Route path="team" element={<Team />} />
           <Route path="gallery" element={<Gallery />} />
+          <Route path="volunteer" element={<Volunteer />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;

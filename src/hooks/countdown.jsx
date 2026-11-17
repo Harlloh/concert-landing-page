@@ -1,51 +1,27 @@
-import { useRef, useState, useEffect } from "react";
-
+import { useEffect, useState } from 'react';
+import { currentEvent, concertDateLabel } from '../data/event';
+import { countdownToDay } from '../lib/countdown';
 export default function Countdown() {
-  const [days, setDays] = useState(0);
-  const [hour, setHour] = useState(0);
-  const [min, setMin] = useState(0);
-  const [sec, setSec] = useState(0);
-  let interval = useRef();
-  const startTimer = () => {
-    const countdownDate = new Date("December 27 2025 00:00:00").getTime();
-    interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countdownDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
-      const min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const sec = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (distance < 0) {
-        clearInterval(interval.current);
-      } else {
-        setDays(days);
-        setHour(hours);
-        setMin(min);
-        setSec(sec);
-      }
-    }, 1000);
-  };
+  const [clock, setClock] = useState(() => countdownToDay(Date.now(), currentEvent.date));
   useEffect(() => {
-    startTimer();
+    const update = () => setClock(countdownToDay(Date.now(), currentEvent.date));
+    update();
+    const timer = setInterval(update, 1000);
+    document.addEventListener('visibilitychange', update);
     return () => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      clearInterval(interval.current);
+      clearInterval(timer);
+      document.removeEventListener('visibilitychange', update);
     };
   }, []);
-
-  return (
-    <div className="countdown">
-      <span className="countdown-h3 d-flex gap-3">
-        <h3>{days}days</h3>
-        <h3>{hour}hours</h3>
-        <h3>{min}min</h3>
-        <h3>{sec}sec</h3>
-      </span>
-      <p>to #asherpraise2025</p>
+  const units = [['days', 'Days'], ['hours', 'Hours'], ['minutes', 'Minutes'], ['seconds', 'Seconds']];
+  return <div className="event-countdown" aria-label="Countdown to concert day in Lagos time">
+    <div className="countdown-caption">
+      <span>{clock.phase === 'upcoming' ? 'Until concert day' : clock.phase === 'today' ? 'Today is concert day' : 'The concert date has passed'}</span>
+      <small>{concertDateLabel()} / Lagos time</small>
     </div>
-  );
+    <div className="countdown-values" role="timer" aria-live="off">{units.map(([key, label]) => <div className="countdown-unit" key={key}>
+        <strong>{String(clock[key]).padStart(2, '0')}</strong>
+        <span>{label}</span>
+      </div>)}</div>
+  </div>;
 }

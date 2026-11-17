@@ -1,119 +1,74 @@
-import { FaCheckCircle } from "react-icons/fa";
-import "./give.css";
-import bg3 from "../../assets/flier.jpeg";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './give.css';
 
+const accountNumber = '6452080598';
 
 export default function Give() {
-  const giveObj = [
-    {
-      mode: "Naira",
-      type: "NGN NAIRA",
-      symbol: "N",
-      accounName: "ASHER PRAISE CONCERT",
-      bank: "MONIEPOINT",
-      accountNumber: 6452080598,
-    },
+  const [copyStatus, setCopyStatus] = useState('');
 
-  ];
-  return (
-    <>
-      <section className="give-sect d-flex flex-column">
-        <h3>Do you love me?</h3>
-        <p>
-          Charity to <span>Widows and Indigents</span>
-          <br /> in the Community
-        </p>
-      </section>
-      <div className="container mt-5">
-        <h1>The day after the holiday</h1>
-        <div className="give-details">
-          <p>
-            Loneliness at Christmas spurs more people into self-injury just the
-            day after the holiday. The Centre for Disease Control & Prevention
-            CDC affirms this much. While delay in self-harm during the holiday
-            itself that is apparent from worldwide statistics has been explained
-            away as not wanting to spoil the experience for others, the spike in
-            this vice just after festive seasons remains a concern. Actually the
-            very allure of the holiday contributes to this behavior when
-            feelings of disappointment heighten. Failure of Xmas picture-perfect
-            to heal people is the enemy&apos;s doing. God&apos;s creation which
-            is originally good has been corrupted by the adversary. His motive
-            for doing this is to derail God&apos;s work and create feelings of
-            disappointment in the people whom God loves.
-          </p>
-          <Link to="/">
-            <img src={bg3} alt="" className="bg3" />
-          </Link>
-          <h4>Feed my sheep</h4>
-          <p>
-            The rumblings had settled of the noisy weeks before; the
-            earth-shaking event which followed the Passover, culminating into
-            the resurrection from death of their LORD. Fear, so palpable the
-            week before, was now giving way to faith and gratitude. Peter with
-            his brethren had seen with their eyes what the whole of humanity
-            would give everything to witness. Yet they had to eat and continue
-            with their normal lives. But there were multitudes who were supposed
-            to be part of the story; for whom the cause of the past weeks was
-            designed. Christ appeared in the dusk of a busy day when Peter had
-            beseeched his brethren to return to their daily lives. “Do you love
-            me more than these?” The third time that he asked, he followed with
-            a command; “Feed My Sheep”.
-            <br />
-            <p className="mt-3">
-              The church today has lived their faith, the great experiences of
-              the miraculous so intensely that they are potentially blinded to
-              the real essence of their own salvation. What about them? What
-              about those who honestly have little to celebrate at Christmas?
-              What about them who have no feet to dance away the Asher Praise
-              concert evening happening on December 27th? Or them who have no
-              sight to behold the beautiful Christmas lights? It is when the
-              faithful lets the light and love of Christ shine through to these
-              ones that they can be sure that the word of God will come true
-              about the church as it was said in that prophetic Hymn 210 of the
-              Celestial Church;
-            </p>
-          </p>
-          <p>
-            <cite>
-              ALL ye people exalt ye Jesus, <br /> Kindle the light amidst all
-              darkness, That Father&apos;s promise be fulfilled in the end
-            </cite>
-          </p>
+  async function copyAccountNumber() {
+    try {
+      await navigator.clipboard.writeText(accountNumber);
+      setCopyStatus('Account number copied.');
+    } catch {
+      setCopyStatus('Please select and copy the account number above.');
+    }
+  }
+
+  return <div className="give-page">
+    <section className="give-hero">
+      <div className="shell">
+        <span className="section-label">The Asher Praise community charity</span>
+        <h1>Do you<br />love me?</h1>
+        <div className="give-hero-bottom">
+          <p>Let our praise become an act of love. Support widows and people in need in our community.</p>
+          <a className="button" href="#give-details">Make a donation <span aria-hidden="true">↗</span></a>
         </div>
-        <section className="givesect  d-flex justify-content-center flex-wrap">
-          {giveObj.map((give, index) => {
-            return (
-              <div
-                key={index}
-                className="givecard m-2 card w-40 flex-column align-items-center"
-              >
-                <div className="card-body bg-dark text-white w-100 d-flex flex-column align-items-center">
-                  <h2 className="card-title">Give In {give.mode}</h2>
-                  <p className="card-text">{give.type}</p>
-                </div>
-                <div className="card-details card-body gap-4 p-5 d-flex flex-column align-items-center w-100">
-                  <p className="card-text">{give.symbol}</p>
-                  <p className="card-text cardd">
-                    <FaCheckCircle /> Account Name: {give.accounName}
-                  </p>
-                  <p className="card-text cardd">
-                    <FaCheckCircle /> Bank: {give.bank}
-                  </p>
-                  <p className="card-text cardd">
-                    <FaCheckCircle /> Account Number: {give.accountNumber}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </section>
-        <h5 className="mt-5 text-brown">Welfare endowment fund</h5>
-        <p>
-          CCC Zion Parish, Itedo Estate, Carwash Bus-stop,off Freedom way,
-          Ikate Lekki
-        </p>
       </div>
-    </>
-  );
+    </section>
+
+    <section className="section-space">
+      <div className="shell give-layout">
+        <div className="give-story">
+          <span className="section-label">Faith, expressed through care</span>
+          <h2>Love that reaches<br />beyond the gathering.</h2>
+          <p className="lead">The joy of Christmas and the warmth of community should reach those who have little to celebrate, too.</p>
+          <p>Through our community charity, we extend care to widows and people in need. It is an invitation to let the light and love of Christ shine through the way we care for one another.</p>
+          <div className="give-scripture">
+            <span className="section-label">The call to care</span>
+            <h3>“Feed my sheep.”</h3>
+            <p>When Christ asked Peter, “Do you love me?”, he followed with a call to care for others. That same call is at the heart of this work: to carry our faith beyond the concert and into everyday life.</p>
+          </div>
+          <blockquote>All ye people exalt ye Jesus,<br />Kindle the light amidst all darkness,<br />That Father’s promise be fulfilled in the end.
+            <cite>Celestial Church hymn 210</cite>
+          </blockquote>
+        </div>
+
+        <aside className="give-donation" id="give-details" aria-labelledby="donation-heading">
+          <span className="section-label">Give in Naira · NGN</span>
+          <h2 id="donation-heading">An act of love.</h2>
+          <p>Support our community charity by bank transfer using the details below.</p>
+          <dl>
+            <div><dt>Account name</dt><dd>ASHER PRAISE CONCERT</dd></div>
+            <div><dt>Bank</dt><dd>MONIEPOINT</dd></div>
+            <div><dt>Account number</dt><dd className="give-account-number">{accountNumber}</dd></div>
+          </dl>
+          <button className="button" type="button" onClick={copyAccountNumber}>Copy account number</button>
+          <p className="give-copy-status" role="status">{copyStatus}</p>
+          <div className="give-fund">
+            <h3>Welfare endowment fund</h3>
+            <p>CCC Zion Parish, Itedo Estate, Carwash Bus-stop, off Freedom Way, Ikate Lekki.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section className="give-closing">
+      <div className="shell">
+        <div><span className="section-label">Many voices. One holy purpose.</span><h2>There is a place<br />for your kindness.</h2></div>
+        <Link className="text-link" to="/volunteer">Give your time. Volunteer with us <span aria-hidden="true">↗</span></Link>
+      </div>
+    </section>
+  </div>;
 }

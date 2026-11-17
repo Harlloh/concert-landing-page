@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local browser QA captures
+.hallmark/current/
+.hallmark/screens/
+.hallmark/shots/
