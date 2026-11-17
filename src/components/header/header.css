@@ -2,8 +2,7 @@
   background: var(--forest);
   color: var(--ivory);
   border-bottom: 1px solid #ffffff20;
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 30;
 }
 .header-inner {
