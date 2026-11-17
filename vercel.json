@@ -1,8 +1,7 @@
 {
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
-    ]
+  "routes": [
+    { "src": "/(give|gallery|playlist|team|volunteer)/?", "dest": "/$1/index.html" },
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
 }

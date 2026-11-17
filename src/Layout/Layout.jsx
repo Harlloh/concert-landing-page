@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/Footer/footer";
 import { currentEvent, site, concertDateLabel } from "../data/event";
+import { pages, eventSchema } from "../data/seo";
 
 const pageTitles = {
   "/give": "Do You Love Me?",
@@ -27,10 +28,10 @@ export default function Layout() {
   }, [pathname, hash]);
 
   useEffect(() => {
-    const title = pathname === "/"
+    const title = pages[pathname]?.title || (pathname === "/"
       ? `${site.name} ${currentEvent.edition}: ${currentEvent.theme}`
-      : `${pageTitles[pathname] || site.name} | ${site.name}`;
-    const description = `${concertDateLabel()} at ${currentEvent.venue}, ${currentEvent.location}. Join ${site.name} ${currentEvent.edition}: ${currentEvent.theme}.`;
+      : `${pageTitles[pathname] || site.name} | ${site.name}`);
+    const description = pages[pathname]?.description || `${concertDateLabel()} at ${currentEvent.venue}, ${currentEvent.location}. Join ${site.name} ${currentEvent.edition}: ${currentEvent.theme}.`;
     const image = new URL(currentEvent.hero.src, site.url).href;
     const canonical = new URL(pathname, site.url).href;
 
@@ -41,6 +42,14 @@ export default function Layout() {
     document.querySelector('meta[property="og:image"]')?.setAttribute('content', image);
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical);
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical);
+    document.getElementById('event-schema')?.remove();
+    if (pathname === '/') {
+      const schema = document.createElement('script');
+      schema.id = 'event-schema';
+      schema.type = 'application/ld+json';
+      schema.textContent = JSON.stringify(eventSchema());
+      document.head.appendChild(schema);
+    }
   }, [pathname]);
 
   return <div className="layout" id="top">
