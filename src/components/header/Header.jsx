@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
 import { site } from "../../data/event";
 import "./header.css";
 export default function Header() {
@@ -49,10 +50,11 @@ export default function Header() {
             type="button"
             ref={toggle}
             aria-expanded={open}
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-controls="main-navigation"
             onClick={() => setOpen((value) => !value)}
           >
-            {open ? "Close" : "Menu"}
+            {open ? <FiX aria-hidden="true" /> : <FiMenu aria-hidden="true" />}
           </button>
         </div>
       </div>

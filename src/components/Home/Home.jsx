@@ -31,6 +31,13 @@ export default function Home() {
         <div>
           <span className="section-label">The heart of Asher Praise</span>
           <h2>Many voices.<br />One holy purpose.</h2>
+          <iframe
+            className="about-video"
+            src={`https://www.youtube.com/embed/${new URL(archive.video).searchParams.get('v')}?start=0&end=60&autoplay=1&mute=1&playsinline=1`}
+            title="Asher Praise Concert"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowFullScreen
+          />
           <a className="text-link" href={archive.video} target="_blank" rel="noreferrer">Watch a moment of Asher Praise</a>
         </div>
         <div>

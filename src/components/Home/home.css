@@ -36,6 +36,13 @@
 .about-layout h2 {
   margin-bottom: 32px;
 }
+.about-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  margin-bottom: 20px;
+}
 .about-layout>div>p:not(.lead) {
   font-size: .95rem;
   color: var(--muted);

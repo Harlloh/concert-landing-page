@@ -49,12 +49,15 @@
 }
 .menu-toggle {
   display: none;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #c7d5bd80;
   color: var(--ivory);
   background: transparent;
   min-height: 46px;
-  padding: 10px 14px;
-  font-size: .85rem;
+  width: 46px;
+  padding: 10px;
+  font-size: 24px;
 }
 .site-header :focus-visible {
   outline-color: var(--gold);
@@ -68,7 +71,7 @@
     height: 64px;
   }
   .menu-toggle {
-    display: block;
+    display: inline-flex;
   }
   .site-nav {
     display: none;

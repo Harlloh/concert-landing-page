@@ -86,7 +86,7 @@ export const site = {
 export const archive = {
   year: 2024,
   url: 'https://drive.google.com/drive/folders/1z-KL5MZZnRHSel9emznLdSCLVVXoUQtF',
-  video: 'https://www.youtube.com/watch?v=bzuLJxAnC6U',
+  video: 'https://www.youtube.com/watch?v=M0Vcngki7Cs',
   photos: [{
     src: '/images/praise.jpg',
     alt: 'A worshipper with hands raised at a previous Asher Praise Concert',

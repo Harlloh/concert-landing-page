@@ -1,31 +1,141 @@
-.cardd {
-  border-bottom: 1px solid black;
-  padding-bottom: 8px;
-  width: 100%;
-  margin: 0 auto;
-  /* background-color: red; */
+.give-hero {
+  padding-block: clamp(64px, 8vw, 120px);
+  background: linear-gradient(90deg, rgba(9, 35, 28, .9), rgba(9, 35, 28, .62)),
+    url('../../assets/doyouloveme.jpg') center / cover no-repeat;
+  color: var(--ivory);
 }
-.give-sect {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.78)),
-    url("../../assets/doyouloveme.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top bottom;
-  height: 80vh;
-  align-items: center;
+.give-hero .section-label {
+  color: var(--gold);
+}
+.give-hero h1 {
+  font-size: clamp(4rem, 9vw, 8rem);
+  margin-bottom: 40px;
+}
+.give-hero-bottom {
   display: flex;
-  background-attachment: fixed;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #57715f;
 }
-.give-sect h3 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  color: white;
+.give-hero-bottom p {
+  max-width: 520px;
+  margin: 0;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
 }
-.give-sect h3 span {
-  font-family: Inter;
-  color: #ff9b0d;
-  font-weight: 500;
+.give-hero-bottom .button {
+  gap: 24px;
+}
+.give-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(40px, 7vw, 112px);
+  align-items: start;
+}
+.give-story > p:not(.lead), .give-scripture p {
+  color: var(--muted);
+}
+.give-story h2 {
+  margin-bottom: 28px;
+}
+.give-scripture {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.give-story blockquote {
+  margin: 32px 0 0;
+  padding-left: 24px;
+  border-left: 2px solid var(--gold);
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+.give-story cite {
+  display: block;
+  margin-top: 16px;
+  font: 400 .8rem/1.5 var(--body);
+  color: var(--muted);
+}
+.give-donation {
+  background: var(--sage);
+  padding: clamp(24px, 3.5vw, 48px);
+  scroll-margin-top: 32px;
+}
+.give-donation h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+.give-donation > p {
+  color: var(--muted);
+  font-size: .95rem;
+}
+.give-donation dl {
+  margin: 32px 0;
+}
+.give-donation dl > div {
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.give-donation dt {
+  font-size: .75rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.give-donation dd {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.give-donation .give-account-number {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .04em;
+  user-select: all;
+}
+.give-donation .button {
+  width: 100%;
+  white-space: normal;
+}
+.give-donation .give-copy-status {
+  min-height: 24px;
+  margin: 12px 0 20px;
+  font-size: .8rem;
+}
+.give-fund {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.give-fund h3 {
+  font-family: var(--body);
+  font-size: .9rem;
+  font-weight: 600;
+}
+.give-fund p {
+  color: var(--muted);
+  font-size: .85rem;
+  margin: 0;
+}
+.give-closing {
+  padding-block: 56px;
+  background: var(--sage);
+}
+.give-closing .shell {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+}
+.give-closing h2 {
+  margin-bottom: 0;
+}
+@media (max-width: 760px) {
+  .give-layout {
+    grid-template-columns: 1fr;
+  }
+  .give-hero-bottom, .give-closing .shell {
+    flex-direction: column;
+    align-items: start;
+  }
 }
